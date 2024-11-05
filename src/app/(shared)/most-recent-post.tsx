@@ -1,6 +1,7 @@
-import React from "react";
-import Image from "next/image";
 import { InnerWrap, Wrapper } from "@/lib/atoms";
+import { Article } from "@/lib/types";
+import { limit } from "@/lib/utils";
+import Image from "next/image";
 
 const mostRecentPost = {
   title: "Unlock Expert Real Estate Investment Insights",
@@ -20,10 +21,14 @@ const mostRecentPost = {
         "Receive timely notifications on new videos and investment opportunities.",
     },
   ],
-  imageUrl: "", // Replace with your image path
+  imageUrl: "/img/related-post.jpg",
 };
 
-export default function MostRecentPost() {
+interface MostRecentPostProps {
+  articles: Article[];
+}
+
+export default function MostRecentPost({ articles }: MostRecentPostProps) {
   return (
     <Wrapper>
       <InnerWrap>
@@ -35,11 +40,11 @@ export default function MostRecentPost() {
             <h3 className="text-3xl font-bold mb-4">{mostRecentPost.title}</h3>
             <p className="mb-8">{mostRecentPost.description}</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 w-full">
-              {mostRecentPost.features.map((feature, index) => (
+              {limit(articles, 2).map((feature, index) => (
                 <div key={index} className="flex items-start w-full">
                   <div className="w-10 h-10 mr-4">
                     <Image
-                      src={feature.icon}
+                      src={feature.image}
                       alt={feature.title}
                       width={40}
                       height={40}

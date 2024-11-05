@@ -1,12 +1,12 @@
-import React from "react";
+import { getLatestArticleAction } from "@/server/actions/articles";
 import Image from "next/image";
 import {
+  FaDiscord,
   FaFacebook,
   FaInstagram,
-  FaTwitter,
   FaLinkedin,
+  FaTwitter,
   FaYoutube,
-  FaDiscord,
 } from "react-icons/fa";
 
 type FooterLink = {
@@ -55,28 +55,24 @@ const footer: { columns: FooterColumn[] } = {
   ],
 };
 
-const recentVideo = {
-  title: "Latest Real Estate Investment Tips",
-  thumbnailUrl: "", // Replace with your thumbnail path
-  videoUrl: "https://youtube.com/watch?v=example", // Replace with your video URL
-};
+export default async function Footer() {
+  const latestArticle = await getLatestArticleAction();
 
-export default function Footer() {
   return (
-    <footer className="bg-white text-black py-8 text-sm border-t border-gray-200">
+    <footer className="bg-white pt-8 text-sm border-t border-gray-200 dark:border-neutral-700 dark:bg-neutral-900">
       <div className="w-full mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 px-8">
           <div>
             <h3 className="text-lg font-semibold mb-4">Latest Video</h3>
-            <div className="aspect-video relative mb-4 rounded-lg overflow-hidden bg-slate-100">
+            <div className="aspect-video relative mb-4 rounded-lg overflow-hidden bg-slate-100 dark:bg-neutral-900">
               <a
-                href={recentVideo.videoUrl}
+                href={latestArticle.video_url}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Image
-                  src={recentVideo.thumbnailUrl}
-                  alt={recentVideo.title}
+                  src={latestArticle.image}
+                  alt={latestArticle.title}
                   fill
                   className="aspect-video absolute inset-0"
                 />
@@ -86,7 +82,7 @@ export default function Footer() {
               href="https://youtube.com/channel/your-channel-id" // Replace with your YouTube channel URL
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gray-800 text-white px-6 py-2 rounded hover:bg-gray-700"
+              className="bg-gray-800 text-white px-6 py-2 rounded hover:bg-gray-700 dark:bg-white dark:text-neutral-900"
             >
               Watch on YouTube
             </a>
@@ -106,7 +102,7 @@ export default function Footer() {
             </div>
           ))}
         </div>
-        <div className="text-center mt-8 flex items-center justify-between px-8 border-t border-gray-200 h-10 text-gray-500 text-xs">
+        <div className="text-center mt-8 flex items-center justify-between px-8 border-t border-gray-200 h-10 text-gray-500 text-xs dark:border-neutral-700 dark:text-neutral-200">
           <p>© 2024 Immo Inversor. All rights reserved.</p>
           <div className="flex justify-center gap-2">
             <a href="https://facebook.com" className="hover:underline">

@@ -1,8 +1,9 @@
 "use client";
+import { Card, Carousel } from "@/components/ui/apple-cards-carousel";
+import { Wrapper } from "@/lib/atoms";
+import { Article } from "@/lib/types";
 import Image from "next/image";
 import React from "react";
-import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
-import { Wrapper } from "@/lib/atoms";
 
 const shortsData = {
   title: "Recent YouTube Shorts",
@@ -41,30 +42,23 @@ const shortsData = {
   ],
 };
 
-interface Short {
-  category: string;
-  title: string;
-  thumbnailUrl: string;
-  videoUrl: string;
-}
-
 interface DummyContentProps {
-  short: Short;
+  short: Article;
 }
 
 const DummyContent: React.FC<DummyContentProps> = ({ short }) => {
   return (
-    <a href={short.videoUrl} target="_blank" rel="noopener noreferrer">
+    <a href={short.video_url} target="_blank" rel="noopener noreferrer">
       <div className="bg-gray-100 p-6 rounded-lg shadow-md">
         <div className="mb-4">
           <span className="text-sm font-medium text-gray-500">
-            {short.category}
+            {short.categories[0] ?? ""}
           </span>
         </div>
         <h3 className="text-xl font-semibold mb-2">{short.title}</h3>
         <div className="relative w-full aspect-video overflow-hidden bg-slate-100">
           <Image
-            src={short.thumbnailUrl}
+            src={short.image}
             alt={short.title}
             fill
             className="aspect-video absolute inset-0"
@@ -75,14 +69,19 @@ const DummyContent: React.FC<DummyContentProps> = ({ short }) => {
   );
 };
 
-export default function ShortsCarousel() {
-  const cards = shortsData.shorts.map((short, index) => (
+interface ShortsCarouselProps {
+  shorts: Article[];
+}
+
+export default function ShortsCarousel({ shorts }: ShortsCarouselProps) {
+  const cards = shorts.map((short, index) => (
     <Card
-      key={short.videoUrl}
+      key={short.canonical_url}
       card={{
-        ...short,
-        src: short.thumbnailUrl,
+        src: short.image,
         content: <DummyContent short={short} />,
+        title: short.title,
+        category: short.categories[0] ?? "",
       }}
       index={index}
     />

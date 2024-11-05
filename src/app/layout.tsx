@@ -1,8 +1,9 @@
+import { body, title } from "@/lib/fonts";
 import type { Metadata } from "next";
-import "./globals.css";
 import Footer from "./(shared)/footer";
 import NavMain from "./(shared)/nav-main";
-import { body, title } from "@/lib/fonts";
+import "./globals.css";
+import "./prose.css";
 
 export const metadata: Metadata = {
   title: "Inmo Inversor | Aprende a invertir en bienes raices en España",
@@ -15,9 +16,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${title.variable} ${body.variable} antialiased font-title scroll-smooth`}
+        className={`${title.variable} ${body.variable} subpixel-antialiased font-title`}
       >
         <NavMain />
         {children}

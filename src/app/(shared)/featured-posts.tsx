@@ -1,4 +1,4 @@
-import React from "react";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -7,10 +7,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import Image from "next/image";
 import { InnerWrap, Wrapper } from "@/lib/atoms";
+import { paths } from "@/routes/paths";
+import { getAllFeaturedArticlesAction } from "@/server/actions/articles";
+import Image from "next/image";
+import Link from "next/link";
 
 const featuredPosts = {
   title: "Explore Real Estate Insights",
@@ -46,43 +47,50 @@ const featuredPosts = {
   ],
 };
 
-export default function FeaturedPosts() {
+export default async function FeaturedPosts() {
+  const featuredArticles = await getAllFeaturedArticlesAction();
+
   return (
     <Wrapper>
       <InnerWrap>
         <h2 className="text-3xl font-bold mb-4">{featuredPosts.title}</h2>
         <p className="mb-8">{featuredPosts.description}</p>
         <ul className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {featuredPosts.posts.map((post, index) => (
+          {featuredArticles.map((article, index) => (
             <li key={index} className="flex flex-col justify-between">
               <Card className="h-full flex flex-col">
                 <CardHeader className="items-start justify-start text-left">
-                  <CardTitle className="text-xl">{post.title}</CardTitle>
-                  <CardDescription>{post.category}</CardDescription>
+                  <CardTitle className="text-xl">{article.title}</CardTitle>
+                  {article.categories[0] && (
+                    <CardDescription>{article.categories[0]}</CardDescription>
+                  )}
                 </CardHeader>
                 <CardContent className="flex flex-col grow px-0 py-2">
                   <div className="flex flex-col grow relative aspect-video overflow-hidden h-full">
                     <Image
-                      src="/images/placeholder.jpg"
-                      alt={post.title}
+                      src={article.image}
+                      alt={article.title}
                       fill
                       className="absolute inset-0"
                       style={{ objectFit: "cover" }}
                     />
                   </div>
                   <div className="flex flex-col px-8 text-left pt-8">
-                    <p className="text-gray-700 mb-4">{post.description}</p>
+                    <p className="text-gray-700 mb-4">{article.description}</p>
                     <div className="flex items-center text-sm text-gray-500 mt-auto ">
-                      <span>{post.author}</span>
+                      <span>{article.author}</span>
                       <span className="mx-2">•</span>
-                      <span>{post.date}</span>
+                      <span>{article.date}</span>
                       <span className="mx-2">•</span>
-                      <span>{post.readTime}</span>
+                      <span>{article.reading_time}</span>
                     </div>
                   </div>
                 </CardContent>
                 <CardFooter>
-                  <Link href="/" className="flex w-full pt-2">
+                  <Link
+                    href={paths.blog.slug(article.slug)}
+                    className="flex w-full pt-2"
+                  >
                     <Button className="flex w-full">Read the article</Button>
                   </Link>
                 </CardFooter>
