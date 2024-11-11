@@ -4,12 +4,6 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 
-const ctaContent = {
-  title: "Join Our Real Estate Community",
-  description:
-    "Subscribe to get updates about courses, new episodes, and more.",
-};
-
 const subscriptionSchema = z.object({
   email: z.string().email("Invalid email address"),
 });
@@ -20,7 +14,7 @@ export default function CtaCommunity() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: {},
   } = useForm<SubscriptionFormData>({
     resolver: zodResolver(subscriptionSchema),
   });
@@ -31,34 +25,28 @@ export default function CtaCommunity() {
   };
 
   return (
-    <section className="bg-gray-500 text-white py-12">
+    <section className="bg-black text-white py-[5dvh]">
       <div className="container mx-auto px-4 max-w-7xl text-center">
-        <h2 className="text-3xl font-bold mb-4">{ctaContent.title}</h2>
-        <p className="mb-8">{ctaContent.description}</p>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex justify-center space-x-4"
+          className="flex justify-center items-center space-x-2"
         >
-          <div>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              {...register("email")}
-              className="px-4 py-2 rounded text-gray-800"
-            />
-            {errors.email && (
-              <p className="text-red-500 mt-2">
-                {errors.email.message as string}
-              </p>
-            )}
-          </div>
+          <input
+            type="email"
+            placeholder="Enter your email..."
+            {...register("email")}
+            className="px-4 py-2 rounded text-gray-800 bg-gray-700 placeholder-gray-500"
+          />
           <button
             type="submit"
-            className="bg-white text-gray-800 px-6 py-2 rounded hover:bg-gray-200"
+            className="bg-white text-black px-6 py-2 rounded hover:bg-gray-200"
           >
-            Subscribe
+            Join 1K+ Readers
           </button>
         </form>
+        <p className="text-gray-500 mt-2 text-sm">
+          1 email every week. Unsubscribe anytime.
+        </p>
       </div>
     </section>
   );

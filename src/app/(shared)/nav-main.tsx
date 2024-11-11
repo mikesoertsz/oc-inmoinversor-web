@@ -1,4 +1,6 @@
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 type NavLink = {
@@ -7,43 +9,48 @@ type NavLink = {
 };
 
 const navLinks: NavLink[] = [
-  { text: "About", url: "/about" },
+  { text: "Story", url: "/story" },
   { text: "Blog", url: "/blog" },
+  // { text: "Newsletter", url: "/newsletter" },
+  // { text: "Resources", url: "/resources" },
 ];
 
 export default function NavMain() {
   return (
-    <nav className="bg-brand-bg1 text-white py-4 px-0 flex w-full">
+    <nav className="bg-black text-white py-4 px-0 flex w-full">
       <div className="flex w-full mx-auto px-4 justify-between items-center">
-        <div className="text-lg font-semibold">
-          <a href="/" className="hover:underline">
+        <div className="text-lg font-semibold flex items-center">
+          <Link href="/" className="hover:underline flex items-center">
             <Image
               src="/img/logo-navv.png"
               alt="Logo"
               width={100}
               height={50}
-              className=""
+              className="mr-2"
             />
-          </a>
-        </div>
-        <div className="flex items-center justify-center gap-4">
-          <ul className="flex gap-1 text-sm font-medium text-gray-300 mr-4">
+          </Link>
+          <ul className="flex text-sm font-medium text-gray-300 ml-8">
             {navLinks.map((link, index) => (
-              <li key={index} className="px-3">
-                <a href={link.url} className="hover:underline">
-                  {link.text}
-                </a>
+              <li key={index} className="">
+                <Button
+                  variant="link"
+                  asChild
+                  className="hover:no-underline hover:text-white transition duration-300 ease-in-out text-gray-300 font-title text-[17px] font-medium"
+                >
+                  <Link href={link.url}>{link.text}</Link>
+                </Button>
               </li>
             ))}
           </ul>
-          <div>
-            <a
-              href="https://youtube.com"
-              className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 font-semibold text-sm font-title"
-            >
-              Watch on YouTube
-            </a>
-          </div>
+        </div>
+        <div className="flex items-center justify-center gap-4">
+          <Button
+            variant="secondary"
+            asChild
+            className="font-medium font-title"
+          >
+            <Link href="/course">View Course</Link>
+          </Button>
         </div>
       </div>
     </nav>

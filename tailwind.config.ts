@@ -9,6 +9,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        title: "var(--font-title)",
+        subtitle: ["var(--font-subtitle)", "sans-serif"],
+      },
       colors: {
         brand: {
           bg: "#231F20",
