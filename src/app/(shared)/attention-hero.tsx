@@ -20,13 +20,14 @@ export default function Hero() {
         <div className="flex justify-center space-x-4 mb-8">
           <a
             href="https://www.youtube.com/@Inmoinversores"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center bg-gray-800 text-white px-6 py-2 rounded hover:bg-gray-700"
           >
             <FaYoutube className="mr-2" />
             ver en YouTube
           </a>
         </div>
-        
       </InnerWrap>
     </Wrapper>
   );

@@ -33,7 +33,7 @@ export default async function FeaturedPosts() {
   return (
     <Wrapper className="py-[5dvh] bg-slate-50">
       <InnerWrap>
-        <h2 className="text-4xl font-bold text-center mb-2">
+        <h2 className="text-4xl font-semibold tracking-tight text-center mb-2">
           {featuredPosts.title}
         </h2>
         <p className="text-center text-gray-500 mb-8">

@@ -8,45 +8,45 @@ import {
 import { InnerWrap, Wrapper } from "@/lib/atoms";
 
 const faqContent = {
-  title: "FAQs",
+  title: "Preguntas Frecuentes",
   description:
-    "Explore answers to common questions about real estate investment in Spain to guide your journey.",
+    "Explora respuestas a preguntas comunes sobre la inversión inmobiliaria en España para guiar tu camino.",
   questions: [
     {
       id: "item-1",
-      question: "What topics are covered on the YouTube channel?",
+      question: "¿Qué temas se tratan en el canal de YouTube?",
       answer:
-        "Our YouTube channel covers a wide range of topics including market analysis, investment strategies, property management tips, and interviews with real estate experts in Spain.",
+        "Nuestro canal de YouTube cubre una amplia gama de temas, incluyendo análisis de mercado, estrategias de inversión, consejos de gestión de propiedades y entrevistas con expertos en bienes raíces en España.",
     },
     {
       id: "item-2",
-      question: "How can I start investing in real estate in Spain?",
+      question: "¿Cómo puedo empezar a invertir en bienes raíces en España?",
       answer:
-        "To start investing in real estate in Spain, watch our beginner's guide series on YouTube. It covers everything from understanding the market to finding the right property and securing financing.",
+        "Para comenzar a invertir en bienes raíces en España, mira nuestra serie de guías para principiantes en YouTube. Cubre todo, desde entender el mercado hasta encontrar la propiedad adecuada y asegurar financiación.",
     },
     {
       id: "item-3",
-      question: "What are the benefits of subscribing to the channel?",
+      question: "¿Cuáles son los beneficios de suscribirse al canal?",
       answer:
-        "By subscribing to our channel, you'll get access to the latest videos on real estate trends, investment opportunities, and expert advice. Stay informed and make better investment decisions.",
+        "Al suscribirte a nuestro canal, tendrás acceso a los últimos vídeos sobre tendencias inmobiliarias, oportunidades de inversión y consejos de expertos. Mantente informado y toma mejores decisiones de inversión.",
     },
     {
       id: "item-4",
-      question: "Can I get personalized advice through the channel?",
+      question: "¿Puedo obtener asesoramiento personalizado a través del canal?",
       answer:
-        "While our videos provide general advice, you can reach out to us for personalized consultations. We also host live Q&A sessions where you can ask specific questions about your investment plans.",
+        "Aunque nuestros vídeos ofrecen consejos generales, puedes contactarnos para consultas personalizadas. También organizamos sesiones de preguntas y respuestas en vivo donde puedes hacer preguntas específicas sobre tus planes de inversión.",
     },
     {
       id: "item-5",
-      question: "How often is new content uploaded?",
+      question: "¿Con qué frecuencia se sube nuevo contenido?",
       answer:
-        "We upload new content weekly, including market updates, investment tips, and interviews with industry professionals. Make sure to subscribe and hit the notification bell to stay updated.",
+        "Subimos nuevo contenido semanalmente, incluyendo actualizaciones de mercado, consejos de inversión y entrevistas con profesionales del sector. Asegúrate de suscribirte y activar la campana de notificaciones para mantenerte actualizado.",
     },
   ],
   footer: {
-    message: "Still have questions?",
-    contact: "Reach out for personalized advice and support.",
-    buttonText: "Contact",
+    message: "¿Todavía tienes preguntas?",
+    contact: "Contáctanos para obtener asesoramiento y apoyo personalizado.",
+    buttonText: "Contacto",
   },
 };
 

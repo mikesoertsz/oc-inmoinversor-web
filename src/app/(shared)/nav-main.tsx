@@ -9,10 +9,10 @@ type NavLink = {
 };
 
 const navLinks: NavLink[] = [
-  { text: "Story", url: "/story" },
+  { text: "Historia", url: "/story" },
   { text: "Blog", url: "/blog" },
-  // { text: "Newsletter", url: "/newsletter" },
-  // { text: "Resources", url: "/resources" },
+  // { text: "Boletín", url: "/newsletter" },
+  // { text: "Recursos", url: "/resources" },
 ];
 
 export default function NavMain() {
@@ -49,7 +49,7 @@ export default function NavMain() {
             asChild
             className="font-medium font-title"
           >
-            <Link href="/course">View Course</Link>
+            <Link href="/course">Ver Curso</Link>
           </Button>
         </div>
       </div>
