@@ -1,6 +1,5 @@
 import { InnerWrap, Wrapper } from "@/lib/atoms";
 import {
-  FaDiscord,
   FaFacebook,
   FaInstagram,
   FaLinkedin,
@@ -48,22 +47,31 @@ const footer: { columns: FooterColumn[] } = {
         { text: "X", url: "https://twitter.com" },
         { text: "LinkedIn", url: "https://linkedin.com" },
         { text: "YouTube", url: "https://youtube.com" },
-        // { text: "Discord", url: "https://discord.com" },
       ],
     },
   ],
 };
 
+const socialLinks = [
+  { icon: FaFacebook, url: "https://facebook.com" },
+  { icon: FaInstagram, url: "https://instagram.com" },
+  { icon: FaTwitter, url: "https://twitter.com" },
+  { icon: FaLinkedin, url: "https://linkedin.com" },
+  { icon: FaYoutube, url: "https://youtube.com" },
+];
+
 export default function Footer() {
   return (
-    <Wrapper>
+    <Wrapper className="px-0">
       <InnerWrap>
-        <footer className="bg-white pt-8 text-sm border-t border-gray-200 dark:border-neutral-700 dark:bg-neutral-900 max-w-5xl">
+        <footer className="bg-white pt-8 text-sm border-t border-gray-200 dark:border-neutral-700 dark:bg-neutral-900 w-full">
           <div className="w-full mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 px-8">
+            <ul className="grid grid-cols-1 md:grid-cols-6">
               {footer.columns.map((column, index) => (
-                <div key={index} className="hidden md:block">
-                  <h3 className="text-lg font-semibold mb-2">{column.title}</h3>
+                <li key={index} className="hidden md:block">
+                  <h3 className="text-sm font-medium tracking-tight mb-1">
+                    {column.title}
+                  </h3>
                   <ul className="flex gap-1 flex-col">
                     {column.links.map((link, linkIndex) => (
                       <li key={linkIndex} className="text-[12px]">
@@ -73,35 +81,22 @@ export default function Footer() {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </li>
               ))}
-            </div>
-            <div className="text-center mt-8 flex items-center justify-between px-8 border-t border-gray-200 h-10 text-gray-500 text-xs dark:border-neutral-700 dark:text-neutral-200">
-              <p>© 2024 Immo Inversor. All rights reserved.</p>
-              <div className="flex justify-center gap-2">
-                <a href="https://facebook.com" className="hover:underline">
-                  <FaFacebook className="w-6 h-6" />
-                </a>
-                <a href="https://instagram.com" className="hover:underline">
-                  <FaInstagram className="w-6 h-6" />
-                </a>
-                <a href="https://twitter.com" className="hover:underline">
-                  <FaTwitter className="w-6 h-6" />
-                </a>
-                <a href="https://linkedin.com" className="hover:underline">
-                  <FaLinkedin className="w-6 h-6" />
-                </a>
-                <a href="https://youtube.com" className="hover:underline">
-                  <FaYoutube className="w-6 h-6" />
-                </a>
-                <a href="https://discord.com" className="hover:underline">
-                  <FaDiscord className="w-6 h-6" />
-                </a>
-              </div>
-            </div>
+            </ul>
           </div>
         </footer>
       </InnerWrap>
+      <div className="text-center mt-8 flex items-center justify-between px-8 border-t border-gray-200 h-10 text-gray-500 text-xs dark:border-neutral-700 dark:text-neutral-200">
+        <p>© 2024 Immo Inversor. All rights reserved.</p>
+        <div className="flex justify-center gap-2">
+          {socialLinks.map(({ icon: Icon, url }, index) => (
+            <a key={index} href={url} className="hover:underline">
+              <Icon size={15} />
+            </a>
+          ))}
+        </div>
+      </div>
     </Wrapper>
   );
 }
