@@ -4,6 +4,7 @@ import Footer from "./(shared)/footer";
 import NavMain from "./(shared)/nav-main";
 import "./globals.css";
 import "./prose.css";
+import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
   title: "Inmo Inversor | Aprende a invertir en bienes raices en España",
@@ -23,6 +24,7 @@ export default function RootLayout({
         <NavMain />
         {children}
         <Footer />
+        <Toaster />
       </body>
     </html>
   );

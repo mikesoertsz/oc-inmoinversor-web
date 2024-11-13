@@ -1,6 +1,6 @@
 import tw from "tailwind-styled-components";
 
-export const Wrapper = tw.section`mx-auto w-full snap-always snap-center mx-auto px-6 lg:px-0 relative z-20`;
+export const Wrapper = tw.section`mx-auto w-full snap-always snap-center mx-auto px-6 md:px-0 relative z-20`;
 export const InnerWrap = tw.div`mx-auto max-w-6xl w-full flex items-center justify-center flex-col py-[10dvh]`;
 export const GreyBlock = tw.div`flex flex-col items-center justify-center w-full p-4 bg-slate-50 border border-slate-200 rounded-lg shadow-sm`;
 export const SplitWrap = tw.div`mx-auto max-w-6xl px-6 md:px-0 w-full flex items-center justify-center gap-2`;

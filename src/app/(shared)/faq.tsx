@@ -7,7 +7,22 @@ import {
 } from "@/components/ui/accordion";
 import { InnerWrap, Wrapper } from "@/lib/atoms";
 
-const faqContent = {
+type FAQContent = {
+  title: string;
+  description: string;
+  questions: {
+    id: string;
+    question: string;
+    answer: string;
+  }[];
+  footer: {
+    message: string;
+    contact: string;
+    buttonText: string;
+  };
+};
+
+const defaultFaqContent: FAQContent = {
   title: "Preguntas Frecuentes",
   description:
     "Explora respuestas a preguntas comunes sobre la inversión inmobiliaria en España para guiar tu camino.",
@@ -32,7 +47,8 @@ const faqContent = {
     },
     {
       id: "item-4",
-      question: "¿Puedo obtener asesoramiento personalizado a través del canal?",
+      question:
+        "¿Puedo obtener asesoramiento personalizado a través del canal?",
       answer:
         "Aunque nuestros vídeos ofrecen consejos generales, puedes contactarnos para consultas personalizadas. También organizamos sesiones de preguntas y respuestas en vivo donde puedes hacer preguntas específicas sobre tus planes de inversión.",
     },
@@ -50,11 +66,15 @@ const faqContent = {
   },
 };
 
-export default function FAQ() {
+interface FAQProps {
+  faqContent?: FAQContent;
+}
+
+export default function FAQ({ faqContent = defaultFaqContent }: FAQProps) {
   return (
     <Wrapper>
       <InnerWrap>
-        <div className="flex w-full flex-col item-center justify-center max-w-3xl py-[5dvh]">
+        <div className="flex w-full flex-col item-center justify-center max-w-3xl py-[5dvh] text-center">
           <h2 className="text-3xl font-bold mb-4">{faqContent.title}</h2>
           <p className="mb-8">{faqContent.description}</p>
           <Accordion type="single" collapsible>

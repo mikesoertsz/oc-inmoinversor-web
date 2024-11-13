@@ -11,7 +11,7 @@ const heroContent = {
 
 export default function Hero() {
   return (
-    <Wrapper className="bg-slate-100 py-[5dvh]">
+    <Wrapper className="bg-slate-100 py-[10dvh]">
       <InnerWrap className="items-start justify-center max-w-4xl">
         <h1 className="text-[3.7rem] font-title font-semibold tracking-tighter mb-1 leading-tight">
           {heroContent.title}
