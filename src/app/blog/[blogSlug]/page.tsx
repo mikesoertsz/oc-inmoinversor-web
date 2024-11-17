@@ -4,13 +4,12 @@ import { getArticleBySlugAction } from "@/server/actions/articles";
 import { notFound } from "next/navigation";
 
 interface BlogParams {
-  params: {
-    blogSlug: string;
-  };
+  params: Promise<{ blogSlug: string }>;
 }
 
 export async function generateMetadata({ params }: BlogParams) {
-  const article = await getArticleBySlugAction(params.blogSlug);
+  const { blogSlug } = await params;
+  const article = await getArticleBySlugAction(blogSlug);
   if (!article) {
     return {};
   }
@@ -36,7 +35,8 @@ export async function generateMetadata({ params }: BlogParams) {
 }
 
 export default async function Blog({ params }: BlogParams) {
-  const article = await getArticleBySlugAction(params.blogSlug);
+  const { blogSlug } = await params;
+  const article = await getArticleBySlugAction(blogSlug);
 
   if (!article) {
     return notFound();
