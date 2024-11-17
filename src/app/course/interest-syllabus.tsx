@@ -57,7 +57,7 @@ export default function CourseSyllabus({ syllabus }: { syllabus: Syllabus }) {
   };
 
   return (
-    <Wrapper className="pb-[5dvh]" id="syllabus">
+    <Wrapper className="" id="syllabus">
       <InnerWrap>
         <div className="flex flex-col w-full md:px-0">
           <CourseSectionHeader
@@ -129,7 +129,9 @@ export default function CourseSyllabus({ syllabus }: { syllabus: Syllabus }) {
                       </div>
                       <div className="hidden mr-8 text-xs font-normal text-gray-500 md:block">
                         {chapter.sections.length}{" "}
-                        {chapter.sections.length === 1 ? "sección" : "secciones"}{" "}
+                        {chapter.sections.length === 1
+                          ? "sección"
+                          : "secciones"}{" "}
                         •{" "}
                         {new Date(chapter.totalduration * 1000)
                           .toISOString()

@@ -5,6 +5,7 @@ import {
   FaLinkedin,
   FaTwitter,
   FaYoutube,
+  FaYoutubeSquare,
 } from "react-icons/fa";
 
 type FooterLink = {
@@ -53,11 +54,10 @@ const footer: { columns: FooterColumn[] } = {
 };
 
 const socialLinks = [
-  { icon: FaFacebook, url: "https://facebook.com" },
-  { icon: FaInstagram, url: "https://instagram.com" },
-  { icon: FaTwitter, url: "https://twitter.com" },
-  { icon: FaLinkedin, url: "https://linkedin.com" },
-  { icon: FaYoutube, url: "https://youtube.com" },
+  { icon: <FaYoutubeSquare size={18} />, url: "https://youtube.com" },
+  { icon: <FaInstagram size={18} />, url: "https://instagram.com" },
+  { icon: <FaTwitter size={18} />, url: "https://twitter.com" },
+  { icon: <FaLinkedin size={18} />, url: "https://linkedin.com" },
 ];
 
 export default function Footer() {
@@ -85,12 +85,31 @@ export default function Footer() {
       </footer>
       <div className="text-center mt-8 flex items-center justify-between px-8 border-t border-gray-200 h-10 text-gray-500 text-xs dark:border-neutral-700 dark:text-neutral-200">
         <p>© 2024 Immo Inversor. All rights reserved.</p>
-        <div className="flex justify-center gap-2">
-          {socialLinks.map(({ icon: Icon, url }, index) => (
-            <a key={index} href={url} className="hover:underline">
-              <Icon size={15} />
-            </a>
-          ))}
+        <div className="flex items-center justify-center gap-2">
+          <div className="flex justify-center gap-2 mr-8">
+            {socialLinks.map(({ icon, url }, index) => (
+              <a
+                key={index}
+                href={url}
+                className="hover:text-gray-900 transition duration-300 ease-in-out"
+              >
+                {icon}
+              </a>
+            ))}
+          </div>
+          <div className="items-center justify-center hidden md:flex md:justify-end">
+            <p>
+              Made by{" "}
+              <a
+                href="http://www.drifter.agency"
+                className="font-semibold text-gray-900"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Drifter
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </Wrapper>

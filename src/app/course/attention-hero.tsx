@@ -2,9 +2,11 @@ import { InnerWrap, Wrapper } from "@/lib/atoms";
 import AttentionCoursePreview from "./attention-coursepreview";
 
 const heroContent = {
-  title: "Real Estate Investment Masterclass",
+  title: "Masterclass de Inversión Inmobiliaria",
   description:
-    "Join our comprehensive course to learn the latest strategies in real estate investment and build a successful property portfolio.",
+    "Únete a nuestro curso para aprender estrategias de inversión inmobiliaria y construir un portafolio exitoso.",
+  buttonText: "Acceso Instantáneo",
+  offerText: "Oferta limitada, precios subirán pronto.",
 };
 
 export default function AttentionHero() {
@@ -17,13 +19,11 @@ export default function AttentionHero() {
         <p className="mb-8 text-lg max-w-prose">{heroContent.description}</p>
         <a
           href="#register"
-          className="bg-white text-black px-8 py-3 rounded-md mb-4 hover:bg-gray-200 mt-12"
+          className="bg-brand-highlight text-black font-medium px-8 py-3 rounded-md mb-4 hover:bg-gray-50 mt-12 transition duration-300 ease-in-out"
         >
-          Get Instant Access
+          {heroContent.buttonText}
         </a>
-        <p className="text-sm">
-          Limited-time offer, the prices will increase soon.
-        </p>
+        <p className="text-sm opacity-50">{heroContent.offerText}</p>
         <AttentionCoursePreview />
       </InnerWrap>
     </Wrapper>
