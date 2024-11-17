@@ -1,10 +1,8 @@
 import { Wrapper } from "@/lib/atoms";
 import {
-  FaFacebook,
   FaInstagram,
   FaLinkedin,
   FaTwitter,
-  FaYoutube,
   FaYoutubeSquare,
 } from "react-icons/fa";
 

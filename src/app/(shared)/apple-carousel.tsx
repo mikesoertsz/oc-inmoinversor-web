@@ -112,7 +112,7 @@ export default function AppleCarousel({
         sliderRef.current.clientWidth ===
       0
     );
-  }, [sliderPosition]);
+  }, []);
 
   const goToNextSlide = useCallback(() => {
     scrollToSlide(sliderRef.current, currentSlide + 1);

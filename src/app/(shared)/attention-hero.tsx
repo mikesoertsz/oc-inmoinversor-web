@@ -7,13 +7,20 @@ const heroContent = {
     "Descubre las últimas estrategias en inversión inmobiliaria a través de nuestro blog y canal de YouTube.",
   imageUrl: "/img/hero.jpg",
   imageAlt: "Perspectivas Inmobiliarias",
+  ctas: [
+    {
+      text: "Ver en YouTube",
+      url: "",
+      icon: <FaYoutube size={20} className="mr-2 text-sm text-[#FF0000]" />,
+    },
+  ],
 };
 
 export default function Hero() {
   return (
-    <Wrapper className="bg-slate-100 py-[5dvh]">
-      <InnerWrap className="items-start justify-center">
-        <h1 className="text-[3.7rem] font-title font-semibold tracking-tighter mb-1 leading-[4rem]">
+    <Wrapper className="bg-gradient-to-t from-black to-brand-bg1 text-white py-[5dvh]">
+      <InnerWrap className="items-center justify-center text-center">
+        <h1 className="text-[3.2rem] balanced font-title font-semibold tracking-tighter mb-1 leading-[4rem]">
           {heroContent.title}
         </h1>
         <p className="mb-8 text-lg max-w-prose pt-2">
@@ -24,9 +31,9 @@ export default function Hero() {
             href="https://www.youtube.com/@Inmoinversores"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center bg-gray-800 text-white px-6 py-2 rounded-md hover:bg-gray-700"
+            className="flex items-center bg-gray-100 text-black px-8 py-4 rounded-md hover:bg-gray-700"
           >
-            <FaYoutube className="mr-2" />
+            <FaYoutube size={20} className="mr-2 text-sm text-[#FF0000]" />
             Ver en YouTube
           </a>
         </div>
