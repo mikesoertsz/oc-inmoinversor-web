@@ -6,6 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { InnerWrap, Wrapper } from "@/lib/atoms";
+import { TitleBlock } from "@/components/ui/titleblock";
 
 type FAQContent = {
   title: string;
@@ -72,24 +73,36 @@ interface FAQProps {
 
 export default function FAQ({ faqContent = defaultFaqContent }: FAQProps) {
   return (
-    <Wrapper>
+    <Wrapper className="py-[0dvh]">
       <InnerWrap>
-        <div className="flex w-full flex-col item-center justify-center max-w-3xl py-[5dvh] text-center">
-          <h2 className="text-3xl font-bold mb-4">{faqContent.title}</h2>
-          <p className="mb-8">{faqContent.description}</p>
-          <Accordion type="single" collapsible>
+        <div className="flex w-full flex-col item-center justify-center max-w-3xl  text-center">
+          <TitleBlock
+            heading={faqContent.title}
+            body={faqContent.description}
+            theme="light"
+            orientation="center"
+          />
+          <Accordion
+            type="single"
+            collapsible
+            className="w-full bg-slate-100 border border-slate-200 p-4 rounded-2xl"
+          >
             {faqContent.questions.map((item) => (
               <AccordionItem
                 key={item.id}
                 value={item.id}
-                className="text-left"
+                className="px-4 mt-2 transition ease-in-out bg-white border border-gray-200 rounded-lg shadow-sm duratin-300 first:mt-0 hover:shadow-md"
               >
-                <AccordionTrigger>{item.question}</AccordionTrigger>
-                <AccordionContent>{item.answer}</AccordionContent>
+                <AccordionTrigger className="flex w-full items-center justify-between py-4 font-medium text-left text-slate-900 hover:underline">
+                  {item.question}
+                </AccordionTrigger>
+                <AccordionContent className="pb-4 text-left text-slate-700">
+                  {item.answer}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
-          <div className="mt-12 flex items-center justify-center flex-col">
+          <div className="mt-12 items-center justify-center flex-col hidden">
             <h3 className="text-xl font-semibold">
               {faqContent.footer.message}
             </h3>

@@ -4,27 +4,27 @@ import { TitleBlock } from "@/components/ui/titleblock";
 
 export default function InterestDetails() {
   const courseContent = {
-    title: "Master Real Estate Investment Strategies",
+    title: "Domina las Estrategias de Inversión Inmobiliaria",
     features: [
       {
-        title: "Property Analysis",
+        title: "Análisis de Propiedades",
         description:
-          "Learn how to effectively analyze properties to identify profitable investment opportunities.",
+          "Aprende a analizar propiedades de manera efectiva para identificar oportunidades de inversión rentables.",
       },
       {
-        title: "Transaction Management",
+        title: "Gestión de Transacciones",
         description:
-          "Gain insights into managing real estate transactions smoothly and efficiently.",
+          "Obtén conocimientos sobre cómo gestionar transacciones inmobiliarias de manera fluida y eficiente.",
       },
       {
-        title: "Flipping for Profit",
+        title: "Reventa para Ganancias",
         description:
-          "Understand the strategies for flipping properties to maximize your returns.",
+          "Comprende las estrategias para revender propiedades y maximizar tus beneficios.",
       },
     ],
   };
   return (
-    <Wrapper className="py-[5dvh]">
+    <Wrapper className="py-[10dvh]">
       <InnerWrap>
         <TitleBlock
           heading={courseContent.title}
@@ -33,24 +33,30 @@ export default function InterestDetails() {
         />
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <li className="bg-slate-50 text-black p-8 rounded-2xl border border-slate-200 row-span-2">
-            <h3 className="text-xl font-semibold">Property Analysis</h3>
+            <h3 className="text-xl font-medium tracking-tight">
+              Análisis de Propiedades
+            </h3>
             <p className="mt-2">
-              Learn how to effectively analyze properties to identify profitable
-              investment opportunities.
+              Aprende a analizar propiedades de manera efectiva para identificar
+              oportunidades de inversión rentables.
             </p>
           </li>
-          <li className="bg-slate-50 text-black p-8 rounded-2xl border border-slate-200">
-            <h3 className="text-xl font-semibold">Transaction Management</h3>
+          <li className="bg-slate-50 text-black p-8 rounded-2xl border border-slate-200 aspect-video">
+            <h3 className="text-xl font-medium tracking-tight">
+              Gestión de Transacciones
+            </h3>
             <p className="mt-2">
-              Gain insights into managing real estate transactions smoothly and
-              efficiently.
+              Obtén conocimientos sobre cómo gestionar transacciones
+              inmobiliarias de manera fluida y eficiente.
             </p>
           </li>
-          <li className="bg-slate-50 text-black p-8 rounded-2xl border border-slate-200">
-            <h3 className="text-xl font-semibold">Flipping for Profit</h3>
+          <li className="bg-slate-50 text-black p-8 rounded-2xl border border-slate-200 aspect-video">
+            <h3 className="text-xl font-medium tracking-tight">
+              Reventa para Ganancias
+            </h3>
             <p className="mt-2">
-              Understand the strategies for flipping properties to maximize your
-              returns.
+              Comprende las estrategias para revender propiedades y maximizar
+              tus beneficios.
             </p>
           </li>
         </ul>

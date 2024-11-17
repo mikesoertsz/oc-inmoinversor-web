@@ -171,7 +171,7 @@ export default function AppleCarousel({
         >
           <span className="sr-only">Previous slide</span>
           <ChevronLeft
-            className="hoveR:bg-slate-200"
+            className="hover:bg-slate-200"
             size={18}
             strokeWidth={2.5}
           />
@@ -183,7 +183,7 @@ export default function AppleCarousel({
         >
           <span className="sr-only">Next slide</span>
           <ChevronRight
-            className="hoveR:bg-slate-200"
+            className="hover:bg-slate-200"
             size={18}
             strokeWidth={2.5}
           />
