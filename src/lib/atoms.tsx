@@ -1,7 +1,7 @@
 import tw from "tailwind-styled-components";
 
 export const Wrapper = tw.section`mx-auto w-full snap-always snap-center mx-auto px-6 md:px-0 relative z-20`;
-export const InnerWrap = tw.div`mx-auto max-w-6xl w-full flex items-center justify-center flex-col py-[10dvh]`;
+export const InnerWrap = tw.div`mx-auto max-w-5xl w-full flex items-center justify-center flex-col py-[10dvh]`;
 export const GreyBlock = tw.div`flex flex-col items-center justify-center w-full p-4 bg-slate-50 border border-slate-200 rounded-lg shadow-sm`;
 export const SplitWrap = tw.div`mx-auto max-w-6xl px-6 md:px-0 w-full flex items-center justify-center gap-2`;
 
@@ -16,3 +16,6 @@ export const Body = tw.p`max-w-prose text-sm font-body leading-relaxed pt-2`;
 
 export const Left = tw.div`relative flex flex-col items-center justify-center w-full xl:w-1/2 min-h-full bg-brand-p2 text-white z-10 py-8 xl:p-12`;
 export const Right = tw.div`relative flex items-center justify-center w-full xl:w-1/2 min-h-full z-10`;
+
+export const MediumHeading = tw.h4`text-3xl antialiased font-semibold tracking-tighter`;
+export const SmallHeading = tw.h4`text-xl antialiased font-medium`;

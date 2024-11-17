@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { FaYoutube } from "react-icons/fa";
 
 type NavLink = {
   text: string;
@@ -44,6 +45,20 @@ export default function NavMain() {
           </ul>
         </div>
         <div className="flex items-center justify-center gap-4">
+          <Button
+            variant="link"
+            asChild
+            className="hover:no-underline hover:text-white transition duration-300 ease-in-out text-gray-300 font-title font-medium flex items-center"
+          >
+            <a
+              href="https://www.youtube.com/@Inmoinversores"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaYoutube size={20} className="mr-2 text-sm text-[#FF0000]" />
+              Ver en YouTube
+            </a>
+          </Button>
           <Button
             variant="secondary"
             asChild

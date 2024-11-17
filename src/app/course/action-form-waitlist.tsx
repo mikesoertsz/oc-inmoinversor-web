@@ -6,6 +6,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { toast } from "sonner";
+import { TitleBlock } from "@/components/ui/titleblock";
+import Confetti from "react-dom-confetti";
 
 const formSchema = z.object({
   email: z.string().email({
@@ -14,6 +16,12 @@ const formSchema = z.object({
 });
 
 export default function ActionFormWaitlist() {
+  const cta = {
+    heading: "Join the Course Waitlist",
+    body: "Sign up with your email to receive updates and exclusive offers.",
+    button: "Join Course Waitlist",
+    paragraph: "We'll keep you in the loop on course updates.",
+  };
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -44,32 +52,33 @@ export default function ActionFormWaitlist() {
   }
 
   return (
-    <Wrapper className="flex flex-col h-full w-full bg-brand-bg1">
+    <Wrapper className="flex flex-col h-full w-full bg-brand-bg1" id="register">
       <InnerWrap className="text-white py-[5dvh]">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div></div>
-          <div className="flex items-start justify-start flex-col">
-            <form
-              onSubmit={form.handleSubmit(onSubmit)}
-              className="flex justify-start items-start gap-2"
+        <TitleBlock
+          heading={cta.heading}
+          body={cta.body}
+          theme="dark"
+          orientation="center"
+        />
+        <div className="flex flex-col items-center justify-center w-full gap-4 text-center">
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="flex justify-center items-center w-full gap-2 max-w-3xl"
+          >
+            <Input
+              type="email"
+              placeholder="Enter your email..."
+              {...form.register("email")}
+              className="px-6 h-12 bg-gray-200 placeholder-gray-500 text-black border-none flex"
+            />
+            <Button
+              type="submit"
+              className="bg-brand-highlight text-black text-lg h-12 px-8 rounded hover:bg-gray-200"
             >
-              <Input
-                type="email"
-                placeholder="Enter your email..."
-                {...form.register("email")}
-                className="px-6 h-12 bg-gray-200 placeholder-gray-500 text-black border-none flex"
-              />
-              <Button
-                type="submit"
-                className="bg-white text-black h-12 px-8 rounded hover:bg-gray-200"
-              >
-                Join Course Waitlist
-              </Button>
-            </form>
-            <p className="text-gray-200 mt-4 text-sm w-full">
-              We&apos;ll keep you in the loop on course updates.
-            </p>
-          </div>
+              {cta.button}
+            </Button>
+          </form>
+          <p className="text-gray-200 mt-1 text-sm w-full">{cta.paragraph}</p>
         </div>
       </InnerWrap>
     </Wrapper>

@@ -6,6 +6,7 @@ import FAQ from "../(shared)/faq";
 import FeaturedPosts from "../(shared)/featured-posts";
 import Hero from "../(shared)/attention-hero";
 import LastVideo from "../(shared)/attention-lastvideo";
+import AppleCarousel from "../(shared)/apple-carousel";
 // import MostRecentPost from "../(shared)/most-recent-post";
 // import ShortsCarousel from "./shorts";
 
@@ -22,6 +23,7 @@ export default async function Home() {
   return (
     <main className="flex flex-col h-full w-full scroll-smooth">
       <Hero />
+      <AppleCarousel />
       <LastVideo />
       <FeaturedPosts />
       {/* <ShortsCarousel shorts={shorts} /> */}

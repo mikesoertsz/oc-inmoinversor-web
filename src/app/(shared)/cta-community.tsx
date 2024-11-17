@@ -25,7 +25,7 @@ export default function CtaCommunity() {
   };
 
   return (
-    <section className="bg-black text-white py-[5dvh]">
+    <section className="bg-gradient-to-t from-brand-bg1 to-brand-bg text-white py-[5dvh]">
       <div className="container mx-auto px-4 max-w-7xl text-center">
         <form
           onSubmit={handleSubmit(onSubmit)}

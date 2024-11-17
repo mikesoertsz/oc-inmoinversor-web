@@ -1,13 +1,15 @@
-"use client";
 import FAQ from "../(shared)/faq";
 import ActionFormWaitlist from "./action-form-waitlist";
+import AttentionHero from "./attention-hero";
+import { AttentionNextCourse } from "./attention-nextcourse";
+import { course_en } from "./course_en";
 import InterestDetails from "./interest-details";
+import CourseSyllabus from "./interest-syllabus";
 
 const courseFaqContent = {
-  title:
-    "Preguntas Frecuentes sobre el Curso de Inversión Inmobiliaria en Madrid",
+  title: "Preguntas Frecuentes",
   description:
-    "Encuentra respuestas a las preguntas más comunes sobre nuestro curso de inversión inmobiliaria en Madrid, disponible tanto en modalidad presencial como online.",
+    "Respuestas sobre nuestro curso de inversión inmobiliaria en Madrid.",
   questions: [
     {
       id: "item-1",
@@ -51,7 +53,10 @@ const courseFaqContent = {
 export default function Course() {
   return (
     <main className="flex flex-col h-full w-full">
+      <AttentionHero />
+      <AttentionNextCourse />
       <InterestDetails />
+      <CourseSyllabus syllabus={course_en.syllabus} />
       <ActionFormWaitlist />
       <FAQ faqContent={courseFaqContent} />
     </main>

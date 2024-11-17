@@ -13,6 +13,9 @@ const config: Config = {
         title: "var(--font-title)",
         subtitle: ["var(--font-subtitle)", "sans-serif"],
       },
+      aspectRatio: {
+        "4/3": "4 / 3",
+      },
       colors: {
         brand: {
           bg: "#231F20",
