@@ -22,7 +22,7 @@ export default function RootLayout({
       <body
         className={`${title.variable} ${body.variable} subpixel-antialiased font-title`}
       >
-        <GoogleAnalytics GA_MEASUREMENT_ID="G-8B0M5E5N52" />
+        <GoogleAnalytics GA_MEASUREMENT_ID="G-8B0M5E5N52`" />
         <NavMain />
         {children}
         <Footer />
