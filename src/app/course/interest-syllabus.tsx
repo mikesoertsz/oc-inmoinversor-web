@@ -62,12 +62,12 @@ export default function CourseSyllabus({ syllabus }: { syllabus: Syllabus }) {
         <div className="flex flex-col w-full md:px-0">
           <CourseSectionHeader
             header={{
-              preheading: "Syllabus",
-              title: "Course Catalogue",
-              subtitle: "Breakdown of the course modules & materials.",
+              preheading: "Programa",
+              title: "Catálogo del Curso",
+              subtitle: "Desglose de los módulos y materiales del curso.",
               icon: <LuGoal size={18} />,
               description:
-                "The syllabus is designed to teach in a practical, additive way, ensuring you learn best practices throughout the course.",
+                "El programa está diseñado para enseñar de manera práctica y acumulativa, asegurando que aprendas las mejores prácticas a lo largo del curso.",
             }}
             right={
               <Button
@@ -75,17 +75,17 @@ export default function CourseSyllabus({ syllabus }: { syllabus: Syllabus }) {
                 variant="link"
                 onClick={handleExpandAll}
               >
-                Open/Close All
+                Abrir/Cerrar Todo
               </Button>
             }
           />
           <div className="hidden mb-4 text-xs text-gray-700">
-            {syllabus.chapters.length} sections •{" "}
+            {syllabus.chapters.length} secciones •{" "}
             {syllabus.chapters.reduce(
               (lectureCount, chapter) => lectureCount + chapter.sections.length,
               0
             )}{" "}
-            modules •{" "}
+            módulos •{" "}
             {(() => {
               const totalSeconds = syllabus.chapters.reduce(
                 (totalDuration, chapter) =>
@@ -97,7 +97,7 @@ export default function CourseSyllabus({ syllabus }: { syllabus: Syllabus }) {
               const seconds = totalSeconds % 60;
               return `${hours > 0 ? `${hours}h ` : ""}${minutes}m ${seconds}s`;
             })()}{" "}
-            total length
+            duración total
           </div>
           <GreyBlock>
             <Accordion
@@ -123,13 +123,13 @@ export default function CourseSyllabus({ syllabus }: { syllabus: Syllabus }) {
                         </div>
                         {chapter.free && (
                           <span className="px-3 ml-4 text-[10px] font-medium text-gray-900 bg-green-200 rounded-full">
-                            Free
+                            Gratis
                           </span>
                         )}
                       </div>
                       <div className="hidden mr-8 text-xs font-normal text-gray-500 md:block">
                         {chapter.sections.length}{" "}
-                        {chapter.sections.length === 1 ? "section" : "sections"}{" "}
+                        {chapter.sections.length === 1 ? "sección" : "secciones"}{" "}
                         •{" "}
                         {new Date(chapter.totalduration * 1000)
                           .toISOString()
@@ -195,7 +195,7 @@ export default function CourseSyllabus({ syllabus }: { syllabus: Syllabus }) {
                                 <Dialog>
                                   <DialogTrigger asChild>
                                     <button className="mr-2 text-xs font-normal text-blue-500 hover:underline">
-                                      Preview
+                                      Vista Previa
                                     </button>
                                   </DialogTrigger>
                                   <DialogContent className="max-w-4xl">

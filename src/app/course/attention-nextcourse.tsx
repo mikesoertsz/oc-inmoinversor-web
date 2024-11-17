@@ -1,32 +1,32 @@
 import { InnerWrap, Wrapper } from "@/lib/atoms";
 
 export function AttentionNextCourse() {
-  const details = [
+  const detalles = [
     {
-      pretitle: "Date",
-      title: "December 10, 2024",
-      description: "Mark your calendar for this important event.",
+      pretitle: "Fecha",
+      title: "10 Diciembre 2024",
+      description: "Marca tu calendario.",
       icon: "",
       value: "",
     },
     {
-      pretitle: "Time",
+      pretitle: "Hora",
       title: "10:00 AM - 4:00 PM",
-      description: "A full day of learning and networking.",
+      description: "Día de aprendizaje y networking.",
       icon: "",
       value: "",
     },
     {
-      pretitle: "Location",
-      title: "Madrid, Spain & Online",
-      description: "Join us in Madrid or participate online from anywhere.",
+      pretitle: "Ubicación",
+      title: "Madrid, España y Online",
+      description: "Únete en Madrid o en línea.",
       icon: "",
       value: "",
     },
     {
-      pretitle: "Instructors",
+      pretitle: "Instructores",
       title: "Guillermo Ortiz",
-      description: "Learn from an expert investor with a decade of experience.",
+      description: "Aprende de un experto inversor.",
       icon: "",
       value: "",
     },
@@ -36,18 +36,18 @@ export function AttentionNextCourse() {
     <Wrapper className="py-4 bg-white">
       <InnerWrap className="bg-slate-50 border border-slate-200 rounded-lg p-4">
         <ul className="grid w-full grid-cols-2 gap-4 md:grid-cols-4">
-          {details.map((item, index) => (
+          {detalles.map((item, index) => (
             <li
               key={index}
               className="flex flex-col items-start justify-start w-full p-3 rounded-lg border-0 border-slate-300 last:border-0 md:border-r"
             >
-              <p className="text-[9px] uppercase font-semibold tracking-[0.1em] text-slate-600">
+              <h4 className="text-[9px] uppercase font-semibold tracking-[0.1em] text-slate-600">
                 {item.pretitle}
-              </p>
-              <div className="mt-1 text-lg font-medium">{item.title}</div>
-              <div className="text-xs text-left text-gray-600">
+              </h4>
+              <h3 className="mt-1 text-md font-medium">{item.title}</h3>
+              <p className="text-xs text-left text-gray-600">
                 {item.description}
-              </div>
+              </p>
             </li>
           ))}
         </ul>

@@ -2,7 +2,7 @@ import FAQ from "../(shared)/faq";
 import ActionFormWaitlist from "./action-form-waitlist";
 import AttentionHero from "./attention-hero";
 import { AttentionNextCourse } from "./attention-nextcourse";
-import { course_en } from "./course_en";
+import { course_es } from "./course_es";
 import InterestDetails from "./interest-details";
 import CourseSyllabus from "./interest-syllabus";
 
@@ -56,7 +56,7 @@ export default function Course() {
       <AttentionHero />
       <AttentionNextCourse />
       <InterestDetails />
-      <CourseSyllabus syllabus={course_en.syllabus} />
+      <CourseSyllabus syllabus={course_es.syllabus} />
       <ActionFormWaitlist />
       <FAQ faqContent={courseFaqContent} />
     </main>
