@@ -3,6 +3,7 @@ import ActionFormWaitlist from "./action-form-waitlist";
 import AttentionHero from "./attention-hero";
 import { AttentionNextCourse } from "./attention-nextcourse";
 import { course_es } from "./course_es";
+import DesireTestimonialsGrid from "./desire-testimonials-grid";
 import InterestDetails from "./interest-details";
 import CourseSyllabus from "./interest-syllabus";
 
@@ -52,11 +53,12 @@ const courseFaqContent = {
 
 export default function Course() {
   return (
-    <main className="flex flex-col h-full w-full">
+    <main className="flex flex-col w-full h-full">
       <AttentionHero />
       <AttentionNextCourse />
       <InterestDetails />
       <CourseSyllabus syllabus={course_es.syllabus} />
+      <DesireTestimonialsGrid />
       <ActionFormWaitlist />
       <FAQ faqContent={courseFaqContent} />
     </main>
