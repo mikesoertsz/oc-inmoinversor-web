@@ -1,5 +1,5 @@
 import { InnerWrap, Wrapper } from "@/lib/atoms";
-import AttentionCoursePreview from "./attention-coursepreview";
+// import AttentionCoursePreview from "./attention-coursepreview";
 
 const heroContent = {
   title: "Curso de Inversión Inmobiliaria",
@@ -24,7 +24,7 @@ export default function AttentionHero() {
           {heroContent.buttonText}
         </a>
         <p className="text-sm opacity-50">{heroContent.offerText}</p>
-        <AttentionCoursePreview />
+        {/* <AttentionCoursePreview /> */}
       </InnerWrap>
     </Wrapper>
   );

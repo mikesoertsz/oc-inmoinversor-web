@@ -21,10 +21,10 @@ export default function ActionFormWaitlist() {
   const [confettiActive, setConfettiActive] = useState(false);
 
   const cta = {
-    heading: "Join the Course Waitlist",
-    body: "Sign up with your email to receive updates and exclusive offers.",
-    button: "Join Course Waitlist",
-    paragraph: "We'll keep you in the loop on course updates.",
+    heading: "Únete a la Lista de Espera del Curso",
+    body: "Regístrate con tu correo electrónico para recibir actualizaciones y ofertas exclusivas.",
+    button: "Unirse a la Lista de Espera del Curso",
+    paragraph: "Te mantendremos informado sobre las actualizaciones del curso.",
   };
 
   const form = useForm({
@@ -60,7 +60,7 @@ export default function ActionFormWaitlist() {
 
   return (
     <Wrapper
-      className="flex flex-col h-full w-full from-brand-bg to-brand-bg1 bg-gradient-to-b"
+      className="flex flex-col w-full h-full from-brand-bg to-brand-bg1 bg-gradient-to-b"
       id="register"
     >
       <InnerWrap className="text-white py-[5dvh]">
@@ -79,23 +79,23 @@ export default function ActionFormWaitlist() {
           ) : (
             <form
               onSubmit={form.handleSubmit(onSubmit)}
-              className="flex justify-center items-center w-full gap-2 max-w-3xl"
+              className="flex items-center justify-center w-full max-w-3xl gap-2"
             >
               <Input
                 type="email"
                 placeholder="Enter your email..."
                 {...form.register("email")}
-                className="px-6 h-12 bg-gray-200 placeholder-gray-500 text-black border-none flex"
+                className="flex h-12 px-6 text-black placeholder-gray-500 bg-gray-200 border-none"
               />
               <Button
                 type="submit"
-                className="bg-brand-highlight text-black text-lg h-12 px-8 rounded hover:bg-gray-200"
+                className="h-12 px-8 text-lg text-black rounded bg-brand-highlight hover:bg-gray-200"
               >
                 {cta.button}
               </Button>
             </form>
           )}
-          <p className="text-gray-200 mt-1 text-sm w-full">{cta.paragraph}</p>
+          <p className="w-full mt-1 text-sm text-gray-200">{cta.paragraph}</p>
         </div>
       </InnerWrap>
     </Wrapper>

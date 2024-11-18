@@ -12,7 +12,7 @@ export async function generateMetadata() {
 
 export default async function Story() {
   const storyContent = {
-    title: "Story of Guillermo Ortiz",
+    title: "Historia de Guillermo Ortiz",
     paragraphs: [
       "Empecé desde muy pequeño expuesto a mucho lujo, porque fui a los mejores colegios en Madrid y en Estados Unidos. A pesar de que mi familia era media clase, siempre estuve rodeado de gente de muy alta clase. Tuve esa suerte.",
       "Desde pequeño siempre quería poder aspirar a eso pero con una condición, que tuviese también el tiempo libre. Veia que muchas familias estaban destructuradas porque los padres “solo” trabajaban y no le dedicaban el tiempo necesario a su familia, que para mi es lo fundamental.",
