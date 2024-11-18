@@ -1,7 +1,7 @@
 import { InnerWrap, Wrapper } from "@/lib/atoms";
 import { Article } from "@/lib/types";
-import { limit } from "@/lib/utils";
 import Image from "next/image";
+import { limit } from "../../lib/utils";
 
 const mostRecentPost = {
   title: "Unlock Expert Real Estate Investment Insights",
@@ -32,15 +32,15 @@ export default function MostRecentPost({ articles }: MostRecentPostProps) {
   return (
     <Wrapper>
       <InnerWrap>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-12">
+        <div className="grid grid-cols-1 gap-8 py-12 md:grid-cols-2">
           <div className="flex-1 text-left">
-            <h2 className="text-sm font-medium text-gray-500 mb-2">
+            <h2 className="mb-2 text-sm font-medium text-gray-500">
               Subscribe
             </h2>
-            <h3 className="text-3xl font-bold mb-4">{mostRecentPost.title}</h3>
+            <h3 className="mb-4 text-3xl font-bold">{mostRecentPost.title}</h3>
             <p className="mb-8">{mostRecentPost.description}</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 w-full">
-              {limit(articles, 2).map((feature, index) => (
+            <div className="grid w-full grid-cols-1 gap-4 mb-8 md:grid-cols-2">
+              {limit(articles, 2).map((feature: Article, index: number) => (
                 <div key={index} className="flex items-start w-full">
                   <div className="w-10 h-10 mr-4">
                     <Image
@@ -58,16 +58,16 @@ export default function MostRecentPost({ articles }: MostRecentPostProps) {
               ))}
             </div>
             <div className="flex space-x-4">
-              <button className="bg-gray-800 text-white px-6 py-2 rounded hover:bg-gray-700">
+              <button className="px-6 py-2 text-white bg-gray-800 rounded hover:bg-gray-700">
                 Learn More
               </button>
-              <button className="bg-transparent border border-gray-800 text-gray-800 px-6 py-2 rounded hover:bg-gray-100">
+              <button className="px-6 py-2 text-gray-800 bg-transparent border border-gray-800 rounded hover:bg-gray-100">
                 Sign Up
               </button>
             </div>
           </div>
-          <div className="flex aspect-video w-full bg-slate-100 h-full">
-            <div className="aspect-video relative rounded-lg overflow-hidden bg-slate-100">
+          <div className="flex w-full h-full aspect-video bg-slate-100">
+            <div className="relative overflow-hidden rounded-lg aspect-video bg-slate-100">
               <Image
                 src={mostRecentPost.imageUrl}
                 alt={mostRecentPost.title}

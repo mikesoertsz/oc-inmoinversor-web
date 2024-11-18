@@ -1,6 +1,6 @@
 export const ROOTS = {
   BASE: "https://inmoinversor.com",
-  ABOUT: "/about",
+  ABOUT: "/story",
   BLOG: "/blog",
 };
 

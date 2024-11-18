@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import FAQ from "../(shared)/faq";
 import ActionFormWaitlist from "./action-form-waitlist";
 import AttentionHero from "./attention-hero";
@@ -54,13 +55,15 @@ const courseFaqContent = {
 export default function Course() {
   return (
     <main className="flex flex-col w-full h-full">
-      <AttentionHero />
-      <AttentionNextCourse />
-      <InterestDetails />
-      <CourseSyllabus syllabus={course_es.syllabus} />
-      <DesireTestimonialsGrid />
-      <ActionFormWaitlist />
-      <FAQ faqContent={courseFaqContent} />
+      <Suspense>
+        <AttentionHero />
+        <AttentionNextCourse />
+        <InterestDetails />
+        <CourseSyllabus syllabus={course_es.syllabus} />
+        <DesireTestimonialsGrid />
+        <ActionFormWaitlist />
+        <FAQ faqContent={courseFaqContent} />
+      </Suspense>
     </main>
   );
 }
