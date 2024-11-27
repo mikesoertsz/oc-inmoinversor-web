@@ -7,6 +7,8 @@ import { course_es } from "./course_es";
 import DesireTestimonialsGrid from "./desire-testimonials-grid";
 import InterestDetails from "./interest-details";
 import CourseSyllabus from "./interest-syllabus";
+import GridBlocks from "../(shared)/grid-blocks";
+import InterestWhyCreatedCourse from "./interest-whystory";
 
 const courseFaqContent = {
   title: "Preguntas Frecuentes",
@@ -58,7 +60,9 @@ export default function Course() {
       <Suspense>
         <AttentionHero />
         <AttentionNextCourse />
+        <GridBlocks />
         <InterestDetails />
+        <InterestWhyCreatedCourse />
         <CourseSyllabus syllabus={course_es.syllabus} />
         <DesireTestimonialsGrid />
         <ActionFormWaitlist />

@@ -5,6 +5,7 @@ import Footer from "./(shared)/footer";
 import NavMain from "./(shared)/nav-main";
 import "./globals.css";
 import "./prose.css";
+import DesireBanner from "./course/desire-banner";
 
 export const metadata: Metadata = {
   title: "Inmo Inversor | Aprende a invertir en bienes raices en España",
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body
         className={`${title.variable} ${body.variable} subpixel-antialiased font-title`}
       >
+        <DesireBanner />
         <NavMain />
         {children}
         <Footer />

@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { InnerWrap, Wrapper } from "@/lib/atoms";
 import Image from "next/image";
@@ -65,7 +64,7 @@ export default function Story() {
           </div>
           <div className="flex flex-col w-full gap-4 mt-6">
             {storyContent.paragraphs.map((paragraph, index) => (
-              <p key={index} className="text-lg text-slate-300">
+              <p key={index} className="text-lg text-slate-400 drop-shadow-sm">
                 {paragraph}
               </p>
             ))}

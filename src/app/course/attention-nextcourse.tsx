@@ -4,7 +4,7 @@ export function AttentionNextCourse() {
   const detalles = [
     {
       pretitle: "Fecha",
-      title: "10 Diciembre 2024",
+      title: "10 January 2025",
       description: "Marca tu calendario.",
       icon: "",
       value: "",
