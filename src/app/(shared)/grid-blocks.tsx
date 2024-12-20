@@ -68,7 +68,7 @@ export default function GridBlocks({
           {gridItems.map((item, index) => (
             <li
               key={index}
-              className="flex flex-col items-start justify-start rounded-xl bg-slate-50 border border-slate-200 text-gray-800 p-8 py-6"
+              className="flex flex-col items-start justify-start rounded-xl bg-slate-50 border border-slate-200 text-slate-800 p-8 py-6"
             >
               <h2 className="text-lg font-medium">{item.title}</h2>
               <p className="text-sm pt-1">{item.subtitle}</p>

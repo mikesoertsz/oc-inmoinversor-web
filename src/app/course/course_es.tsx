@@ -3,7 +3,8 @@ export const course_es = {
     header: "Programa del Taller",
     chapters: [
       {
-        title: "Bienvenida, Descripción del Programa, Recorrido por la Plataforma y Preguntas Frecuentes",
+        title:
+          "Bienvenida, Descripción del Programa, Recorrido por la Plataforma y Preguntas Frecuentes",
         description: "",
         sections: [
           {
@@ -218,7 +219,8 @@ export const course_es = {
             preview: false,
             previewlink: "",
             type: "lecture",
-            title: "Planificación de Tiempo y Presupuesto para el Éxito en Flipping",
+            title:
+              "Planificación de Tiempo y Presupuesto para el Éxito en Flipping",
             duration: 0,
             watchlink: "",
           },
@@ -266,7 +268,8 @@ export const course_es = {
             preview: false,
             previewlink: "",
             type: "lecture",
-            title: "Alquileres a Largo Plazo vs. Corto Plazo: ¿Cuál es el Adecuado para Ti?",
+            title:
+              "Alquileres a Largo Plazo vs. Corto Plazo: ¿Cuál es el Adecuado para Ti?",
             duration: 0,
             watchlink: "",
           },
@@ -394,7 +397,8 @@ export const course_es = {
             preview: false,
             previewlink: "",
             type: "lecture",
-            title: "Entendiendo las Opciones de Financiamiento y Cómo Obtenerlas",
+            title:
+              "Entendiendo las Opciones de Financiamiento y Cómo Obtenerlas",
             duration: 0,
             watchlink: "",
           },
@@ -426,7 +430,8 @@ export const course_es = {
             preview: false,
             previewlink: "",
             type: "lecture",
-            title: "Historias de Éxito: Financiamiento de Inversiones Inmobiliarias",
+            title:
+              "Historias de Éxito: Financiamiento de Inversiones Inmobiliarias",
             duration: 0,
             watchlink: "",
           },
@@ -442,7 +447,8 @@ export const course_es = {
             preview: false,
             previewlink: "",
             type: "lecture",
-            title: "Creando una Lista de Verificación Personalizada para Comprar",
+            title:
+              "Creando una Lista de Verificación Personalizada para Comprar",
             duration: 0,
             watchlink: "",
           },
@@ -650,7 +656,8 @@ export const course_es = {
             preview: false,
             previewlink: "",
             type: "lecture",
-            title: "Ejemplos del Mundo Real de Planificación Fiscal Inteligente",
+            title:
+              "Ejemplos del Mundo Real de Planificación Fiscal Inteligente",
             duration: 0,
             watchlink: "",
           },
@@ -755,7 +762,8 @@ export const course_es = {
         free: false,
       },
       {
-        title: "Plan Integral + Hoja de Ruta Financiera + Compañero de Responsabilidad",
+        title:
+          "Plan Integral + Hoja de Ruta Financiera + Compañero de Responsabilidad",
         description: "",
         sections: [
           {
@@ -849,6 +857,28 @@ export const course_es = {
         ],
         totalduration: 220,
         free: false,
+      },
+    ],
+  },
+  testimonials: {
+    list: [
+      {
+        avatar: "",
+        name: "Luisma",
+        role: "",
+        quotelong:
+          "En vertigo, sentío para mí ha sido bastante más que un curso. Empecé de una forma muy, muy potente y te planteas muchas cosas. A mí me recordó poco a la película de Karate Kid, cuando, cuando el chaval decía, a lo decir, al tercer apular será que tiene que ver esto con el Karate, pues en este curso, a mí me paso al principio un poco esto de que tiene que ver todo esto con las inversiones y realmente para mí ha sido increíble la forma tan potente en la que empieza haciendo un cambio de mentalidad para dar te cuenta de todo lo que puedes hacer como inversor y como te hacen cambiar la mentalidad para ser inversor. Lo más importante obviamente es que en que en que en que en te ayuda a ello, tanto a gel María como Guillermo son las personas que son son por su cercanía, por su humanidad, y porque te demuestran lo buena persona que son y no buena persona que puede ser siendo un inversor, el ser inversor no quiere decir, no quiere decir nada malo, no quiere decir que se es un trepa, que se es un tío agresivo, en absoluto, ellos te enseñan un poco a valorar todo lo bueno que se puede hacer también haciendo inversiones, eso es bueno para todos. Y bueno, a mi me ha llevado bastante el nivel de en realidad, que nos han enculcado, pero luego también hace el canía y sobre todo la humanidad, porque en este sector es algo que a lo mejor no está tan tan la flor de piel o tan bien explicado desde algunos sectores, no que puede ser, hasta puede estar mal visto, pero a mí la verdad es que me han encantado, me han cambiado totalmente la mentalidad de respeto las inversiones, respeto a tu espetal mismo, me he hecho cambiar muchas falsetas de mi vida en cuanto a profesional y a personal, para precisamente poder llevar a ser un buen inversor, así que no se me ocurre mucho más que deciros, porque lo mejor es y lo descubriendo y que os deje solprender también porque muchas cosas que la gente que empieza al curso no sabe lo que les espera y es mucho más que un curso de inversión, así que lo recomiendo.",
+        quoteshort:
+          "Este curso me cambió la mentalidad sobre las inversiones, transformándome en un mejor inversor tanto profesional como personalmente.",
+      },
+      {
+        avatar: "",
+        name: "Carlos Niearnau",
+        role: "",
+        quotelong:
+          "Hola, hola a todos, espero que estés bien, mi nombre es Carlos Mirnau y no soy participante de la primera edición de DCS y os voy a explicar realmente mi experiencia para que tengáis una, no te viene a referencia, eh, un poco sobremina al final de la mis simplemente el sal de un desmobiliario y es quería comprar un, quiero comprar un piso para obtener una fonte ingresos adicional. Yo vi el, un acercuso a través del que bien, no conocía y hermoso, pero había un vídeo que había colado a él, me interesa en términos de YouTube, como su mente muchos de nosotros ahora estáis viendo, y nada al mente me gustaron mucho, me parecieron y hermoso en la gemalía de las personas estetinales que saben mucho el tema, y nada entonces me comentaron para contarme el curso Hacido en las experiencias estetinales de 3 meses, pero aún sí, y nada al final como no se se ha visto el plan y no así, pero cubre, digamos, las diferentes áreas que saber, pero bueno, al final comentaros que lo más importante no es la teoría, ya que la teoría la podéis encontrar en cualquier otro sitio, en internet, en libros y de manera gratuita, y un poco lo que os quería destacar y que es lo que más me ha gustado el curso, es el grupo que se quería, ya que al final considero poco creeré es una comunidad, la con descontarte con nosotros que somos ICS uno y en allo durante estos tres meses ya unas horas y hemos tenido un grupo de las ventias personas que hemos participado, pasamos oportunidades cada una, cada día noticias, entonces el cine estamos muy en contacto, incluso ahora estamos participando en la comprar en piso en Madrid. Entonces al final un poco yo lo que os vendría el curso es realmente esta experiencia de comunidad que es la que se crea y si es verdad que sobre todo para la gente Madrid es un poco más fuerte porque su la vez más gente ahí y al final en Madrid ya habréis que también ahí no más oportunidades pero está una cosita más. Pero en ese de Barcelona también no tiene unas cuentas este final tenemos un grupo aquí que también hemos hecho a una querada y esperamos seguir bien donos y al final es un poco lo más importante para mí esto. El grupo el grupo que hemos creado y nada que, al final, después de todo lo que se aprende las diferentes clases que tenéis que basabado o el día que digáis, al final si tenéis cualquier tipo de dudas, siempre tenéis a hacer María o a Guillermo, al final, son dos personas que hemos argumentado, sabe, en mucho, ya tienen más de más experiencia en el tema y que os van a ayudar mucho, sí, siempre es en el curso. Y nada, así para acabar ya, lo recomiendo, recomiendo que, que es la puntés ya que es una buena experiencia, que al final en los lados de tomar, no como un coste al mismo, sino como una impresión a futuro, bueno, muchas gracias y a ver si no es el más pante, no, la feo.",
+        quoteshort:
+          "Recomiendo el curso por la experiencia de comunidad que se crea y el apoyo constante de los instructores.",
       },
     ],
   },

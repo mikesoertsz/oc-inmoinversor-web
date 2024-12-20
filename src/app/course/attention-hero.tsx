@@ -1,4 +1,5 @@
 import { InnerWrap, Wrapper } from "@/lib/atoms";
+import AttentionCoursePreview from "./attention-coursepreview";
 // import AttentionCoursePreview from "./attention-coursepreview";
 
 const heroContent = {
@@ -11,7 +12,7 @@ const heroContent = {
 
 export default function AttentionHero() {
   return (
-    <Wrapper className="bg-gradient-to-b from-black to-brand-bg1 py-[8dvh]">
+    <Wrapper className="bg-gradient-to-b from-black to-brand-bg1 py-[5dvh]">
       <InnerWrap className="items-center justify-center max-w-4xl text-center text-white">
         <h1 className="mb-4 text-5xl font-semibold tracking-tight">
           {heroContent.title}
@@ -19,12 +20,12 @@ export default function AttentionHero() {
         <p className="mb-8 text-lg max-w-prose">{heroContent.description}</p>
         <a
           href="#register"
-          className="px-8 py-3 mt-12 mb-4 font-medium text-black transition duration-300 ease-in-out rounded-md bg-brand-highlight hover:bg-gray-50"
+          className="px-12 py-4 mt-12 mb-4 font-medium text-black transition duration-300 ease-in-out rounded-md bg-brand-highlight hover:bg-gray-50"
         >
           {heroContent.buttonText}
         </a>
-        <p className="text-sm opacity-50">{heroContent.offerText}</p>
-        {/* <AttentionCoursePreview /> */}
+        <p className="text-sm opacity-80">{heroContent.offerText}</p>
+        <AttentionCoursePreview />
       </InnerWrap>
     </Wrapper>
   );

@@ -33,7 +33,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "articles/ciclo-inmobiliario-sincronizar-inversiones.mdx", "articles/impuestos-gastos-ocultos-inversion-inmobiliaria.mdx"  ],
   "exclude": [
     "node_modules"
   ]

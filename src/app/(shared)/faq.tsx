@@ -93,7 +93,7 @@ export default function FAQ({ faqContent = defaultFaqContent }: FAQProps) {
                 value={item.id}
                 className="px-4 mt-2 transition ease-in-out bg-white border border-gray-200 rounded-lg shadow-sm duratin-300 first:mt-0 hover:shadow-md"
               >
-                <AccordionTrigger className="flex w-full items-center justify-between py-4 font-medium text-left text-slate-900 hover:underline">
+                <AccordionTrigger className="flex w-full items-center justify-between py-4 font-medium text-left text-slate-900">
                   {item.question}
                 </AccordionTrigger>
                 <AccordionContent className="pb-4 text-left text-slate-700">
