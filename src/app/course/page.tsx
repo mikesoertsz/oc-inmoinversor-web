@@ -23,6 +23,10 @@ export default function Course() {
         {/* <InterestWhyCreatedCourse /> */}
         <DesireTestimonialVideo />
         <CourseSyllabus syllabus={course_es.syllabus} />
+        <DesireTestimonialVideo
+          videoPosition="right"
+          testimonial={course_es.testimonials.list[7]}
+        />
         <DesireTestimonialsGrid />
         <ActionFormWaitlist />
         <DesireCTAFinal />

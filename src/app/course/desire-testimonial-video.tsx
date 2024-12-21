@@ -1,22 +1,24 @@
 "use client";
 import { InnerWrap, Wrapper } from "@/lib/atoms";
+import clsx from "clsx";
 import Image from "next/image";
 import ReactPlayer from "react-player";
-import clsx from "clsx";
 
 type Testimonial = {
   avatar: string;
   name: string;
-  quote: string;
-  videoUrl: string;
+  quoteshort: string;
+  quotelong: string;
+  video: string;
 };
 
 const defaultTestimonialContent: Testimonial = {
   avatar: "/img/testimonials/jose-lopez.png",
   name: "Jose Lopez",
-  quote:
+  quoteshort:
     "Desde el principio me sirvió mucho, aprendí creo que todo el necesario para empezar a invertir, luego además tuve toda la ayuda personal de Guillermo a la hora de tomar la decisión.",
-  videoUrl: "/vids/jose_1.mp4", // Local video URL
+  quotelong: "",
+  video: "/vids/jose_1.mp4", // Local video URL
 };
 
 type DesireTestimonialSingleProps = {
@@ -29,12 +31,12 @@ export default function DesireTestimonialVideo({
   videoPosition = "left",
 }: DesireTestimonialSingleProps) {
   return (
-    <Wrapper>
-      <InnerWrap>
+    <Wrapper className="py-0">
+      <InnerWrap className="py-0">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full bg-slate-50 rounded-xl p-4 border border-slate-200">
           <div
             className={clsx(
-              "w-full aspect-video overflow-hidden rounded-xl shadow-md border-white col-span-2 border-4",
+              "w-full aspect-video overflow-hidden rounded-xl shadow-md border-white col-span-2 border-4 relative",
               {
                 "order-1": videoPosition === "left",
                 "order-2": videoPosition === "right",
@@ -42,7 +44,7 @@ export default function DesireTestimonialVideo({
             )}
           >
             <ReactPlayer
-              url={testimonial.videoUrl}
+              url={testimonial.video}
               width="100%"
               height="100%"
               controls
@@ -76,7 +78,7 @@ export default function DesireTestimonialVideo({
                   </span>
                 ))}
             </div>
-            <p className="text-xs leading-relaxed">{testimonial.quote}</p>
+            <p className="text-xs leading-relaxed">{testimonial.quoteshort}</p>
           </div>
         </div>
       </InnerWrap>

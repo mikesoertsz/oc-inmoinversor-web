@@ -1,10 +1,9 @@
 "use client";
-import React from "react";
-import { InnerWrap, Wrapper } from "@/lib/atoms";
-import { Button } from "@/components/ui/button";
-import { GoCheck } from "react-icons/go";
 import { TitleBlock } from "@/components/ui/titleblock";
-import { Pencil, User, CreditCard, Rocket } from "lucide-react";
+import { InnerWrap, Wrapper } from "@/lib/atoms";
+import { CreditCard, Pencil, Rocket, User } from "lucide-react";
+import Link from "next/link";
+import { GoCheck } from "react-icons/go";
 
 type CTAContent = {
   preheading: string;
@@ -90,8 +89,8 @@ export default function DesireCTAFinal({
         />
 
         <div className="rounded-2xl bg-slate-50 p-4 shadow-lg">
-          <div className="relative mt-8 flex px-4">
-            <ul className="flex justify-center gap-8 relative z-10 ">
+          <div className="relative flex px-4 rounded-lg border border-slate-200 p-4">
+            <ul className="grid grid-cols-2 md:grid-cols-4 gap-4 relative z-10">
               {steps.map((step, index) => (
                 <li
                   key={index}
@@ -100,7 +99,7 @@ export default function DesireCTAFinal({
                   <p className="text-[11px] text-gray-500 pb-3">
                     Paso {index + 1}
                   </p>
-                  <div className="text-4xl  rounded-full flex items-center justify-center text-black">
+                  <div className="rounded-full flex items-center justify-center text-black">
                     {step.icon}
                   </div>
                   <h4 className="text-sm font-medium font-body mt-2">
@@ -133,9 +132,12 @@ export default function DesireCTAFinal({
                     </li>
                   ))}
                 </ul>
-                <Button className="bg-brand-highlight hover:bg-gray-900 hover:text-white shadow-none text-black px-4 py-4 rounded-lg  transition flex items-center justify-center w-full">
+                <Link
+                  href="#register"
+                  className="px-12 py-4 mt-12 font-medium text-black transition duration-300 ease-in-out rounded-md bg-brand-highlight hover:bg-green-400 flex w-full items-center justify-center"
+                >
                   Comenzar
-                </Button>
+                </Link>
               </li>
             ))}
           </ul>

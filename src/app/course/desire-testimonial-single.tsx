@@ -4,14 +4,20 @@ import Image from "next/image";
 type Testimonial = {
   avatar: string;
   name: string;
-  quote: string;
+  role: string | null;
+  quoteshort: string | null;
+  quotelong: string;
+  video: string;
 };
 
 const defaultTestimonialContent: Testimonial = {
   avatar: "/img/testimonials/amaia.png",
   name: "Amaia",
-  quote:
+  quoteshort:
     "El curso de Invacter Concentido tiene mucho valor y significado. El mensaje que nos han transmitido me ha ayudado mucho, y el grupo que hemos formado es espectacular. Muchas gracias a Aguilar Moya Germania por todo.",
+  quotelong: "",
+  role: "",
+  video: "",
 };
 
 type DesireTestimonialSingleProps = {
@@ -44,7 +50,7 @@ export default function DesireTestimonialSingle({
                 </span>
               ))}
           </div>
-          <p className="text-sm leading-relaxed">{testimonial.quote}</p>
+          <p className="text-sm leading-relaxed">{testimonial.quoteshort}</p>
         </div>
       </InnerWrap>
     </Wrapper>
