@@ -916,6 +916,15 @@ export const course_es = {
         quoteshort:
           "El curso de Invacter Concentido tiene mucho valor y significado. El mensaje que nos han transmitido me ha ayudado mucho, y el grupo que hemos formado es espectacular. Muchas gracias a Aguilar Moya Germania por todo.",
       },
+      {
+        avatar: "/img/testimonials/jose-lopez.png",
+        name: "Jose Lopez",
+        role: "",
+        quotelong:
+          "Ah, soy José, tengo 29 años, y fue el alumno de la primera edición del curso de Guillermo, allá por 2020, y cede el curso porque quería invertir en real estate, había invertido de muchas cosas antes, escrito, bolsa, tfs, hasta en whisky, creó blending. Y bueno, tenía algo de dinero horrado o 8.000 euros, y me había leído ya el libro de que yo saquía, había visto varios vídeos de inversión inmobiliaría en YouTube, y quería al paso, llegó a mis oídos el curso de Guillermo entre otros, que Guillermo fue además de los primeros y escogí este curso porque pude hablar con el personalmente, me sentí identificado con su historia, yo también he trabajado en consultores satézicas durante dos años en aquel momento, llevaba ya trabajando y eso donde he dedicado más de 12 horas al día, pues, durante esos dos años y vi la enversión como una vía de escape a esa vida que ya no me gustaba. Y bueno, desde el principio me sirvió mucho, aprendí creo que todo el necesario para empezar a invertir, luego además tuve toda la ayuda personal de Guillermo a la hora de tomar la decisión, que toma la decisión un poco más tarde porque estaba ahorrar un poco más, le presenta el caso, medio luz verde y eso da esa confianza que necesitas como para el antalte.",
+        quoteshort:
+          "Desde el principio me sirvió mucho, aprendí creo que todo el necesario para empezar a invertir, luego además tuve toda la ayuda personal de Guillermo a la hora de tomar la decisión.",
+      },
     ],
   },
   faq: {

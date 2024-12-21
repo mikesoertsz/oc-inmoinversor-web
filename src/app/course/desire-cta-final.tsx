@@ -133,7 +133,7 @@ export default function DesireCTAFinal({
                     </li>
                   ))}
                 </ul>
-                <Button className="bg-yellow-400 shadow-none text-black px-4 py-4 rounded-lg hover:bg-yellow-300 transition flex items-center justify-center w-full">
+                <Button className="bg-brand-highlight hover:bg-gray-900 hover:text-white shadow-none text-black px-4 py-4 rounded-lg  transition flex items-center justify-center w-full">
                   Comenzar
                 </Button>
               </li>

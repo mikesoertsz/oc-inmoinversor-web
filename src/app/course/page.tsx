@@ -9,6 +9,7 @@ import DesireCTAFinal from "./desire-cta-final";
 import DesireTestimonialSingle from "./desire-testimonial-single";
 import DesireTestimonialsGrid from "./desire-testimonials-grid";
 import CourseSyllabus from "./interest-syllabus";
+import DesireTestimonialVideo from "./desire-testimonial-video";
 
 export default function Course() {
   return (
@@ -20,6 +21,7 @@ export default function Course() {
         <GridBlocks />
         {/* <InterestDetails /> */}
         {/* <InterestWhyCreatedCourse /> */}
+        <DesireTestimonialVideo />
         <CourseSyllabus syllabus={course_es.syllabus} />
         <DesireTestimonialsGrid />
         <ActionFormWaitlist />
