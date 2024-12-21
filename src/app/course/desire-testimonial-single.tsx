@@ -8,9 +8,10 @@ type Testimonial = {
 };
 
 const defaultTestimonialContent: Testimonial = {
-  avatar: "/img/guillermo.jpg",
-  name: "John Doe",
-  quote: "This is a default testimonial quote.",
+  avatar: "/img/testimonials/amaia.png",
+  name: "Amaia",
+  quote:
+    "El curso de Invacter Concentido tiene mucho valor y significado. El mensaje que nos han transmitido me ha ayudado mucho, y el grupo que hemos formado es espectacular. Muchas gracias a Aguilar Moya Germania por todo.",
 };
 
 type DesireTestimonialSingleProps = {
