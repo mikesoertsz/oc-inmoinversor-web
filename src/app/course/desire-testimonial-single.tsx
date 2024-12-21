@@ -24,14 +24,16 @@ export default function DesireTestimonialSingle({
   return (
     <Wrapper>
       <InnerWrap>
-        <Image
-          src={testimonial.avatar}
-          alt={testimonial.name}
-          width={50}
-          height={50}
-          className="rounded-full"
-        />
-        <div className="flex flex-col text-center items-center justify-center gap-2 mt-4">
+        <div className="flex items-center justify-center relative rounded-full overflow-hidden w-14 h-14 border-4 shadow-md border-white">
+          <Image
+            src={testimonial.avatar}
+            alt={testimonial.name}
+            fill
+            className="absolute inset-0"
+            style={{ objectFit: "cover" }}
+          />
+        </div>
+        <div className="flex flex-col text-center items-center justify-center gap-2 mt-4 max-w-prose">
           <h3 className="text-lg font-semibold">{testimonial.name}</h3>
           <div className="flex">
             {Array(5)
@@ -42,7 +44,7 @@ export default function DesireTestimonialSingle({
                 </span>
               ))}
           </div>
-          <p className="text-sm">{testimonial.quote}</p>
+          <p className="text-sm leading-relaxed">{testimonial.quote}</p>
         </div>
       </InnerWrap>
     </Wrapper>

@@ -3,27 +3,27 @@ import Image from "next/image";
 
 export default function DesireTestimonialsGrid() {
   const testimonials = [
-    {
-      name: "Luisma",
-      role: "",
-      testimonial:
-        "Este curso me cambió la mentalidad sobre las inversiones, transformándome en un mejor inversor tanto profesional como personalmente. Me han cambiado totalmente la mentalidad de respeto las inversiones, respeto a tu espetal mismo, me he hecho cambiar muchas falsetas de mi vida en cuanto a profesional y a personal, para precisamente poder llevar a ser un buen inversor.",
-      img: "/img/testimonials/luisma.png",
-    },
-    {
-      name: "Carlos Miearnau",
-      role: "",
-      testimonial:
-        "Recomiendo el curso por la experiencia de comunidad que se crea y el apoyo constante de los instructores. Lo que más me ha gustado del curso es el grupo que se crea, ya que considero que es una comunidad. Hemos tenido un grupo de las ventias personas que hemos participado, pasamos oportunidades cada una, cada día noticias, entonces el cine estamos muy en contacto.",
-      img: "/img/testimonials/carlos-miearnau.png",
-    },
-    {
-      name: "Mar",
-      role: "",
-      testimonial:
-        "Este curso ha cambiado mi mentalidad. Ahora siento que soy inversora inmobiliaria, ahora siento que de verdad puedo invertir en pisos de hecho, ya hemos empezado a hacerlo y que esto es lo que yo quería.",
-      img: "/img/testimonials/mar.png",
-    },
+{
+  name: "Luisma",
+  role: "",
+  testimonial:
+    "Este curso me transformó en un mejor inversor, cambiando mi mentalidad tanto profesional como personalmente.",
+  img: "/img/testimonials/luisma.png",
+},
+{
+  name: "Carlos Miearnau",
+  role: "",
+  testimonial:
+    "Recomiendo el curso por la comunidad que se crea y el apoyo constante de los instructores.",
+  img: "/img/testimonials/carlos-miarnau.png",
+},
+{
+  name: "Mar",
+  role: "",
+  testimonial:
+    "Este curso ha cambiado mi mentalidad. Ahora siento que soy inversora inmobiliaria y puedo invertir en pisos.",
+  img: "/img/testimonials/mar.png",
+},
   ];
   return (
     <Wrapper className="py-12 bg-gradient-to-t from-slate-100 to-white">
