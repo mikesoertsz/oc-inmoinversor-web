@@ -25,7 +25,9 @@ export default function AttentionHero() {
           {heroContent.buttonText}
         </a>
         <p className="text-sm opacity-80">{heroContent.offerText}</p>
-        <AttentionCoursePreview />
+        <div className="hidden">
+          <AttentionCoursePreview />
+        </div>
       </InnerWrap>
     </Wrapper>
   );

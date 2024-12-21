@@ -863,23 +863,102 @@ export const course_es = {
   testimonials: {
     list: [
       {
-        avatar: "",
+        avatar: "/img/testimonials/luisma.png",
         name: "Luisma",
         role: "",
         quotelong:
           "En vertigo, sentío para mí ha sido bastante más que un curso. Empecé de una forma muy, muy potente y te planteas muchas cosas. A mí me recordó poco a la película de Karate Kid, cuando, cuando el chaval decía, a lo decir, al tercer apular será que tiene que ver esto con el Karate, pues en este curso, a mí me paso al principio un poco esto de que tiene que ver todo esto con las inversiones y realmente para mí ha sido increíble la forma tan potente en la que empieza haciendo un cambio de mentalidad para dar te cuenta de todo lo que puedes hacer como inversor y como te hacen cambiar la mentalidad para ser inversor. Lo más importante obviamente es que en que en que en que en te ayuda a ello, tanto a gel María como Guillermo son las personas que son son por su cercanía, por su humanidad, y porque te demuestran lo buena persona que son y no buena persona que puede ser siendo un inversor, el ser inversor no quiere decir, no quiere decir nada malo, no quiere decir que se es un trepa, que se es un tío agresivo, en absoluto, ellos te enseñan un poco a valorar todo lo bueno que se puede hacer también haciendo inversiones, eso es bueno para todos. Y bueno, a mi me ha llevado bastante el nivel de en realidad, que nos han enculcado, pero luego también hace el canía y sobre todo la humanidad, porque en este sector es algo que a lo mejor no está tan tan la flor de piel o tan bien explicado desde algunos sectores, no que puede ser, hasta puede estar mal visto, pero a mí la verdad es que me han encantado, me han cambiado totalmente la mentalidad de respeto las inversiones, respeto a tu espetal mismo, me he hecho cambiar muchas falsetas de mi vida en cuanto a profesional y a personal, para precisamente poder llevar a ser un buen inversor, así que no se me ocurre mucho más que deciros, porque lo mejor es y lo descubriendo y que os deje solprender también porque muchas cosas que la gente que empieza al curso no sabe lo que les espera y es mucho más que un curso de inversión, así que lo recomiendo.",
         quoteshort:
-          "Este curso me cambió la mentalidad sobre las inversiones, transformándome en un mejor inversor tanto profesional como personalmente.",
+          "Este curso me cambió la mentalidad sobre las inversiones, transformándome en un mejor inversor tanto profesional como personalmente. Me han cambiado totalmente la mentalidad de respeto las inversiones, respeto a tu espetal mismo, me he hecho cambiar muchas falsetas de mi vida en cuanto a profesional y a personal, para precisamente poder llevar a ser un buen inversor.",
       },
       {
-        avatar: "",
-        name: "Carlos Niearnau",
+        avatar: "/img/testimonials/carlos-miearnau.png",
+        name: "Carlos Miearnau",
         role: "",
         quotelong:
           "Hola, hola a todos, espero que estés bien, mi nombre es Carlos Mirnau y no soy participante de la primera edición de DCS y os voy a explicar realmente mi experiencia para que tengáis una, no te viene a referencia, eh, un poco sobremina al final de la mis simplemente el sal de un desmobiliario y es quería comprar un, quiero comprar un piso para obtener una fonte ingresos adicional. Yo vi el, un acercuso a través del que bien, no conocía y hermoso, pero había un vídeo que había colado a él, me interesa en términos de YouTube, como su mente muchos de nosotros ahora estáis viendo, y nada al mente me gustaron mucho, me parecieron y hermoso en la gemalía de las personas estetinales que saben mucho el tema, y nada entonces me comentaron para contarme el curso Hacido en las experiencias estetinales de 3 meses, pero aún sí, y nada al final como no se se ha visto el plan y no así, pero cubre, digamos, las diferentes áreas que saber, pero bueno, al final comentaros que lo más importante no es la teoría, ya que la teoría la podéis encontrar en cualquier otro sitio, en internet, en libros y de manera gratuita, y un poco lo que os quería destacar y que es lo que más me ha gustado el curso, es el grupo que se quería, ya que al final considero poco creeré es una comunidad, la con descontarte con nosotros que somos ICS uno y en allo durante estos tres meses ya unas horas y hemos tenido un grupo de las ventias personas que hemos participado, pasamos oportunidades cada una, cada día noticias, entonces el cine estamos muy en contacto, incluso ahora estamos participando en la comprar en piso en Madrid. Entonces al final un poco yo lo que os vendría el curso es realmente esta experiencia de comunidad que es la que se crea y si es verdad que sobre todo para la gente Madrid es un poco más fuerte porque su la vez más gente ahí y al final en Madrid ya habréis que también ahí no más oportunidades pero está una cosita más. Pero en ese de Barcelona también no tiene unas cuentas este final tenemos un grupo aquí que también hemos hecho a una querada y esperamos seguir bien donos y al final es un poco lo más importante para mí esto. El grupo el grupo que hemos creado y nada que, al final, después de todo lo que se aprende las diferentes clases que tenéis que basabado o el día que digáis, al final si tenéis cualquier tipo de dudas, siempre tenéis a hacer María o a Guillermo, al final, son dos personas que hemos argumentado, sabe, en mucho, ya tienen más de más experiencia en el tema y que os van a ayudar mucho, sí, siempre es en el curso. Y nada, así para acabar ya, lo recomiendo, recomiendo que, que es la puntés ya que es una buena experiencia, que al final en los lados de tomar, no como un coste al mismo, sino como una impresión a futuro, bueno, muchas gracias y a ver si no es el más pante, no, la feo.",
         quoteshort:
-          "Recomiendo el curso por la experiencia de comunidad que se crea y el apoyo constante de los instructores.",
+          "Recomiendo el curso por la experiencia de comunidad que se crea y el apoyo constante de los instructores. Lo que más me ha gustado del curso es el grupo que se crea, ya que considero que es una comunidad. Hemos tenido un grupo de las ventias personas que hemos participado, pasamos oportunidades cada una, cada día noticias, entonces el cine estamos muy en contacto.",
+      },
+      {
+        avatar: "",
+        name: "Mar",
+        role: "",
+        quotelong:
+          "Hola, cuando yo llegue a Madrid, te estoy aria trabajar, me alquilea habitaciones y también pisos como tantos otros. Y aquel proceso, a mí me encantaba, en aquella época no me interne, te había que levantarse su perpronto, había que coger a la segunda mano, a comprarse una mano, había que subrayarlo, o costar llamando, ir a ver el piso, antes conocer la zona, todo ese proceso me encantaba, me encantaba todo ese mundo de los pisos, de verlos, Sentía que algún día yo quería hacer eso, pero quería hacerlo como propitaria, quería tener mis propios pisos para alquilarlo si ayudar a la gente que, como yo llegaba, matriz, a estudiar y a trabajar. Es mi producción emocion tan increíble. Recuerdo que lo comenté con un matrimonio que fueron unos de mis mejores caseros y me dijeron pues si te gusta esto, lo que tienes que hacer es comprar un piso pequeñito, lo ponés en alquiler y se va pagando. o compras un un poquito más grande, también lo ponés en alquiler y se va pagando solo. Y, bueno, a mí, a que yo era algo que me emocionaba, pero aquella me parecía muy alejado de mí. Era como un sueño y en alcanzable. La idea estaba ahí, pero bueno, en aquel momento me parecía en alcanzable y mucho tiempo después. Por eso, cuando uno es meses de igual a mí el curso invertir con sentido de Angel Maria de Guillermo, sentir que tenía que hacer ese curso. sentir que me iba a cambiar la vida. No sé por qué, pero lo sentí. Y la verdad es que no puedo estar, ni más contenta, ni más agradecida. Los profesores son maravillosos, nos han aportado muchísimo valor, hemos aprendido un montón, hemos aprendido estrategias y movilarias, hemos aprendido de financiación, hemos aprendido de fiscalidad, nos han traído invitados increíbles que nos han enseñado muchísimo. Acambiado, puedo decir que a cambio de mi vida. Hemos creado un equipo fantástico entre los profesores y los alumnos, un equipo que sigue funcionando. Por eso lo que he dicho, no puede estar más agradecida. Pero sobre todo, por algo que para mí es un lamentable y es que este curso ha cambiado mi mentalidad. Aquello que me parece en alcanzable, ahora ya no me lo parece. Ahora siento que soy inversora inmobiliaria, ahora siento que de verdad puedo invertir en pisos de hecho, ya hemos empezado a hacerlo y que esto es lo que yo quería, así que recomiendo absolutamente el curso invertir con sentido, nos saludó a todos.",
+        quoteshort:
+          "Este curso ha cambiado mi mentalidad. Ahora siento que soy inversora inmobiliaria, ahora siento que de verdad puedo invertir en pisos de hecho, ya hemos empezado a hacerlo y que esto es lo que yo quería.",
+      },
+      {
+        avatar: "/img/testimonials/andrea.png",
+        name: "Andrea",
+        role: "",
+        quotelong:
+          "Hola, soy Andrea, y hago este video para contarte mi experiencia sobre el curso de ICS, invertir con sentido. Había hecho ya mi primer inversión inmobiliaria, y me apunté al curso de ICS para adentrarme más en este tema. Puedo ser que aprendió muchísimo, y lo más importante ha sido, programa armimente con el mindset inversor. Antes de Marie Guillermo son personas muy cercanas, que inclusive nos han compartido operaciones para acompañarnos en el proceso de la inversión inmobiliaria. Yo estoy muy contenta que agradecida con todo lo que nos han compartido, por lo que recomiendo este curso siempre siendo, muchas gracias.",
+        quoteshort:
+          "Puedo ser que aprendió muchísimo, y lo más importante ha sido, programa armimente con el mindset inversor. Yo estoy muy contenta que agradecida con todo lo que nos han compartido, por lo que recomiendo este curso siempre siendo, muchas gracias.",
+      },
+      {
+        avatar: "/img/testimonials/mari.png",
+        name: "Mari",
+        role: "",
+        quotelong:
+          "Hola, ¿qué por qué yo recomiendo este curso? Porque estoy aquí dando mi testimonio. Realmente este curso para mí ha habido un antes y un después, ¿no? A veces mucha gente te dice, esto te cambio la vida, realmente no me cambio la vida, esto. Lo que me cambio la vida fue mi decisión, mi decisión de decir, Y llegó la hora, llegó la hora de apostar por mí, llegó la hora de permitirme estar con los mejores y eso es lo que me cambió la vida. No, mi decisión, mi decisión de comprometerme 100% como ellos te piden al principio, compromiso 100%, porque ellos lo dan todo. Cuando lo se escuché en la presentación del curso Ángel María y Aguillarmo, ellos me transmitieron mucho confianza, Ángel Maria Pás y Aguillarmo en tu Ciasmo, por aprender y por saber más, por aportar, es un no paraar, en el curso encontré un grupo de personas todas diferentes y muy preparadas y yo al principio tenía miedo, pero luego me sentí tan acogida y siempre cuidando de cada uno de nosotros, ¿no? Tiene el curso tiene muchas herramientas, te hablan de fiscalidad, te hablan de financiación, de un plan de acción, son tantas cosas, pero a mí lo que me movió fue la base del curso. Es un curso diferente porque lo que te enseñan realmente primero es apostar por ti. Creo que él tiene, Te enseñan tus valores, cuáles son tus valores, esto y nunca lo había visto. No es un curso de inversión y, sin embargo, ellos piensan que eso es lo más importante. que sepas cuáles son tus valores, cuáles tu propósito de vida y que lo veas a ir reflejado y vaya a salir, ¿no? y esto fue lo que me hizo decidir y era por todas y ahí estoy con ellos aún porque ellos nunca te dicen adiós para siempre, no siempre están ahí apoyando y creo que merece la pena, yo animo todos a que construían su propio opinión y que bueno que se defen llevar por este entusiasmo y por esta no sé por vibrar por la vida, es como me gusta estar y con la gente que quiero estar, quiero estar con luchadores y con ganadores con campeones y así me siento ahora. Gracias de verdad, Angel María y Guillermo porque aún no en todo lo que han hecho en mi vida. Gracias y así.",
+        quoteshort:
+          "Realmente este curso para mí ha habido un antes y un después. Lo que me cambio la vida fue mi decisión de decir, llegó la hora de apostar por mí, llegó la hora de permitirme estar con los mejores y eso es lo que me cambió la vida.",
+      },
+      {
+        avatar: "/img/testimonials/amaia.png",
+        name: "Amaia",
+        role: "",
+        quotelong:
+          "Bueno, bueno, las que todas, que se dada las gracias a Aguilar Moya Germania, por todo lo que nos han diseñado en este curso, tal y como dice el nombre eso, el curso de Invacter Concentido, creo que eso tiene mucho, mucho valor y mucho significado, creo también que es muy importante el meysad que nos han crezmitido y la mi persuramente eso me ha ayudado mucho, creo que todavía tengo mucho que aprender, pero que todo vendrá y que el grupo que hemos hecho creo que es espectacular y hablo muchos cosas y eso es muy de negra de hacer que será simplemente a los masbácias por todo que tenés mucho el éxito y que esto sea la duradero que hay muchas oportunidades dentro de inversión como de amistadios y que que sea para mucho tiempo eso es lo que más de eso y creo que más Me gustaría esto esto. Muchas gracias por celebrar el mas y muchas gracias a este logo.",
+        quoteshort:
+          "El curso de Invacter Concentido tiene mucho valor y significado. El mensaje que nos han transmitido me ha ayudado mucho, y el grupo que hemos formado es espectacular. Muchas gracias a Aguilar Moya Germania por todo.",
       },
     ],
+  },
+  faq: {
+    title: "Preguntas Frecuentes",
+    description:
+      "Respuestas sobre nuestro curso de inversión inmobiliaria en Madrid.",
+    questions: [
+      {
+        id: "item-1",
+        question: "¿Qué temas se cubren en el curso?",
+        answer:
+          "El curso cubre una amplia gama de temas, incluyendo análisis de mercado, estrategias de inversión, gestión de propiedades y estudios de casos reales en Madrid.",
+      },
+      {
+        id: "item-2",
+        question: "¿El curso está disponible en modalidad online?",
+        answer:
+          "Sí, ofrecemos el curso tanto en modalidad presencial en Madrid como online para que puedas aprender desde cualquier lugar.",
+      },
+      {
+        id: "item-3",
+        question: "¿Cuáles son los beneficios de tomar el curso?",
+        answer:
+          "Al tomar el curso, obtendrás conocimientos prácticos y teóricos sobre la inversión inmobiliaria, acceso a recursos exclusivos y la oportunidad de conectar con otros inversores.",
+      },
+      {
+        id: "item-4",
+        question: "¿Hay algún requisito previo para inscribirse?",
+        answer:
+          "No se requieren conocimientos previos en inversión inmobiliaria. El curso está diseñado para principiantes y profesionales que deseen mejorar sus habilidades.",
+      },
+      {
+        id: "item-5",
+        question: "¿Cómo puedo inscribirme en el curso?",
+        answer:
+          "Puedes inscribirte en el curso a través de nuestro sitio web. Simplemente completa el formulario de inscripción y selecciona la modalidad que prefieras.",
+      },
+    ],
+    footer: {
+      message: "¿Tienes más preguntas?",
+      contact:
+        "Contáctanos para obtener más información y asistencia personalizada.",
+      buttonText: "Contacto",
+    },
   },
 };

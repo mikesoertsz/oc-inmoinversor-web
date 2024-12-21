@@ -4,25 +4,25 @@ import Image from "next/image";
 export default function DesireTestimonialsGrid() {
   const testimonials = [
     {
-      name: "María López",
-      role: "Agente Inmobiliario",
+      name: "Luisma",
+      role: "",
       testimonial:
-        "Guillermo es un experto y hace que aprender sea muy fácil. Recomiendo este curso a todos.",
-      img: "/img/testimonials/avatar-4.png",
+        "Este curso me cambió la mentalidad sobre las inversiones, transformándome en un mejor inversor tanto profesional como personalmente. Me han cambiado totalmente la mentalidad de respeto las inversiones, respeto a tu espetal mismo, me he hecho cambiar muchas falsetas de mi vida en cuanto a profesional y a personal, para precisamente poder llevar a ser un buen inversor.",
+      img: "/img/testimonials/luisma.png",
     },
     {
-      name: "Carlos García",
-      role: "Empresario",
+      name: "Carlos Miearnau",
+      role: "",
       testimonial:
-        "El valor que obtuve de este curso es inigualable. Ahora tengo una estrategia clara para invertir en bienes raíces.",
-      img: "/img/testimonials/avatar-2.png",
+        "Recomiendo el curso por la experiencia de comunidad que se crea y el apoyo constante de los instructores. Lo que más me ha gustado del curso es el grupo que se crea, ya que considero que es una comunidad. Hemos tenido un grupo de las ventias personas que hemos participado, pasamos oportunidades cada una, cada día noticias, entonces el cine estamos muy en contacto.",
+      img: "/img/testimonials/carlos-miearnau.png",
     },
     {
-      name: "Ana Martínez",
-      role: "Consultora",
+      name: "Mar",
+      role: "",
       testimonial:
-        "Este curso transformó mi forma de ver las inversiones inmobiliarias. He logrado resultados sorprendentes.",
-      img: "/img/testimonials/avatar-3.png",
+        "Este curso ha cambiado mi mentalidad. Ahora siento que soy inversora inmobiliaria, ahora siento que de verdad puedo invertir en pisos de hecho, ya hemos empezado a hacerlo y que esto es lo que yo quería.",
+      img: "/img/testimonials/mar.png",
     },
   ];
   return (
