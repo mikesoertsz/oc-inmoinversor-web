@@ -24,10 +24,12 @@ export default function Course() {
         <InterestPersonalStory />
         {/* <InterestDetails /> */}
         {/* <InterestWhyCreatedCourse /> */}
-        <DesireTestimonialVideo
-          testimonial={course_es.testimonials.list[6]}
-          videoPosition="left"
-        />
+        <div className="py-[5dvh]">
+          <DesireTestimonialVideo
+            testimonial={course_es.testimonials.list[6]}
+            videoPosition="left"
+          />
+        </div>
         <CourseSyllabus syllabus={course_es.syllabus} />
         <DesireTestimonialVideo
           videoPosition="right"

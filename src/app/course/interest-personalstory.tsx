@@ -1,13 +1,19 @@
 "use client";
+import { TitleBlock } from "@/components/ui/titleblock";
 import { InnerWrap, Wrapper } from "@/lib/atoms";
 import React from "react";
 import ReactPlayer from "react-player";
 
 export default function InterestPersonalStory() {
   return (
-    <Wrapper>
+    <Wrapper className="bg-gradient-to-t from-black to-brand-bg1 py-[10dvh]">
       <InnerWrap className="py-0 mt-12">
-        <div className="flex justify-center w-full aspect-video overflow-hidden bg-slate-100 relative max-w-6xl rounded-2xl shadow-xl border-4 border-black">
+        <TitleBlock
+          heading="Hola, soy Guillermo, y el sector inmobiliario cambió mi vida."
+          theme="dark"
+          orientation="center"
+        />
+        <div className="flex justify-center w-full aspect-video overflow-hidden bg-slate-100 relative max-w-6xl rounded-2xl shadow-xl border-4 border-black mt-8">
           <ReactPlayer
             url="https://youtu.be/XCgMXnJc598"
             width="100%"
@@ -15,17 +21,11 @@ export default function InterestPersonalStory() {
             pip
           />
         </div>
-        <div className="flex flex-col items-center justify-center w-full mt-12 max-w-3xl">
-          <h3 className="text-4xl font-semibold">
+        <div className="flex flex-col items-center justify-center w-full mt-5 max-w-4xl text-center">
+          <h4 className="text-lg font-light text-gray-200">
             Conoce a tu instructor: La historia personal detrás del éxito en la
             inversión inmobiliaria.
-          </h3>
-          <p className="text-lg text-white opacity-80 mt-4 max-w-prose">
-            Descubre la trayectoria y las experiencias que han llevado a tu
-            instructor a convertirse en un experto en inversión inmobiliaria.
-            Aprende de sus desafíos y logros para inspirarte en tu propio
-            camino.
-          </p>
+          </h4>
         </div>
       </InnerWrap>
     </Wrapper>
