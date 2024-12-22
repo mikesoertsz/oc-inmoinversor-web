@@ -1,45 +1,45 @@
 import { InnerWrap, Wrapper } from "@/lib/atoms";
 import Image from "next/image";
 
-export default function DesireTestimonialsGrid() {
-  const testimonials = [
-    {
-      name: "Luisma",
-      role: "",
-      testimonial:
-        "Este curso me transformó en un mejor inversor, cambiando mi mentalidad tanto profesional como personalmente.",
-      img: "/img/testimonials/luisma.png",
-    },
-    {
-      name: "Carlos Miearnau",
-      role: "",
-      testimonial:
-        "Recomiendo el curso por la comunidad que se crea y el apoyo constante de los instructores.",
-      img: "/img/testimonials/carlos-miarnau.png",
-    },
-    {
-      name: "Mar",
-      role: "",
-      testimonial:
-        "Este curso ha cambiado mi mentalidad. Ahora siento que soy inversora inmobiliaria y puedo invertir en pisos.",
-      img: "/img/testimonials/mar.png",
-    },
-  ];
+type Testimonial = {
+  name: string;
+  role: string;
+  quoteshort: string;
+  quotelong: string;
+  video: string;
+  avatar: string;
+};
+
+type DesireTestimonialsGridProps = {
+  testimonials?: Testimonial[];
+};
+
+export default function DesireTestimonialsGrid({
+  testimonials = [],
+}: DesireTestimonialsGridProps) {
+  // Function to select random 3 testimonials
+  const getRandomTestimonials = (testimonials: Testimonial[]) => {
+    const shuffled = testimonials.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, 3);
+  };
+
+  const selectedTestimonials = getRandomTestimonials(testimonials);
+
   return (
     <Wrapper className="py-12 bg-gradient-to-t from-slate-100 to-white">
       <InnerWrap className="py-0">
         <ul className="grid grid-cols-1 gap-0 border divide-x shadow-lg md:grid-cols-3 divide-slate-200 rounded-xl border-slate-200 bg-white">
-          {testimonials.map((testimonial, index) => (
+          {selectedTestimonials.map((testimonial, index) => (
             <li
               key={index}
               className="flex flex-col items-start justify-between p-10"
             >
               <blockquote className="mb-4 text-sm">
-                {testimonial.testimonial}
+                {testimonial.quoteshort}
               </blockquote>
               <div className="flex items-center mt-4">
                 <Image
-                  src={testimonial.img}
+                  src={testimonial.avatar}
                   alt={testimonial.name}
                   width={40}
                   height={40}
