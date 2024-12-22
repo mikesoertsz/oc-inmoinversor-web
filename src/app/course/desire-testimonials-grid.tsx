@@ -26,7 +26,7 @@ export default function DesireTestimonialsGrid({
   const selectedTestimonials = getRandomTestimonials(testimonials);
 
   return (
-    <Wrapper className="py-12 bg-gradient-to-t from-slate-100 to-white">
+    <Wrapper className="py-12 bg-gradient-to-b from-slate-100 to-white">
       <InnerWrap className="py-0">
         <ul className="grid grid-cols-1 gap-0 border divide-x shadow-lg md:grid-cols-3 divide-slate-200 rounded-xl border-slate-200 bg-white">
           {selectedTestimonials.map((testimonial, index) => (

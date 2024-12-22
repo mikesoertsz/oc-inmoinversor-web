@@ -41,8 +41,8 @@ export default function Course() {
           testimonials={course_es.testimonials.list}
         />
         <ActionPricing />
-        <FAQ faqContent={course_es.faq} />
         <DesireTestimonialsGrid testimonials={course_es.testimonials.list} />
+        <FAQ faqContent={course_es.faq} />
         <ActionFormWaitlist />
       </Suspense>
     </main>
