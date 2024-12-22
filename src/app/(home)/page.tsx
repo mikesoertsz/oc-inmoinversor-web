@@ -1,12 +1,12 @@
 import // getAllArticlesAction,
+
 // getAllShortsArticlesAction,
 "@/server/actions/articles";
-import CtaCommunity from "../(shared)/cta-community";
-import FAQ from "../(shared)/faq";
-import FeaturedPosts from "../(shared)/featured-posts";
+import AppleCarousel from "../(shared)/apple-carousel";
 import Hero from "../(shared)/attention-hero";
 import LastVideo from "../(shared)/attention-lastvideo";
-import AppleCarousel from "../(shared)/apple-carousel";
+import CtaCommunity from "../(shared)/cta-community";
+import FAQ from "../(shared)/faq";
 // import MostRecentPost from "../(shared)/most-recent-post";
 // import ShortsCarousel from "./shorts";
 
@@ -23,9 +23,9 @@ export default async function Home() {
   return (
     <main className="flex flex-col h-full w-full scroll-smooth">
       <Hero />
-      <AppleCarousel />
+      {/* <AppleCarousel /> */}
       <LastVideo />
-      <FeaturedPosts />
+      {/* <FeaturedPosts /> */}
       {/* <ShortsCarousel shorts={shorts} /> */}
       {/* <MostRecentPost articles={articles} /> */}
       <FAQ />
