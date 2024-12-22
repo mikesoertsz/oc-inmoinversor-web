@@ -14,7 +14,7 @@ export default function CtaCommunity() {
   const {
     register,
     handleSubmit,
-    formState: {},
+    formState: { },
   } = useForm<SubscriptionFormData>({
     resolver: zodResolver(subscriptionSchema),
   });
@@ -25,17 +25,17 @@ export default function CtaCommunity() {
   };
 
   return (
-    <section className="bg-gradient-to-t from-brand-bg1 to-brand-bg text-white py-[5dvh]">
+    <section className="bg-gradient-to-t from-brand-bg1 to-brand-bg text-white py-[10dvh] sm:py-[5dvh]">
       <div className="container mx-auto px-4 max-w-7xl text-center">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex justify-center items-center space-x-2"
+          className="flex justify-center sm:items-center items-stretch gap-2 flex-col sm:flex-row w-full"
         >
           <input
             type="email"
             placeholder="Enter your email..."
             {...register("email")}
-            className="px-4 py-2 rounded text-gray-800 bg-gray-700 placeholder-gray-500"
+            className="px-4 py-2 rounded text-gray-100 bg-gray-700 placeholder-gray-500"
           />
           <button
             type="submit"
@@ -44,7 +44,7 @@ export default function CtaCommunity() {
             Join 1K+ Readers
           </button>
         </form>
-        <p className="text-gray-500 mt-2 text-sm">
+        <p className="text-gray-500 mt-4 sm:mt-2 text-sm">
           1 email every week. Unsubscribe anytime.
         </p>
       </div>

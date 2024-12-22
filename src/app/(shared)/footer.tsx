@@ -66,7 +66,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <Wrapper className="px-0 border-t border-gray-200">
+    <Wrapper className="px-0 border-t border-gray-200 ">
       <footer className="w-full max-w-5xl pt-8 mx-auto text-sm bg-white dark:border-neutral-700 dark:bg-neutral-900 hidden">
         <ul className="grid w-full grid-cols-1 md:grid-cols-6 rounded-full border border-slate-100">
           {footer.columns.map((column, index) => (
@@ -90,7 +90,7 @@ export default function Footer() {
           ))}
         </ul>
       </footer>
-      <div className="flex items-center justify-between h-10 px-8 mt-8 text-xs text-center text-gray-500 border-t border-gray-200 dark:border-neutral-700 dark:text-neutral-200">
+      <div className="flex flex-col-reverse gap-y-3 py-2 sm:gap-y-0 sm:py-0 sm:flex-row items-center justify-between h-auto sm:h-10 px-8 mt-8 text-xs text-center text-gray-500 border-t border-gray-200 dark:border-neutral-700 dark:text-neutral-200">
         <p>© 2024 Immo Inversor. Todos los derechos reservados.</p>
         <div className="flex items-center justify-center gap-2">
           <div className="flex items-center justify-center gap-2 mr-4 border border-slate-200 p-1 rounded-full px-4">

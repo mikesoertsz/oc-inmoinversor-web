@@ -22,6 +22,7 @@ export default function RootLayout({
         className={`${title.variable} ${body.variable} subpixel-antialiased font-title`}
       >
         {/* <DesireBanner /> */}
+
         <NavMain />
         {children}
         <Footer />

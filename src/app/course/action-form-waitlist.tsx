@@ -79,7 +79,7 @@ export default function ActionFormWaitlist() {
           ) : (
             <form
               onSubmit={form.handleSubmit(onSubmit)}
-              className="flex items-center justify-center w-full max-w-3xl gap-2"
+              className="flex md:items-center justify-center w-full max-w-3xl gap-2 flex-col md:flex-row items-stretch"
             >
               <Input
                 type="email"
