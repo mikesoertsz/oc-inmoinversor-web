@@ -930,7 +930,7 @@ export const course_es = {
           "Ah, soy José, tengo 29 años, y fue el alumno de la primera edición del curso de Guillermo, allá por 2020, y cede el curso porque quería invertir en real estate, había invertido de muchas cosas antes, escrito, bolsa, tfs, hasta en whisky, creó blending. Y bueno, tenía algo de dinero horrado o 8.000 euros, y me había leído ya el libro de que yo saquía, había visto varios vídeos de inversión inmobiliaría en YouTube, y quería al paso, llegó a mis oídos el curso de Guillermo entre otros, que Guillermo fue además de los primeros y escogí este curso porque pude hablar con el personalmente, me sentí identificado con su historia, yo también he trabajado en consultores satézicas durante dos años en aquel momento, llevaba ya trabajando y eso donde he dedicado más de 12 horas al día, pues, durante esos dos años y vi la enversión como una vía de escape a esa vida que ya no me gustaba. Y bueno, desde el principio me sirvió mucho, aprendí creo que todo el necesario para empezar a invertir, luego además tuve toda la ayuda personal de Guillermo a la hora de tomar la decisión, que toma la decisión un poco más tarde porque estaba ahorrar un poco más, le presenta el caso, medio luz verde y eso da esa confianza que necesitas como para el antalte.",
         quoteshort:
           "Desde el principio me sirvió mucho, aprendí creo que todo el necesario para empezar a invertir, luego además tuve toda la ayuda personal de Guillermo a la hora de tomar la decisión.",
-        video: "",
+        video: "https://www.youtube.com/watch?v=k8hSNE2Y9ko",
       },
       {
         avatar: "/img/testimonials/leticia.png",
@@ -940,7 +940,7 @@ export const course_es = {
           "Bueno, me ha gustado mucho Guillermo, como formador, instructor, sobre todo, porque se nota que tiene muchísima experiencia que ha trabajado ya en muchas inversiones y que gracias a esa experiencia que él tiene todo lo que ha aprendido, nos lo ponen nuestra disposición, entonces tiene tantos conocimientos, y pues no solamente del sector de la inversión en sí, de las reformas, pero también pues todos los los contactos con los bancos, de cómo conseguir los mejores créditos, de cómo mejorar las obras y la eficiencia energética, eso es un montón de conceptos diferentes y luego parte, pues que es una persona super cercana que siempre está a disposición para que le podamos preguntar, mandar dudas, incluso después del curso, pues ya yo lo hace tres años y sigo en contacto con él, pues porque con la parte siempre sigo ofreciendo oportunidades de inversión y luego siempre está disponible para en tus propias o de inversiones o que no las estés haciendo con él, resolverte dudas, seguir ayudando, entonces digamos que después del curso todavía hay una continuidad, que ellos son los ofrecen otros sitios y que, bueno, es solo hace hace muy humano, no, a Guillermo y por eso pues yo estoy muy agradecida de haberme formado con él.",
         quoteshort:
           "Me ha gustado mucho Guillermo como formador, instructor, porque se nota que tiene muchísima experiencia y siempre está a disposición para resolver dudas, incluso después del curso. Estoy muy agradecida de haberme formado con él.",
-        video: "/vids/leticia.mp4",
+        video: "https://www.youtube.com/watch?v=P-cXM83_Sxc",
       },
     ],
   },

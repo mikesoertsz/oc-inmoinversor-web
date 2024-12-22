@@ -21,7 +21,10 @@ export default function Course() {
         <GridBlocks />
         {/* <InterestDetails /> */}
         {/* <InterestWhyCreatedCourse /> */}
-        <DesireTestimonialVideo />
+        <DesireTestimonialVideo
+          testimonial={course_es.testimonials.list[6]}
+          videoPosition="left"
+        />
         <CourseSyllabus syllabus={course_es.syllabus} />
         <DesireTestimonialVideo
           videoPosition="right"
