@@ -873,8 +873,8 @@ export const course_es = {
         video: "",
       },
       {
-        avatar: "/img/testimonials/carlos-miearnau.png",
-        name: "Carlos Miearnau",
+        avatar: "/img/testimonials/carlos-miarnau.png",
+        name: "Carlos Miarnau",
         role: "",
         quotelong:
           "Hola, hola a todos, espero que estés bien, mi nombre es Carlos Mirnau y no soy participante de la primera edición de DCS y os voy a explicar realmente mi experiencia para que tengáis una, no te viene a referencia, eh, un poco sobremina al final de la mis simplemente el sal de un desmobiliario y es quería comprar un, quiero comprar un piso para obtener una fonte ingresos adicional. Yo vi el, un acercuso a través del que bien, no conocía y hermoso, pero había un vídeo que había colado a él, me interesa en términos de YouTube, como su mente muchos de nosotros ahora estáis viendo, y nada al mente me gustaron mucho, me parecieron y hermoso en la gemalía de las personas estetinales que saben mucho el tema, y nada entonces me comentaron para contarme el curso Hacido en las experiencias estetinales de 3 meses, pero aún sí, y nada al final como no se se ha visto el plan y no así, pero cubre, digamos, las diferentes áreas que saber, pero bueno, al final comentaros que lo más importante no es la teoría, ya que la teoría la podéis encontrar en cualquier otro sitio, en internet, en libros y de manera gratuita, y un poco lo que os quería destacar y que es lo que más me ha gustado el curso, es el grupo que se quería, ya que al final considero poco creeré es una comunidad, la con descontarte con nosotros que somos ICS uno y en allo durante estos tres meses ya unas horas y hemos tenido un grupo de las ventias personas que hemos participado, pasamos oportunidades cada una, cada día noticias, entonces el cine estamos muy en contacto, incluso ahora estamos participando en la comprar en piso en Madrid. Entonces al final un poco yo lo que os vendría el curso es realmente esta experiencia de comunidad que es la que se crea y si es verdad que sobre todo para la gente Madrid es un poco más fuerte porque su la vez más gente ahí y al final en Madrid ya habréis que también ahí no más oportunidades pero está una cosita más. Pero en ese de Barcelona también no tiene unas cuentas este final tenemos un grupo aquí que también hemos hecho a una querada y esperamos seguir bien donos y al final es un poco lo más importante para mí esto. El grupo el grupo que hemos creado y nada que, al final, después de todo lo que se aprende las diferentes clases que tenéis que basabado o el día que digáis, al final si tenéis cualquier tipo de dudas, siempre tenéis a Guillermo, al final, es una persona que hemos argumentado, sabe, en mucho, ya tiene más de más experiencia en el tema y que os va a ayudar mucho, sí, siempre es en el curso. Y nada, así para acabar ya, lo recomiendo, recomiendo que, que es la puntés ya que es una buena experiencia, que al final en los lados de tomar, no como un coste al mismo, sino como una impresión a futuro, bueno, muchas gracias y a ver si no es el más pante, no, la feo.",
@@ -883,7 +883,7 @@ export const course_es = {
         video: "",
       },
       {
-        avatar: "",
+        avatar: "/img/testimonials/mar.png",
         name: "Mar",
         role: "",
         quotelong:

@@ -2,7 +2,6 @@ import // getAllArticlesAction,
 
 // getAllShortsArticlesAction,
 "@/server/actions/articles";
-import AppleCarousel from "../(shared)/apple-carousel";
 import Hero from "../(shared)/attention-hero";
 import LastVideo from "../(shared)/attention-lastvideo";
 import CtaCommunity from "../(shared)/cta-community";
