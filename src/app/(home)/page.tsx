@@ -6,8 +6,10 @@ import Hero from "../(shared)/attention-hero";
 import LastVideo from "../(shared)/attention-lastvideo";
 import CtaCommunity from "../(shared)/cta-community";
 import FAQ from "../(shared)/faq";
-import AppleCarousel from "../(shared)/apple-carousel";
+// import AppleCarousel from "../(shared)/apple-carousel";
 import SwiperCarousel from "../(shared)/swiper-carouse";
+import CustomCarousel from "../(shared)/custom-carouse";
+import TestimonialWall from "../(shared)/custom-carouse";
 // import MostRecentPost from "../(shared)/most-recent-post";
 // import ShortsCarousel from "./shorts";
 
@@ -93,6 +95,28 @@ export default async function Home() {
   // const articles = await getAllArticlesAction();
   // const shorts = await getAllShortsArticlesAction();
 
+  const companies = ["Politico", "Quartr", "Gnosis"];
+  const testimonials = [
+    {
+      quote: "Antimetal removed the burden of compute cost analysis and required long term spend commitments, unlocking significant cost savings.",
+      author: "Casey Arbaugh",
+      designation: "Systems Engineering Manager, Politico",
+    },
+    {
+      quote: "Another great testimonial here",
+      author: "John Doe",
+      designation: "CTO, Quartr",
+    },
+    {
+      quote: "Third testimonial goes here",
+      author: "Jane Smith",
+      designation: "CEO, Gnosis",
+    },
+  ];
+
+  const subtitle = "Wall of love";
+  const description = "Join thousands of companies who are streamlining and\nautomating their cloud with Antimetal";
+
   return (
     <main className="flex flex-col h-full w-full scroll-smooth">
       <Hero />
@@ -101,11 +125,18 @@ export default async function Home() {
         breakpoints={breakpoints}
         navigationClasses={navigationClasses}
       />
+      <TestimonialWall
+        companies={companies}
+        testimonials={testimonials}
+        subtitle={subtitle}
+        description={description}
+      />
       <LastVideo />
       {/* <FeaturedPosts /> */}
       {/* <ShortsCarousel shorts={shorts} /> */}
       {/* <MostRecentPost articles={articles} /> */}
       <FAQ />
+
       <CtaCommunity />
     </main>
   );

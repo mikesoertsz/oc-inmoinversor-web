@@ -132,3 +132,10 @@ body {
     filter: brightness(1.1);
   }
 }
+
+.center-x {
+  position: absolute;
+  left: 50%;
+  --tw-translate-x: -50%;
+  transform: translate(-50%, 0%) rotate(0) skew(0) skewY(0) scaleX(1) scaleY(1);
+}
