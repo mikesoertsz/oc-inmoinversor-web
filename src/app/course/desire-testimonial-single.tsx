@@ -28,7 +28,7 @@ export default function DesireTestimonialSingle({
   testimonial = defaultTestimonialContent,
 }: DesireTestimonialSingleProps) {
   return (
-    <Wrapper>
+    <Wrapper className="">
       <InnerWrap>
         <div className="flex items-center justify-center relative rounded-full overflow-hidden w-14 h-14 border-4 shadow-md border-white">
           <Image

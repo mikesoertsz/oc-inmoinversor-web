@@ -5,8 +5,8 @@ import ReactPlayer from "react-player";
 
 export default function LastVideo() {
   return (
-    <Wrapper className="bg-gradient-to-t from-brand-bg1 to-black py-[5dvh]">
-      <InnerWrap className="items-center justify-center max-w-4xl text-center">
+    <Wrapper className="bg-gradient-to-t from-brand-bg1 to-black py-[5dvh] md:px-3">
+      <InnerWrap className="items-center justify-center max-w-4xl text-center py-[5dvh] md:py-[10dvh]">
         <h2 className="tracking-tight font-title text-center mb-8 text-2xl text-white">
           Ver el episodio más reciente
         </h2>

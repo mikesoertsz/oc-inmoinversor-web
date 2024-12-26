@@ -88,9 +88,9 @@ export default function ActionPricing({
           orientation="center"
         />
 
-        <div className="rounded-2xl bg-slate-50 p-4 shadow-lg">
+        <div className="rounded-2xl bg-slate-50 p-4 shadow-lg w-full md:w-auto">
           <div className="relative flex px-4 rounded-lg border border-slate-200 p-4">
-            <ul className="grid grid-cols-2 md:grid-cols-4 gap-4 relative z-10">
+            <ul className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 relative z-10">
               {steps.map((step, index) => (
                 <li
                   key={index}

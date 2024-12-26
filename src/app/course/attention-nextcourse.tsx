@@ -35,7 +35,7 @@ export function AttentionNextCourse() {
   return (
     <Wrapper className="py-4 bg-white">
       <InnerWrap className="bg-slate-50 border border-slate-200 rounded-lg p-4">
-        <ul className="grid w-full grid-cols-2 gap-4 md:grid-cols-4">
+        <ul className="grid w-full sm:grid-cols-2 gap-4 md:grid-cols-4">
           {detalles.map((item, index) => (
             <li
               key={index}

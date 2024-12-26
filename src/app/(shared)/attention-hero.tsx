@@ -19,11 +19,11 @@ const heroContent = {
 export default function Hero() {
   return (
     <Wrapper className="bg-gradient-to-t from-black to-brand-bg1 text-white py-[5dvh]">
-      <InnerWrap className="items-center justify-center text-center">
-        <h1 className="text-[3.2rem] balanced font-title font-semibold tracking-tighter mb-1 leading-[4rem]">
+      <InnerWrap className="items-center justify-center text-center md:py-[10dvh] py-[5dvh]">
+        <h1 className="text-[2rem] sm:text-[2.5rem] leading-[1.35]  md:text-[3.2rem] balanced font-title font-semibold tracking-tighter mb-1 md:leading-[4rem]">
           {heroContent.title}
         </h1>
-        <p className="mb-8 text-lg max-w-prose pt-2">
+        <p className="mb-8 text-base md:text-lg max-w-prose pt-2">
           {heroContent.description}
         </p>
         <div className="flex justify-center space-x-4 mb-8">
