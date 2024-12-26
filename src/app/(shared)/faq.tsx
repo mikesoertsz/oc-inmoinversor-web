@@ -74,7 +74,7 @@ interface FAQProps {
 export default function FAQ({ faqContent = defaultFaqContent }: FAQProps) {
   return (
     <Wrapper className="py-[0dvh]">
-      <InnerWrap>
+      <InnerWrap className="py-[5dvh] md:py-[10dvh]">
         <div className="flex w-full flex-col item-center justify-center max-w-3xl  text-center">
           <TitleBlock
             heading={faqContent.title}

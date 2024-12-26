@@ -89,7 +89,7 @@ export function TitleBlock({
         </PreHeading>
       )}
       {heading && (
-        <Heading className="font-title text-4xl md:text-[2.5em] font-medium tracking-tighter leading-[4rem] py-0 my-0">
+        <Heading className="font-title text-4xl leading-[1.35] md:text-[2.5em] font-medium tracking-tighter md:leading-[4rem]">
           {heading}
         </Heading>
       )}
