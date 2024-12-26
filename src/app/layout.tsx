@@ -5,6 +5,7 @@ import Footer from "./(shared)/footer";
 import NavMain from "./(shared)/nav-main";
 import "./globals.css";
 import "./prose.css";
+import GoogleAnalytics from "@/lib/Analytics";
 
 export const metadata: Metadata = {
   title: "Inmo Inversor | Aprende a invertir en bienes raices en España",
@@ -18,6 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <GoogleAnalytics GA_MEASUREMENT_ID="G-K8F9KGJXC8" />
       <body
         className={`${title.variable} ${body.variable} subpixel-antialiased font-title`}
       >
