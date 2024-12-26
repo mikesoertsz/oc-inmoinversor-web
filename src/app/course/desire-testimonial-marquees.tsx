@@ -6,31 +6,39 @@ import Marquee from "react-fast-marquee";
 type Testimonial = {
   name: string;
   role: string;
-  testimonial: string;
-  img: string;
+  quoteshort: string;
+  quotelong: string;
+  video: string;
+  avatar: string;
 };
 
 const defaultTestimonials: Testimonial[] = [
   {
     name: "Luisma",
     role: "",
-    testimonial:
+    quoteshort:
       "Este curso me transformó en un mejor inversor, cambiando mi mentalidad tanto profesional como personalmente.",
-    img: "/img/testimonials/luisma.png",
+    quotelong: "",
+    video: "",
+    avatar: "/img/testimonials/luisma.png",
   },
   {
     name: "Carlos Miearnau",
     role: "",
-    testimonial:
+    quoteshort:
       "Recomiendo el curso por la comunidad que se crea y el apoyo constante de los instructores.",
-    img: "/img/testimonials/carlos-miarnau.png",
+    quotelong: "",
+    video: "",
+    avatar: "/img/testimonials/carlos-miarnau.png",
   },
   {
     name: "Mar",
     role: "",
-    testimonial:
+    quoteshort:
       "Este curso ha cambiado mi mentalidad. Ahora siento que soy inversora inmobiliaria y puedo invertir en pisos.",
-    img: "/img/testimonials/mar.png",
+    quotelong: "",
+    video: "",
+    avatar: "/img/testimonials/mar.png",
   },
 ];
 
@@ -53,19 +61,21 @@ export default function DesireTestimonialsMarquees({
           {testimonials.map((testimonial, index) => (
             <li
               key={index}
-              className="flex flex-col items-start justify-between p-10 bg-white shadow-lg rounded-xl h-[250px] aspect-video mr-4"
+              className="flex flex-col items-start justify-between p-10 bg-white shadow-lg rounded-xl h-[370px] w-[380px] mr-4"
             >
-              <blockquote className="mb-4 text-sm">
-                {testimonial.testimonial}
+              <blockquote className="mb-4 text-sm grow flex h-full">
+                {testimonial.quoteshort}
               </blockquote>
-              <div className="flex items-center mt-4">
-                <Image
-                  src={testimonial.img}
-                  alt={testimonial.name}
-                  width={40}
-                  height={40}
-                  className="mr-3 overflow-hidden rounded-full"
-                />
+              <div className="flex items-center mt-4 gap-4">
+                <div className="flex items-center justify-center w-9 h-9 overflow-hidden rounded-full relative">
+                  <Image
+                    src={testimonial.avatar}
+                    alt={testimonial.name}
+                    fill
+                    className="absolute inset-0"
+                    style={{ objectFit: "cover" }}
+                  />
+                </div>
                 <div>
                   <p className="text-sm font-medium">{testimonial.name}</p>
                   <p className="text-xs text-gray-500">{testimonial.role}</p>

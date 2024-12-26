@@ -7,39 +7,43 @@ import AttentionHero from "./attention-hero";
 import { AttentionNextCourse } from "./attention-nextcourse";
 import { course_es } from "./course_es";
 import DesireTestimonialsMarquees from "./desire-testimonial-marquees";
-import DesireTestimonialSingle from "./desire-testimonial-single";
 import DesireTestimonialVideo from "./desire-testimonial-video";
 import DesireTestimonialsGrid from "./desire-testimonials-grid";
-import CourseSyllabus from "./interest-syllabus";
 import InterestPersonalStory from "./interest-personalstory";
+import CourseSyllabus from "./interest-syllabus";
 
 export default function Course() {
   return (
     <main className="flex flex-col w-full h-full">
       <Suspense>
         <AttentionHero />
-        
         <DesireTestimonialSingle />
         <AttentionNextCourse />
+        <DesireTestimonialVideo
+          videoPosition="right"
+          testimonial={course_es.testimonials.list[1]}
+        />
         <GridBlocks />
         <InterestPersonalStory />
         {/* <InterestDetails /> */}
         {/* <InterestWhyCreatedCourse /> */}
         <div className="py-[5dvh]">
           <DesireTestimonialVideo
-            testimonial={course_es.testimonials.list[6]}
+            testimonial={course_es.testimonials.list[0]}
             videoPosition="left"
           />
         </div>
         <CourseSyllabus syllabus={course_es.syllabus} />
         <DesireTestimonialVideo
           videoPosition="right"
-          testimonial={course_es.testimonials.list[7]}
+          testimonial={course_es.testimonials.list[2]}
         />
-        <DesireTestimonialsMarquees />
+        <DesireTestimonialsMarquees
+          testimonials={course_es.testimonials.list}
+        />
         <ActionPricing />
-        <FAQ faqContent={course_es.faq} />
         <DesireTestimonialsGrid testimonials={course_es.testimonials.list} />
+        <FAQ faqContent={course_es.faq} />
         <ActionFormWaitlist />
       </Suspense>
     </main>
