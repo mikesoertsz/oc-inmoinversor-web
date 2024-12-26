@@ -18,6 +18,7 @@ export default function Course() {
     <main className="flex flex-col w-full h-full">
       <Suspense>
         <AttentionHero />
+        
         <AttentionNextCourse />
         <DesireTestimonialVideo
           videoPosition="right"
