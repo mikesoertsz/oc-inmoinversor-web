@@ -78,7 +78,10 @@ export default function ActionPricing({
   ];
 
   return (
-    <Wrapper className="bg-gradient-to-r from-purple-500 to-pink-500 p-8 rounded-lg shadow-lg">
+    <Wrapper
+      className="bg-gradient-to-r from-purple-500 to-pink-500 p-8 rounded-lg shadow-lg"
+      id="register"
+    >
       <InnerWrap className="text-center">
         <TitleBlock
           preheading={ctaContent.preheading}
