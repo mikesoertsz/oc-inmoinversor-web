@@ -73,7 +73,9 @@ export default function DesireTestimonialVideo({
                   </span>
                 ))}
             </div>
-            <p className="text-xs leading-relaxed">{testimonial.quoteshort}</p>
+            <p className="text-xs leading-relaxed text-slate-700">
+              {testimonial.quoteshort}
+            </p>
           </div>
         </div>
       </InnerWrap>

@@ -23,7 +23,7 @@ const titleStyles = cva("flex w-full max-w-3xl", {
     },
     orientation: {
       center:
-        "flex-col items-center justify-center w-full text-center gap-2 mb-6",
+        "flex-col items-center justify-center w-full text-center gap-2 mb-12",
       left: "flex-col items-start justify-start w-full text-left gap-2",
     },
   },
@@ -89,11 +89,13 @@ export function TitleBlock({
         </PreHeading>
       )}
       {heading && (
-        <Heading className="font-title text-4xl md:text-[2.5em] font-medium tracking-tighter leading-[4rem]">
+        <Heading className="font-title text-4xl md:text-[2.5em] font-medium tracking-tighter leading-[4rem] py-0 my-0">
           {heading}
         </Heading>
       )}
-      {subheading && <SubHeading>{subheading}</SubHeading>}
+      {subheading && (
+        <SubHeading className="py-0 my-0">{subheading}</SubHeading>
+      )}
       {body && (
         <Body className={theme === "dark" ? darkModeStyles.body : ""}>
           {body}

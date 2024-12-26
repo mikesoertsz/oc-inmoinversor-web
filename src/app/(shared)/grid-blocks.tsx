@@ -20,34 +20,47 @@ const defaultGridContent: {
   subtitle: "Aprende estrategias prácticas y conocimientos",
   items: [
     {
-      title: "Análisis de Mercado",
-      subtitle:
-        "Comprender tendencias y datos del mercado para mejores decisiones de inversión.",
+      title: "Planificación Financiera",
+      subtitle: "Estrategia financiera para un mindset inversor sólido.",
+    },
+    {
+      title: "Mindset",
+      subtitle: "Planificación para un mindset inversor sólido.",
     },
     {
       title: "Estrategias de Inversión",
       subtitle:
-        "Diferentes enfoques para maximizar retornos y minimizar riesgos en inversiones.",
+        "Conoce todas las estrategias y cómo elegir la que mejor se adapta a ti.",
+    },
+    {
+      title: "Equipo Necesario",
+      subtitle:
+        "Sin un buen equipo, solo tienes el 50% del trabajo hecho. Aprende a construirlo.",
+    },
+    {
+      title: "Encontrar Ofertas + Leads",
+      subtitle:
+        "Lo más importante es encontrar la oportunidad. Te enseñamos cómo hacerlo.",
+    },
+    {
+      title: "Financiación",
+      subtitle:
+        "Qué preparar, cómo pedirlo, cuándo y qué pedir para evitar rechazos.",
+    },
+    {
+      title: "Legal",
+      subtitle:
+        "No te equivoques en impuestos, conoce todos los trucos de primera mano.",
+    },
+    {
+      title: "Renovaciones",
+      subtitle:
+        "Te enseñamos casos reales y precios para planificar renovaciones efectivas.",
     },
     {
       title: "Gestión de Propiedades",
       subtitle:
-        "Gestión efectiva de propiedades para asegurar rendimiento y valor óptimos.",
-    },
-    {
-      title: "Opciones de Financiación",
-      subtitle:
-        "Explorar métodos de financiación para inversiones inmobiliarias eficaces.",
-    },
-    {
-      title: "Evaluación de Riesgos",
-      subtitle:
-        "Identificar y mitigar riesgos para proteger tu cartera inmobiliaria eficazmente.",
-    },
-    {
-      title: "Consideraciones Legales",
-      subtitle:
-        "Navegar aspectos legales para asegurar cumplimiento y evitar problemas.",
+        "Aprende a gestionar tus propiedades de manera eficiente para maximizar tus ingresos.",
     },
   ],
 };
@@ -64,14 +77,14 @@ export default function GridBlocks({
           theme="light"
           orientation="center"
         />
-        <ul className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 w-full pt-4">
+        <ul className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 w-full p-4 bg-brand-bg1 border border-slate-200 rounded-xl">
           {gridItems.map((item, index) => (
             <li
               key={index}
-              className="flex flex-col items-start justify-start rounded-xl bg-slate-50 border border-slate-200 text-slate-800 p-8 py-6"
+              className="flex flex-col items-start justify-start rounded-xl bg-white shadow-sm hover:shadow-md transition transform duration-200 ease-in-out border border-slate-200 text-slate-800 p-6 py-6"
             >
-              <h2 className="text-lg font-medium">{item.title}</h2>
-              <p className="text-sm pt-1">{item.subtitle}</p>
+              <h2 className="text-md font-semibold text-black">{item.title}</h2>
+              <p className="text-sm pt-1 font-body">{item.subtitle}</p>
             </li>
           ))}
         </ul>

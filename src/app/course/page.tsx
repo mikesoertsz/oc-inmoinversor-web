@@ -11,6 +11,7 @@ import DesireTestimonialVideo from "./desire-testimonial-video";
 import DesireTestimonialsGrid from "./desire-testimonials-grid";
 import InterestPersonalStory from "./interest-personalstory";
 import CourseSyllabus from "./interest-syllabus";
+import InterestFull from "./interest-full";
 
 export default function Course() {
   return (
@@ -37,6 +38,7 @@ export default function Course() {
           videoPosition="right"
           testimonial={course_es.testimonials.list[2]}
         />
+        <InterestFull />
         <DesireTestimonialsMarquees
           testimonials={course_es.testimonials.list}
         />
