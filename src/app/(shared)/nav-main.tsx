@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
@@ -19,22 +19,25 @@ const navLinks: NavLink[] = [
 ];
 
 export default function NavMain() {
-  let [openNav, setOpenNav] = useState(false);
+  const [openNav, setOpenNav] = useState(false);
   return (
-    <nav className={`bg-black text-white py-4 px-0 flex w-full max-w-[100vw] sm:overflow-hidden ${openNav? "overflow-visible": "overflow-hidden"}`}>
+    <nav
+      className={`bg-black text-white py-4 px-0 flex w-full max-w-[100vw] sm:overflow-hidden ${
+        openNav ? "overflow-visible" : "overflow-hidden"
+      }`}
+    >
       <MobileNavbar
         navitems={navLinks}
-        buttons={
-          [
-            {
-              text: "Ver en YouTube",
-              icon: <FaYoutube size={20} className="mr-2 text-sm text-[#FF0000]" />,
-              url: "https://www.youtube.com/@Inmoinversores"
-            }
-          ]
-        }
+        buttons={[
+          {
+            text: "Ver en YouTube",
+            icon: (
+              <FaYoutube size={20} className="mr-2 text-sm text-[#FF0000]" />
+            ),
+            url: "https://www.youtube.com/@Inmoinversores",
+          },
+        ]}
         open={openNav}
-
       />
       <div className="flex w-full mx-auto px-4 justify-between items-center">
         <div className="text-lg font-semibold flex items-center">
@@ -83,10 +86,12 @@ export default function NavMain() {
           >
             <Link href="/course">Ver Curso</Link>
           </Button>
-          <Button onClick={() => setOpenNav((e)=>!e)} className="sm:hidden inline-block">
+          <Button
+            onClick={() => setOpenNav((e) => !e)}
+            className="sm:hidden inline-block"
+          >
             {openNav ? <GrClose /> : <SlMenu />}
           </Button>
-
         </div>
       </div>
     </nav>
