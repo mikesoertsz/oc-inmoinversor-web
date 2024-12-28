@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 
 const subscriptionSchema = z.object({
-  email: z.string().email("Invalid email address"),
+  email: z.string().email("Dirección de correo electrónico no válida"),
 });
 
 type SubscriptionFormData = z.infer<typeof subscriptionSchema>;
@@ -21,7 +21,7 @@ export default function CtaCommunity() {
 
   const onSubmit: SubmitHandler<SubscriptionFormData> = (data) => {
     console.log(data);
-    // Handle form submission, e.g., send data to API
+    // Manejar el envío del formulario, por ejemplo, enviar datos a la API
   };
 
   return (
@@ -33,7 +33,7 @@ export default function CtaCommunity() {
         >
           <input
             type="email"
-            placeholder="Enter your email..."
+            placeholder="Introduce tu correo electrónico..."
             {...register("email")}
             className="px-4 py-2 rounded text-gray-100 bg-gray-700 placeholder-gray-500"
           />
@@ -41,11 +41,11 @@ export default function CtaCommunity() {
             type="submit"
             className="bg-white text-black px-6 py-2 rounded hover:bg-gray-200"
           >
-            Join 1K+ Readers
+            Únete a más de 1K lectores
           </button>
         </form>
         <p className="text-gray-500 mt-4 sm:mt-2 text-sm">
-          1 email every week. Unsubscribe anytime.
+          1 correo electrónico cada semana. Darse de baja en cualquier momento.
         </p>
       </div>
     </section>
