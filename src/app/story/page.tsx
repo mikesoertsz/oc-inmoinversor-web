@@ -62,7 +62,8 @@ export default function Story() {
               style={{ objectFit: "cover" }}
             />
           </div>
-          <div className="py-12 flex w-full">
+          <div className="py-12 flex w-fullbun run dev
+          ">
             <PersonalStory />
           </div>
           <div className="flex flex-col w-full gap-4 mt-6">

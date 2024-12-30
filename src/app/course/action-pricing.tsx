@@ -1,8 +1,9 @@
 "use client";
+import FormUserRegistration from "@/app/course/form-user-registration";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { TitleBlock } from "@/components/ui/titleblock";
 import { InnerWrap, Wrapper } from "@/lib/atoms";
 import { CreditCard, Pencil, Rocket, User } from "lucide-react";
-import Link from "next/link";
 import { GoCheck } from "react-icons/go";
 
 type CTAContent = {
@@ -135,12 +136,16 @@ export default function ActionPricing({
                     </li>
                   ))}
                 </ul>
-                <Link
-                  href="#register"
-                  className="px-12 py-4 mt-12 font-medium text-black transition duration-300 ease-in-out rounded-md bg-brand-highlight hover:bg-green-400 flex w-full items-center justify-center"
-                >
-                  Comenzar
-                </Link>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <button className="px-12 py-4 mt-12 font-medium text-black transition duration-300 ease-in-out rounded-md bg-brand-highlight hover:bg-green-400 flex w-full items-center justify-center">
+                      Comenzar
+                    </button>
+                  </DialogTrigger>
+                  <DialogContent>
+                    <FormUserRegistration />
+                  </DialogContent>
+                </Dialog>
               </li>
             ))}
           </ul>
