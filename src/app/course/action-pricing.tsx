@@ -46,7 +46,7 @@ export default function ActionPricing({
       title: "Acceso Completo",
       price: 2999,
       features: [
-        "Todo en Online",
+        "Todo en Solo Online",
         "Mentoría personalizada",
         "Webinars exclusivos",
         "Oportunidades de co-inversión",
@@ -138,7 +138,7 @@ export default function ActionPricing({
                 </ul>
                 <Dialog>
                   <DialogTrigger asChild>
-                    <button className="px-12 py-4 mt-12 font-medium text-black transition duration-300 ease-in-out rounded-md bg-brand-highlight hover:bg-green-400 flex w-full items-center justify-center">
+                    <button className="px-12 py-4 mt-12 font-medium text-black transition duration-300 ease-in-out rounded-md bg-green-400 hover:bg-green-500 flex w-full items-center justify-center">
                       Comenzar
                     </button>
                   </DialogTrigger>
