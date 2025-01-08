@@ -62,8 +62,10 @@ export default function Story() {
               style={{ objectFit: "cover" }}
             />
           </div>
-          <div className="py-12 flex w-fullbun run dev
-          ">
+          <div
+            className="py-12 flex w-fullbun run dev
+          "
+          >
             <PersonalStory />
           </div>
           <div className="flex flex-col w-full gap-4 mt-6">
@@ -73,7 +75,7 @@ export default function Story() {
               </p>
             ))}
           </div>
-          <div className="flex items-center justify-between gap-12 p-8 my-4 mt-12 text-white bg-slate-900 shadow-lg rounded-xl">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-12 p-8 my-4 mt-12 text-white bg-slate-900 shadow-lg rounded-xl text-center md:text-left">
             <p className="text-sm">{storyContent.courseMessage}</p>
             <Button variant="secondary" asChild>
               <Link href={storyContent.courseLink}>Ver Curso</Link>

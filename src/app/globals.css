@@ -6,8 +6,13 @@
   --container-size: 1080px;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
+  position: relative;
 }
 
 @layer utilities {

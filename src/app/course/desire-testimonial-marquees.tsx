@@ -50,7 +50,7 @@ export default function DesireTestimonialsMarquees({
   testimonials = defaultTestimonials,
 }: DesireTestimonialsMarqueesProps) {
   return (
-    <Wrapper className="py-12 bg-gradient-to-t from-slate-200 to-white">
+    <Wrapper className="py-12 bg-gradient-to-t from-slate-200 to-white px-0">
       <VelocityScroll
         text="Testimonios"
         default_velocity={1}
