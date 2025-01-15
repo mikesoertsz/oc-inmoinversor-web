@@ -1,12 +1,12 @@
 import { Toaster } from "@/components/ui/sonner";
 import { body, title } from "@/lib/fonts";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import Footer from "./(shared)/footer";
 import NavMain from "./(shared)/nav-main";
 import "./globals.css";
 import "./prose.css";
-import { Suspense } from "react";
-import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: "Inmo Inversor | Aprende a invertir en bienes raices en España",
@@ -22,6 +22,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <Suspense>
         <GoogleAnalytics gaId="G-K8F9KGJXC8" />
+        <GoogleTagManager gtmId="GTM-KCGSVCZP" />
       </Suspense>
       <body
         className={`${title.variable} ${body.variable} subpixel-antialiased font-title`}
