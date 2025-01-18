@@ -7,11 +7,14 @@ import Footer from "./(shared)/footer";
 import NavMain from "./(shared)/nav-main";
 import "./globals.css";
 import "./prose.css";
+import TermlyCMP from "@/components/TermlyCMP";
 
 export const metadata: Metadata = {
   title: "Inmo Inversor | Aprende a invertir en bienes raices en España",
   description: "Canal de aprendizaje sobre inversión inmobiliaria en España",
 };
+
+const WEBSITE_UUID = "3b910d3f-8697-4372-9d39-23d87dbc1072";
 
 export default function RootLayout({
   children,
@@ -27,6 +30,11 @@ export default function RootLayout({
       <body
         className={`${title.variable} ${body.variable} subpixel-antialiased font-title`}
       >
+        <TermlyCMP
+          websiteUUID={WEBSITE_UUID}
+          autoBlock={false}
+          masterConsentsOrigin={true}
+        />
         <NavMain />
         {children}
         <Footer />
