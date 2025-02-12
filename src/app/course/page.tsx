@@ -1,7 +1,6 @@
 import { Suspense } from "react";
 import FAQ from "../(shared)/faq";
 import GridBlocks from "../(shared)/grid-blocks";
-import ActionPricing from "./action-pricing";
 import AttentionHero from "./attention-hero";
 import { course_es } from "./course_es";
 import DesireTestimonialsMarquees from "./desire-testimonial-marquees";
@@ -9,7 +8,6 @@ import DesireTestimonialVideo from "./desire-testimonial-video";
 import DesireTestimonialsGrid from "./desire-testimonials-grid";
 import InterestFull from "./interest-full";
 import InterestPersonalStory from "./interest-personalstory";
-import CourseSyllabus from "./interest-syllabus";
 
 export default function Course() {
   return (
@@ -32,7 +30,7 @@ export default function Course() {
             videoPosition="left"
           />
         </div>
-        <CourseSyllabus syllabus={course_es.syllabus} />
+        {/* <CourseSyllabus syllabus={course_es.syllabus} /> */}
         <DesireTestimonialVideo
           videoPosition="right"
           testimonial={course_es.testimonials.list[2]}
@@ -41,7 +39,7 @@ export default function Course() {
         <DesireTestimonialsMarquees
           testimonials={course_es.testimonials.list}
         />
-        <ActionPricing />
+        {/* <ActionPricing /> */}
         <DesireTestimonialsGrid testimonials={course_es.testimonials.list} />
         <FAQ faqContent={course_es.faq} />
         {/* <ActionFormWaitlist /> */}
