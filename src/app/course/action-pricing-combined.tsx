@@ -1,5 +1,8 @@
 "use client";
 
+import { TitleBlock } from "@/components/ui/titleblock";
+import { InnerWrap, Wrapper } from "@/lib/atoms";
+import { GoCheck } from "react-icons/go";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -15,29 +18,38 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
-import { GraduationCap, PartyPopper } from "lucide-react";
+import { GraduationCap } from "lucide-react";
 import { useState, useEffect } from "react";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
-import tw from "tailwind-styled-components";
-
-const Wrapper = tw.section`
-  mx-auto w-full snap-always snap-center mx-auto px-6 lg:px-3 relative z-20 py-[5dvh] bg-zinc-900
-`;
-
-const InnerWrap = tw.div`
-  mx-auto max-w-5xl w-full flex items-center justify-center flex-col py-[10dvh]
-`;
 
 const content = {
+  cta: {
+    preheading: "Únete a Nosotros Ahora",
+    heading: "¡Desbloquea Tu Potencial Hoy!",
+    subheading: "Plazas limitadas disponibles. ¡Actúa rápido!",
+  },
+  pricing: {
+    title: "Acceso Completo",
+    price: 2999,
+    features: [
+      "Todo el contenido online",
+      "Mentoría personalizada",
+      "Seminarios web exclusivos",
+      "Oportunidades de coinversión",
+      "Estrategias avanzadas inmobiliarias",
+      "Plan de inversión personalizado",
+    ],
+    guarantee: "Garantía de satisfacción del 100% o te devolvemos el dinero",
+  },
   form: {
-    title: "Registro del Curso",
-    subtitle: "Comienza tu viaje en la inversión inmobiliaria.",
+    title: "Regístrate Ahora",
+    subtitle: "Comienza tu viaje en inversión inmobiliaria",
     fields: {
       name: {
         label: "Nombre Completo",
-        placeholder: "Juan Pérez",
-        description: "Por favor, nombre y apellido.",
+        placeholder: "Juan García",
+        description: "Nombre y apellidos, por favor",
         validation: {
           required: "El nombre es obligatorio",
           minLength: "El nombre debe tener al menos 2 caracteres",
@@ -47,37 +59,33 @@ const content = {
       email: {
         label: "Correo Electrónico",
         placeholder: "juan@ejemplo.com",
-        description: "El material del curso y las actualizaciones se enviarán a este correo",
+        description: "Recibirás los materiales del curso en este correo",
         validation: {
           required: "El correo electrónico es obligatorio",
-          format: "Por favor, introduce una dirección de correo válida",
+          format: "Por favor, introduce un correo electrónico válido",
         },
       },
       phone: {
-        label: "Número de Teléfono",
-        placeholder: "Introduce el número de teléfono",
-        description: "Usaremos esto para enviarte actualizaciones importantes del curso",
+        label: "Teléfono",
+        placeholder: "Introduce tu número de teléfono",
+        description: "Lo usaremos para enviarte actualizaciones importantes",
         validation: {
-          required: "El número de teléfono es obligatorio",
-          format: "Por favor, introduce un número de teléfono válido con el código de país",
+          required: "El teléfono es obligatorio",
+          format: "Por favor, introduce un número válido con código de país",
         },
       },
     },
     submit: {
-      default: "Registrar en el Curso",
-      loading: "Registrando...",
+      default: "Inscribirme al Curso",
+      loading: "Procesando...",
     },
-    footer: "Al registrarte, aceptas nuestros Términos y Condiciones y Políticas de Privacidad",
-  },
-  success: {
-    title: "¡Bienvenido a Bordo! 🎉",
-    message:
-      "Gracias por registrar tu interés en nuestro curso. Te hemos enviado un correo con más instrucciones. ¡Prepárate para comenzar tu viaje!",
-    resetButton: "Restablecer Formulario",
+    footer:
+      "Al registrarte, aceptas nuestros Términos y Condiciones y Política de Privacidad",
   },
   notifications: {
-    success: "¡Registrado con éxito en el curso! Nos pondremos en contacto pronto.",
-    error: "El registro falló. Por favor, inténtalo de nuevo.",
+    success:
+      "¡Registro completado con éxito! Nos pondremos en contacto contigo pronto.",
+    error: "Error en el registro. Por favor, inténtalo de nuevo.",
   },
 };
 
@@ -97,7 +105,7 @@ const formSchema = z.object({
     }),
 });
 
-export function CourseSignupForm() {
+export default function CombinedCTA() {
   const [mounted, setMounted] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -106,7 +114,7 @@ export function CourseSignupForm() {
     defaultValues: {
       name: "",
       email: "",
-      phone: "+34", // Predeterminado a España
+      phone: "+34",
     },
   });
 
@@ -114,18 +122,9 @@ export function CourseSignupForm() {
     setMounted(true);
   }, []);
 
-  if (!mounted) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 flex flex-col items-center justify-center p-4">
-        <div className="w-full max-w-md">
-          <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-indigo-50" />
-        </div>
-      </div>
-    );
-  }
+  if (!mounted) return null;
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log("Enviando formulario con datos:", values);
     try {
       const response = await fetch(
         "https://hook.eu2.make.com/7l1tt47tk9cekkvhqhtjudzygqdo928c",
@@ -139,64 +138,84 @@ export function CourseSignupForm() {
       );
 
       if (!response.ok) {
-        throw new Error(`¡Error HTTP! estado: ${response.status}`);
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
 
       toast.success(content.notifications.success);
       setIsSubmitted(true);
     } catch (error) {
-      console.error("Error al enviar el formulario:", error);
+      console.error("Error submitting form:", error);
       toast.error(content.notifications.error);
     }
   }
 
-  function resetForm() {
-    console.log("Restableciendo formulario");
-    form.reset();
-    setIsSubmitted(false);
-  }
-
   return (
-    <Wrapper>
+    <Wrapper className="bg-gradient-to-b from-black to-slate-900 py-[5dvh]">
       <InnerWrap>
-        <div className="bg-slate-50 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-indigo-50">
-          {isSubmitted ? (
-            <div className="flex flex-col items-center justify-center text-center space-y-6 py-6">
-              <div className="flex justify-center items-center w-16 h-16 bg-primary/10 rounded-full">
-                <PartyPopper className="h-8 w-8 text-primary" />
-              </div>
-              <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight text-gray-900">
-                  {content.success.title}
-                </h2>
-                <p className="text-muted-foreground text-sm max-w-md">
-                  {content.success.message}
-                </p>
-              </div>
-              <Button onClick={resetForm} className="mt-6" variant="outline">
-                {content.success.resetButton}
-              </Button>
-            </div>
-          ) : (
-            <>
-              <div className="text-center mb-8">
-                <div className="flex justify-center mb-4">
-                  <div className="bg-primary/10 p-3 rounded-full">
-                    <GraduationCap className="h-8 w-8 text-primary" />
-                  </div>
-                </div>
-                <h1 className="text-lg font-semibold tracking-tight text-gray-900 mb-2">
-                  {content.form.title}
-                </h1>
-                <p className="text-muted-foreground text-sm">
-                  {content.form.subtitle}
+        <TitleBlock
+          preheading={content.cta.preheading}
+          heading={content.cta.heading}
+          subheading={content.cta.subheading}
+          theme="dark"
+          orientation="center"
+        />
+
+        <div className="grid md:grid-cols-2 gap-8 w-full max-w-6xl mx-auto bg-slate-50 p-8 rounded-2xl">
+          {/* Pricing Column */}
+          <div className="bg-white p-6 rounded-xl shadow-md flex flex-col items-start justify-between">
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-2xl font-light tracking-tight">
+                  {content.pricing.title}
+                </h3>
+                <p className="text-5xl font-light mt-2 tracking-tighter">
+                  <span className="text-gray-800 text-2xl mr-3">€</span>
+                  {content.pricing.price.toLocaleString("de-ES")}
                 </p>
               </div>
 
+              <ul className="gap-2">
+                {content.pricing.features.map((feature, idx) => (
+                  <li key={idx} className="flex items-center text-sm">
+                    <GoCheck className="text-green-500 mr-2 flex-shrink-0" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <p className="text-sm text-gray-500 pt-4 border-t">
+              {content.pricing.guarantee}
+            </p>
+          </div>
+
+          {/* Form Column */}
+          <div className="bg-white p-6 rounded-xl shadow-md">
+            <div className="text-center mb-6">
+              <div className="inline-flex justify-center items-center w-12 h-12 bg-primary/10 rounded-full mb-4">
+                <GraduationCap className="h-6 w-6 text-primary" />
+              </div>
+              <h2 className="text-xl font-semibold tracking-tight">
+                {content.form.title}
+              </h2>
+              <p className="text-sm text-muted-foreground mt-1">
+                {content.form.subtitle}
+              </p>
+            </div>
+
+            {isSubmitted ? (
+              <div className="text-center space-y-4 py-8">
+                <h3 className="text-xl font-medium">
+                  ¡Gracias por registrarte!
+                </h3>
+                <p className="text-sm text-gray-600">
+                  Te hemos enviado un correo con los siguientes pasos.
+                </p>
+              </div>
+            ) : (
               <Form {...form}>
                 <form
                   onSubmit={form.handleSubmit(onSubmit)}
-                  className="space-y-6"
+                  className="space-y-4"
                 >
                   <FormField
                     control={form.control}
@@ -266,21 +285,21 @@ export function CourseSignupForm() {
 
                   <Button
                     type="submit"
-                    className="w-full py-7 text-lg font-light tracking-normal"
+                    className="w-full py-6 text-base font-medium mt-4"
                     disabled={form.formState.isSubmitting}
                   >
                     {form.formState.isSubmitting
                       ? content.form.submit.loading
                       : content.form.submit.default}
                   </Button>
+
+                  <p className="text-xs text-center text-muted-foreground mt-4">
+                    {content.form.footer}
+                  </p>
                 </form>
               </Form>
-
-              <div className="mt-6 text-center text-xs text-muted-foreground">
-                <p>{content.form.footer}</p>
-              </div>
-            </>
-          )}
+            )}
+          </div>
         </div>
       </InnerWrap>
     </Wrapper>
