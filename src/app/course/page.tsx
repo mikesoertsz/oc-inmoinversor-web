@@ -8,6 +8,7 @@ import DesireTestimonialVideo from "./desire-testimonial-video";
 import DesireTestimonialsGrid from "./desire-testimonials-grid";
 import InterestFull from "./interest-full";
 import InterestPersonalStory from "./interest-personalstory";
+import { CourseSignupForm } from "./action-form-waitlist";
 
 export default function Course() {
   return (
@@ -42,7 +43,7 @@ export default function Course() {
         {/* <ActionPricing /> */}
         <DesireTestimonialsGrid testimonials={course_es.testimonials.list} />
         <FAQ faqContent={course_es.faq} />
-        {/* <ActionFormWaitlist /> */}
+        <CourseSignupForm />
       </Suspense>
     </main>
   );
