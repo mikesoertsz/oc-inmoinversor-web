@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
-import { GraduationCap } from "lucide-react";
+import { GraduationCap, PartyPopper } from "lucide-react";
 import { useState, useEffect } from "react";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
@@ -81,6 +81,12 @@ const content = {
     },
     footer:
       "Al registrarte, aceptas nuestros Términos y Condiciones y Política de Privacidad",
+  },
+  success: {
+    title: "¡Bienvenido a Bordo! 🎉",
+    message:
+      "Gracias por registrarte en nuestro curso. Te hemos enviado un correo con las siguientes instrucciones. ¡Prepárate para comenzar tu viaje!",
+    resetButton: "Volver al Formulario",
   },
   notifications: {
     success:
@@ -149,6 +155,11 @@ export default function CombinedCTA() {
     }
   }
 
+  function resetForm() {
+    form.reset();
+    setIsSubmitted(false);
+  }
+
   return (
     <Wrapper className="bg-gradient-to-b from-black to-slate-900 py-[5dvh]">
       <InnerWrap>
@@ -160,7 +171,7 @@ export default function CombinedCTA() {
           orientation="center"
         />
 
-        <div className="grid md:grid-cols-2 gap-8 w-full max-w-6xl mx-auto bg-slate-50 p-8 rounded-2xl">
+        <div className="grid md:grid-cols-2 gap-4 w-full max-w-6xl mx-auto bg-slate-50 p-4 rounded-2xl">
           {/* Pricing Column */}
           <div className="bg-white p-6 rounded-xl shadow-md flex flex-col items-start justify-between">
             <div className="space-y-6">
@@ -168,9 +179,8 @@ export default function CombinedCTA() {
                 <h3 className="text-2xl font-light tracking-tight">
                   {content.pricing.title}
                 </h3>
-                <p className="text-5xl font-light mt-2 tracking-tighter">
-                  <span className="text-gray-800 text-2xl mr-3">€</span>
-                  {content.pricing.price.toLocaleString("de-ES")}
+                <p className="text-5xl font-medium mt-2 tracking-tighter">
+                  €{content.pricing.price.toLocaleString("de-DE")}
                 </p>
               </div>
 
@@ -190,114 +200,134 @@ export default function CombinedCTA() {
 
           {/* Form Column */}
           <div className="bg-white p-6 rounded-xl shadow-md">
-            <div className="text-center mb-6">
-              <div className="inline-flex justify-center items-center w-12 h-12 bg-primary/10 rounded-full mb-4">
-                <GraduationCap className="h-6 w-6 text-primary" />
-              </div>
-              <h2 className="text-xl font-semibold tracking-tight">
-                {content.form.title}
-              </h2>
-              <p className="text-sm text-muted-foreground mt-1">
-                {content.form.subtitle}
-              </p>
-            </div>
-
             {isSubmitted ? (
-              <div className="text-center space-y-4 py-8">
-                <h3 className="text-xl font-medium">
-                  ¡Gracias por registrarte!
-                </h3>
-                <p className="text-sm text-gray-600">
-                  Te hemos enviado un correo con los siguientes pasos.
-                </p>
+              <div className="flex flex-col items-center justify-center text-center space-y-6 py-6">
+                <div className="flex justify-center items-center w-16 h-16 bg-primary/10 rounded-full">
+                  <PartyPopper className="h-8 w-8 text-primary" />
+                </div>
+                <div className="space-y-2">
+                  <h2 className="text-2xl font-semibold tracking-tight">
+                    {content.success.title}
+                  </h2>
+                  <p className="text-muted-foreground text-sm max-w-md">
+                    {content.success.message}
+                  </p>
+                </div>
+                <Button onClick={resetForm} className="mt-6" variant="outline">
+                  {content.success.resetButton}
+                </Button>
               </div>
             ) : (
-              <Form {...form}>
-                <form
-                  onSubmit={form.handleSubmit(onSubmit)}
-                  className="space-y-4"
-                >
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>{content.form.fields.name.label}</FormLabel>
-                        <FormControl>
-                          <Input
-                            placeholder={content.form.fields.name.placeholder}
-                            {...field}
-                            className="bg-white"
-                          />
-                        </FormControl>
-                        <FormDescription>
-                          {content.form.fields.name.description}
-                        </FormDescription>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>{content.form.fields.email.label}</FormLabel>
-                        <FormControl>
-                          <Input
-                            placeholder={content.form.fields.email.placeholder}
-                            type="email"
-                            {...field}
-                            className="bg-white"
-                          />
-                        </FormControl>
-                        <FormDescription>
-                          {content.form.fields.email.description}
-                        </FormDescription>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name="phone"
-                    render={({ field: { onChange, value } }) => (
-                      <FormItem>
-                        <FormLabel>{content.form.fields.phone.label}</FormLabel>
-                        <FormControl>
-                          <PhoneInput
-                            international
-                            defaultCountry="ES"
-                            value={value}
-                            onChange={onChange}
-                            placeholder={content.form.fields.phone.placeholder}
-                          />
-                        </FormControl>
-                        <FormDescription>
-                          {content.form.fields.phone.description}
-                        </FormDescription>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <Button
-                    type="submit"
-                    className="w-full py-6 text-base font-medium mt-4"
-                    disabled={form.formState.isSubmitting}
-                  >
-                    {form.formState.isSubmitting
-                      ? content.form.submit.loading
-                      : content.form.submit.default}
-                  </Button>
-
-                  <p className="text-xs text-center text-muted-foreground mt-4">
-                    {content.form.footer}
+              <>
+                <div className="text-center mb-6">
+                  <div className="inline-flex justify-center items-center w-12 h-12 bg-primary/10 rounded-full mb-4">
+                    <GraduationCap className="h-6 w-6 text-primary" />
+                  </div>
+                  <h2 className="text-xl font-semibold tracking-tight">
+                    {content.form.title}
+                  </h2>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    {content.form.subtitle}
                   </p>
-                </form>
-              </Form>
+                </div>
+
+                <Form {...form}>
+                  <form
+                    onSubmit={form.handleSubmit(onSubmit)}
+                    className="space-y-4"
+                  >
+                    <FormField
+                      control={form.control}
+                      name="name"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>
+                            {content.form.fields.name.label}
+                          </FormLabel>
+                          <FormControl>
+                            <Input
+                              placeholder={content.form.fields.name.placeholder}
+                              {...field}
+                              className="bg-white"
+                            />
+                          </FormControl>
+                          <FormDescription>
+                            {content.form.fields.name.description}
+                          </FormDescription>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>
+                            {content.form.fields.email.label}
+                          </FormLabel>
+                          <FormControl>
+                            <Input
+                              placeholder={
+                                content.form.fields.email.placeholder
+                              }
+                              type="email"
+                              {...field}
+                              className="bg-white"
+                            />
+                          </FormControl>
+                          <FormDescription>
+                            {content.form.fields.email.description}
+                          </FormDescription>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="phone"
+                      render={({ field: { onChange, value } }) => (
+                        <FormItem>
+                          <FormLabel>
+                            {content.form.fields.phone.label}
+                          </FormLabel>
+                          <FormControl>
+                            <PhoneInput
+                              international
+                              defaultCountry="ES"
+                              value={value}
+                              onChange={onChange}
+                              placeholder={
+                                content.form.fields.phone.placeholder
+                              }
+                            />
+                          </FormControl>
+                          <FormDescription>
+                            {content.form.fields.phone.description}
+                          </FormDescription>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <Button
+                      type="submit"
+                      className="w-full py-6 text-base font-medium mt-4"
+                      disabled={form.formState.isSubmitting}
+                    >
+                      {form.formState.isSubmitting
+                        ? content.form.submit.loading
+                        : content.form.submit.default}
+                    </Button>
+
+                    <p className="text-xs text-center text-muted-foreground mt-4">
+                      {content.form.footer}
+                    </p>
+                  </form>
+                </Form>
+              </>
             )}
           </div>
         </div>
