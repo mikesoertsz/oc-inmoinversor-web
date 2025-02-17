@@ -31,7 +31,7 @@ const content = {
   },
   pricing: {
     title: "Acceso Completo",
-    price: 2999,
+    price: 3499,
     features: [
       "Todo el contenido online",
       "Mentoría personalizada",
