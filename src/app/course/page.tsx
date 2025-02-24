@@ -1,7 +1,6 @@
 import { Suspense } from "react";
 import FAQ from "../(shared)/faq";
 import GridBlocks from "../(shared)/grid-blocks";
-import ActionPricing from "./action-pricing";
 import CombinedCTA from "./action-pricing-combined";
 import AttentionHero from "./attention-hero";
 import { course_es } from "./course_es";
