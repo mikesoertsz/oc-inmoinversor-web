@@ -44,7 +44,7 @@ export default function Course() {
         <DesireTestimonialsMarquees
           testimonials={course_es.testimonials.list}
         />
-        <ActionPricing />
+        {/* <ActionPricing /> */}
         {/* <DesireTestimonialsGrid testimonials={course_es.testimonials.list} /> */}
         <FAQ faqContent={course_es.faq} />
         <CombinedCTA />
