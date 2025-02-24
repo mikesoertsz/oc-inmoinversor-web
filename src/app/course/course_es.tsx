@@ -963,7 +963,16 @@ export const course_es = {
           "Me ha gustado mucho Guillermo como formador, instructor, porque se nota que tiene muchísima experiencia y comparte todo con nosotros. He adquirido todos los conocimientos para saltar a la piscina. He visto que no es necesario tener todo el dinero para empezar, pero que sí hay que lanzarse para vivir tus proprias experiencias en este sector. Mi primera inversión en bilbao fue un éxito.",
         video: "https://www.youtube.com/watch?v=P-cXM83_Sxc",
       },
-
+      {
+        avatar: "/img/testimonials/luisma.png",
+        name: "Luisma",
+        role: "",
+        quotelong:
+          "Insert a long and detailed testimonial from Luisma here, describing his experience with the course, how it helped him, and any specific benefits or successes he achieved as a result of the course.",
+        quoteshort:
+          "Insert a short and concise testimonial from Luisma here, summarizing his positive experience with the course.",
+        video: "https://youtu.be/h2la2KsiC0w",
+      },
       {
         avatar: "/img/testimonials/oscar-m.png",
         name: "Oscar Morales",

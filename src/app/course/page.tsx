@@ -17,6 +17,10 @@ export default function Course() {
         <AttentionHero />
         <div className="pt-[5dvh]">
           <DesireTestimonialVideo
+            videoPosition="left"
+            testimonial={course_es.testimonials.list[3]}
+          />
+          <DesireTestimonialVideo
             videoPosition="right"
             testimonial={course_es.testimonials.list[1]}
           />
