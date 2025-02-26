@@ -14,7 +14,7 @@ export default function Course() {
     <main className="flex flex-col w-full h-full">
       <Suspense>
         <AttentionHero />
-        <div className="pt-[5dvh]">
+        <div className="pt-[5dvh] gap-4 flex flex-col">
           <DesireTestimonialVideo
             videoPosition="left"
             testimonial={course_es.testimonials.list[3]}
