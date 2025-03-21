@@ -36,7 +36,7 @@ const featuresContent = {
 
 export default function SponsorFeatures() {
   return (
-    <Wrapper className="bg-gradient-to-b from-brand-bg1 to-black py-[10dvh]">
+    <Wrapper className="bg-black py-[3dvh]">
       <InnerWrap className="items-center justify-center max-w-6xl text-center text-white">
         <span className="text-brand-highlight font-medium mb-4 block">
           {featuresContent.preheading}

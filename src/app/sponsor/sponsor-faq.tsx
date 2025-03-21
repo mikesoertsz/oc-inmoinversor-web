@@ -46,10 +46,10 @@ const faqContent = {
 
 export default function SponsorFAQ() {
   return (
-    <Wrapper className="bg-gradient-to-b from-brand-bg1 to-black py-[10dvh]">
-      <InnerWrap className="items-center justify-center max-w-4xl text-white">
+    <Wrapper className="bg-slate-100">
+      <InnerWrap className="items-center justify-center max-w-4xl text-black">
         <div className="text-center mb-16">
-          <span className="text-brand-highlight font-medium mb-4 block">
+          <span className="text-brand-primary font-medium mb-4 block">
             {faqContent.preheading}
           </span>
 
@@ -57,7 +57,7 @@ export default function SponsorFAQ() {
             {faqContent.heading}
           </h2>
 
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
             {faqContent.subheading}
           </p>
         </div>
@@ -68,7 +68,7 @@ export default function SponsorFAQ() {
               <AccordionTrigger className="text-left">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-slate-400">
+              <AccordionContent className="text-slate-600">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

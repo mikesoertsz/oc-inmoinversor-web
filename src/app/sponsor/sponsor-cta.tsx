@@ -71,12 +71,9 @@ export default function SponsorCTA() {
   }
 
   return (
-    <Wrapper
-      className="bg-gradient-to-b from-black to-brand-bg1 py-[10dvh]"
-      id="contact"
-    >
+    <Wrapper className="bg-gradient-to-b to-black from-brand-bg1" id="contact">
       <InnerWrap className="items-center justify-center max-w-3xl text-black">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <div className="inline-flex justify-center items-center w-16 h-16 bg-brand-primary/10 rounded-full mb-6">
             <HandshakeIcon className="h-8 w-8 text-brand-primary" />
           </div>
