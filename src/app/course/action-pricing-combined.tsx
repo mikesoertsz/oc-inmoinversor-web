@@ -161,7 +161,10 @@ export default function CombinedCTA() {
   }
 
   return (
-    <Wrapper className="bg-gradient-to-b from-black to-slate-900 py-[5dvh]">
+    <Wrapper
+      className="bg-gradient-to-b from-black to-slate-900 py-[5dvh]"
+      id="register"
+    >
       <InnerWrap>
         <TitleBlock
           preheading={content.cta.preheading}

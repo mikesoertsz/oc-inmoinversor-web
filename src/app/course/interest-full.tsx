@@ -2,28 +2,30 @@ import { InnerWrap, Wrapper } from "@/lib/atoms";
 
 export default function InterestFull() {
   const full = {
-    mainTitle: "La flexibilidad financiera es mi nuevo superpoder",
-    mainQuote: "Rompe la rutina, invierte y asegura tu futuro financiero.",
-    subheading: "Tres requisitos para reventar el 2025",
+    mainTitle: "¿Estás listo para empezar?",
+    mainQuote: "La mejor inversión que puedes hacer es en ti mismo",
+    subheading: "Lo que necesitas para empezar:",
+    registerText: "Empezar ahora",
     requirements: [
       {
-        title: "FULL",
-        description: "Comprometete a ir a FULL",
-        icon: "🚀",
-      },
-      {
-        title: "CREETELO",
-        description: "Si no te crees inversor, jamás lo serás",
-        icon: "💪",
-      },
-      {
-        title: "ADAPTATE",
+        icon: "🎯",
+        title: "Compromiso",
         description:
-          "Adapta tus estrategias a tu nivel de vida, tiempo, formación y ciclo económico",
-        icon: "🔄",
+          "Dedicación para aprender y aplicar los conocimientos adquiridos.",
+      },
+      {
+        icon: "💡",
+        title: "Mentalidad",
+        description:
+          "Disposición para aprender y crecer como inversor inmobiliario.",
+      },
+      {
+        icon: "🚀",
+        title: "Acción",
+        description:
+          "Voluntad para tomar acción y comenzar tu viaje de inversión.",
       },
     ],
-    registerText: "¡Inscríbete ahora!",
   };
 
   return (

@@ -6,7 +6,7 @@ const heroContent = {
   title: "Curso de Inversión Inmobiliaria",
   description:
     "Únete a nuestro curso para aprender estrategias de inversión inmobiliaria y construir un portafolio exitoso.",
-  buttonText: "Acceso Instantáneo",
+  buttonText: "Empezar ahora",
   offerText: "Oferta limitada, precios subirán pronto.",
 };
 
