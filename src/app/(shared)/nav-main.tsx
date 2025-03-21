@@ -16,6 +16,7 @@ type NavLink = {
 const navLinks: NavLink[] = [
   { text: "Historia", url: "/story" },
   { text: "Blog", url: "/blog" },
+  { text: "Patrocinio", url: "/sponsor" },
 ];
 
 export default function NavMain() {
