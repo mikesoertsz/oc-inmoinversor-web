@@ -39,7 +39,7 @@ export default function NavMain() {
       />
 
       <nav
-        className={`bg-black text-white py-4 px-0 flex w-full max-w-[100vw]`}
+        className={`bg-black text-white py-2 px-0 flex w-full max-w-[100vw]`}
       >
         <div className="flex w-full mx-auto px-4 justify-between items-center">
           <div className="text-lg font-semibold flex items-center">
@@ -58,7 +58,7 @@ export default function NavMain() {
                   <Button
                     variant="link"
                     asChild
-                    className="hover:no-underline hover:text-white transition duration-300 ease-in-out text-gray-300 font-title text-[17px] font-medium"
+                    className="hover:no-underline hover:text-white transition duration-300 ease-in-out text-gray-300 font-title text-[17px] font-medium text-sm"
                   >
                     <Link href={link.url}>{link.text}</Link>
                   </Button>
