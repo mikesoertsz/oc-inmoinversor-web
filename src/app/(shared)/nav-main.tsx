@@ -14,6 +14,7 @@ type NavLink = {
 };
 
 const navLinks: NavLink[] = [
+  { text: "Home", url: "/" },
   { text: "Historia", url: "/story" },
   { text: "Blog", url: "/blog" },
   { text: "Patrocinio", url: "/sponsor" },
@@ -58,7 +59,7 @@ export default function NavMain() {
                   <Button
                     variant="link"
                     asChild
-                    className="hover:no-underline hover:text-white transition duration-300 ease-in-out text-gray-300 font-title text-[17px] font-medium text-sm"
+                    className="hover:no-underline hover:text-white transition duration-300 ease-in-out text-gray-300 font-title text-[17px] font-medium text-xs"
                   >
                     <Link href={link.url}>{link.text}</Link>
                   </Button>
@@ -71,14 +72,14 @@ export default function NavMain() {
             <Button
               variant="link"
               asChild
-              className="hidden  hover:no-underline hover:text-white transition duration-300 ease-in-out text-gray-300 font-title font-medium sm:flex items-center"
+              className="hidden  hover:no-underline hover:text-white transition duration-300 ease-in-out text-gray-300 font-title font-medium sm:flex items-center text-xs"
             >
               <a
                 href="https://www.youtube.com/@Inmoinversores"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaYoutube size={20} className="mr-2 text-sm text-[#FF0000]" />
+                <FaYoutube size={20} className="mr-2 text-[#FF0000]" />
                 Ver en YouTube
               </a>
             </Button>

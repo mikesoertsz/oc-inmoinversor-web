@@ -6,12 +6,12 @@ interface BlogContentProps {
 }
 
 export function BlogContent({ article }: BlogContentProps) {
-  console.log({ content: article.content });
-
   return (
-    <Wrapper className="py-8">
-      <InnerWrap className="prose max-w-3xl text-left mx-auto flex flex-col items-start justify-start">
-        {article.content}
+    <Wrapper className="py-4">
+      <InnerWrap className="prose prose-lg max-w-3xl mx-auto py-24">
+        <div className="prose-headings:font-medium prose-headings:tracking-tight prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl prose-p:text-gray-700 prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900 prose-ul:list-disc prose-ol:list-decimal gap-4">
+          {article.content}
+        </div>
       </InnerWrap>
     </Wrapper>
   );
