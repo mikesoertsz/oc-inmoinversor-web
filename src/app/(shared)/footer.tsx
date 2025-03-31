@@ -1,6 +1,4 @@
 import { Wrapper } from "@/lib/atoms";
-import { FaInstagram, FaYoutube } from "react-icons/fa";
-import { FaThreads, FaXTwitter } from "react-icons/fa6";
 
 type FooterLink = {
   text: string;
@@ -47,27 +45,11 @@ const footer: { columns: FooterColumn[] } = {
   ],
 };
 
-const socialLinks = [
-  {
-    icon: <FaYoutube size={18} />,
-    url: "https://www.youtube.com/channel/UCUt1LXPzzrOVe7PyYNYVjFQ",
-  },
-  {
-    icon: <FaInstagram size={16} />,
-    url: "https://www.instagram.com/inmo.inversores/",
-  },
-  { icon: <FaXTwitter size={16} />, url: "https://x.com/inmoinversores" },
-  // { icon: <FaLinkedin size={16} />, url: "https://linkedin.com" },
-  {
-    icon: <FaThreads size={16} />,
-    url: "https://www.threads.net/@inmo.inversores",
-  },
-];
-
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
     <Wrapper className="px-0 border-t border-gray-200 ">
-      <footer className="w-full max-w-5xl mx-auto text-sm bg-white dark:border-neutral-700 dark:bg-neutral-900 hidden">
+      <footer className="w-full max-w-5xl mx-auto text-sm bg-white dark:border-neutral-700 dark:bg-neutral-900 hidden px-0">
         <ul className="grid w-full grid-cols-1 md:grid-cols-6 rounded-full border border-slate-100">
           {footer.columns.map((column, index) => (
             <li
@@ -90,33 +72,20 @@ export default function Footer() {
           ))}
         </ul>
       </footer>
-      <div className="flex flex-col-reverse gap-y-3 py-2 sm:gap-y-0 sm:py-0 sm:flex-row items-center justify-between h-auto sm:h-10 px-8 text-xs text-center text-gray-500 border-t border-gray-200 dark:border-neutral-700 dark:text-neutral-200">
-        <p>© 2024 Immo Inversor. Todos los derechos reservados.</p>
-        <div className="flex items-center justify-center gap-2">
-          <div className="flex items-center justify-center gap-2 mr-4 border border-slate-200 p-1 rounded-full px-4">
-            {socialLinks.map(({ icon, url }, index) => (
-              <a
-                key={index}
-                href={url}
-                className="transition duration-300 ease-in-out hover:text-gray-900 rounded-full overflow-hidden hover:bg-slate-100"
-              >
-                {icon}
-              </a>
-            ))}
-          </div>
-          <div className="items-center justify-center hidden md:flex md:justify-end">
-            <p>
-              Hecho por{" "}
-              <a
-                href="http://www.drifter.agency"
-                className="font-semibold text-gray-900"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Drifter
-              </a>
-            </p>
-          </div>
+      <div className="flex flex-col-reverse gap-y-3 py-2 sm:gap-y-0 sm:py-0 sm:flex-row items-center justify-between h-auto sm:h-10 text-xs text-center text-gray-500 border-t border-gray-200 dark:border-neutral-700 dark:text-neutral-200">
+        <p>Immo Inversor © {currentYear}. Todos los derechos reservados.</p>
+        <div className="items-center justify-center hidden md:flex md:justify-end">
+          <p>
+            Hecho por{" "}
+            <a
+              href="http://www.drifter.agency"
+              className="font-semibold text-gray-900"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Drifter
+            </a>
+          </p>
         </div>
       </div>
     </Wrapper>
