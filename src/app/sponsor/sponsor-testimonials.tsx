@@ -52,7 +52,7 @@ export default function SponsorTestimonials() {
               <Quote className="h-8 w-8 text-brand-highlight mb-6" />
 
               <blockquote className="text-lg mb-6 text-slate-300">
-                "{testimonial.quote}"
+                &ldquo;{testimonial.quote}&rdquo;
               </blockquote>
 
               <div className="flex items-center">
