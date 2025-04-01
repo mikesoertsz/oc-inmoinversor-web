@@ -4,6 +4,7 @@ import SponsorFAQ from "./sponsor-faq";
 import SponsorFeatures from "./sponsor-features";
 import SponsorHero from "./sponsor-hero";
 import SponsorOffer from "./sponsor-offer";
+import AnalyticsDashboard from "./analytics/AnalyticsDashboard";
 
 export default function SponsorPage() {
   return (
@@ -11,8 +12,7 @@ export default function SponsorPage() {
       <main className="min-h-screen bg-black text-white">
         <SponsorHero />
         <SponsorFeatures />
-        {/* <SponsorVideoDemo /> */}
-        {/* <SponsorTestimonials /> */}
+        <AnalyticsDashboard />
         <SponsorOffer />
         <SponsorFAQ />
         <SponsorCTA />
