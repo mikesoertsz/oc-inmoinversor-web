@@ -33,6 +33,10 @@ export default function RootLayout({
           gtag('config', 'AW-16748317337');
         `}
       </Script>
+      <meta
+        name="facebook-domain-verification"
+        content="fnt8j85finy5w14g4yj6ot2gw0lg8h"
+      />
       <Suspense>
         <GoogleAnalytics gaId="G-K8F9KGJXC8" />
         <GoogleTagManager gtmId="GTM-KCGSVCZP" />
