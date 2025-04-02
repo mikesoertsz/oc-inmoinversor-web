@@ -147,6 +147,13 @@ export default function CombinedCTA() {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
+      // Trigger Google Ads conversion
+      if (typeof window !== "undefined" && "gtag" in window) {
+        window.gtag("event", "conversion", {
+          send_to: "AW-16748317337/_x6_CIet54oaEJmVnLI-",
+        });
+      }
+
       toast.success(content.notifications.success);
       setIsSubmitted(true);
     } catch (error) {

@@ -1,5 +1,6 @@
 import { InnerWrap, Wrapper } from "@/lib/atoms";
 import AttentionCoursePreview from "./attention-coursepreview";
+import { VelocityScroll } from "@/components/ui/scroll-based-velocity";
 // import AttentionCoursePreview from "./attention-coursepreview";
 
 const heroContent = {
@@ -12,7 +13,7 @@ const heroContent = {
 
 export default function AttentionHero() {
   return (
-    <Wrapper className="bg-gradient-to-b from-black to-brand-bg1 py-[5dvh]">
+    <Wrapper className="bg-gradient-to-b from-black to-brand-bg1 pt-[5dvh]">
       <InnerWrap className="items-center justify-center max-w-4xl text-center text-white">
         <h1 className="mb-4 text-5xl font-semibold tracking-tight">
           {heroContent.title}
@@ -25,8 +26,13 @@ export default function AttentionHero() {
           {heroContent.buttonText}
         </a>
         <p className="text-sm opacity-80">{heroContent.offerText}</p>
+        <AttentionCoursePreview />
       </InnerWrap>
-      <AttentionCoursePreview />
+      <VelocityScroll
+        text="FULLLLL"
+        default_velocity={1}
+        className="font-title text-center text-6xl font-black tracking-[-0.02em] text-brand-highlight drop-shadow-sm dark:text-brand-highlight md:text-9xl md:leading-[8rem] opacity-100"
+      />
     </Wrapper>
   );
 }

@@ -47,7 +47,8 @@ const content = {
       email: {
         label: "Correo Electrónico",
         placeholder: "juan@ejemplo.com",
-        description: "El material del curso y las actualizaciones se enviarán a este correo",
+        description:
+          "El material del curso y las actualizaciones se enviarán a este correo",
         validation: {
           required: "El correo electrónico es obligatorio",
           format: "Por favor, introduce una dirección de correo válida",
@@ -56,10 +57,12 @@ const content = {
       phone: {
         label: "Número de Teléfono",
         placeholder: "Introduce el número de teléfono",
-        description: "Usaremos esto para enviarte actualizaciones importantes del curso",
+        description:
+          "Usaremos esto para enviarte actualizaciones importantes del curso",
         validation: {
           required: "El número de teléfono es obligatorio",
-          format: "Por favor, introduce un número de teléfono válido con el código de país",
+          format:
+            "Por favor, introduce un número de teléfono válido con el código de país",
         },
       },
     },
@@ -67,7 +70,8 @@ const content = {
       default: "Registrar en el Curso",
       loading: "Registrando...",
     },
-    footer: "Al registrarte, aceptas nuestros Términos y Condiciones y Políticas de Privacidad",
+    footer:
+      "Al registrarte, aceptas nuestros Términos y Condiciones y Políticas de Privacidad",
   },
   success: {
     title: "¡Bienvenido a Bordo! 🎉",
@@ -76,7 +80,8 @@ const content = {
     resetButton: "Restablecer Formulario",
   },
   notifications: {
-    success: "¡Registrado con éxito en el curso! Nos pondremos en contacto pronto.",
+    success:
+      "¡Registrado con éxito en el curso! Nos pondremos en contacto pronto.",
     error: "El registro falló. Por favor, inténtalo de nuevo.",
   },
 };
@@ -140,6 +145,13 @@ export function CourseSignupForm() {
 
       if (!response.ok) {
         throw new Error(`¡Error HTTP! estado: ${response.status}`);
+      }
+
+      // Trigger Google Ads conversion
+      if (typeof window !== "undefined" && "gtag" in window) {
+        window.gtag("event", "conversion", {
+          send_to: "AW-16748317337/_x6_CIet54oaEJmVnLI-",
+        });
       }
 
       toast.success(content.notifications.success);

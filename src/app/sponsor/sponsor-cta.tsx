@@ -28,9 +28,11 @@ const formSchema = z.object({
   message: z.string().min(10, "Por favor, escribe un mensaje más detallado"),
 });
 
+type FormValues = z.infer<typeof formSchema>;
+
 export default function SponsorCTA() {
   const searchParams = useSearchParams();
-  const form = useForm<z.infer<typeof formSchema>>({
+  const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
@@ -47,28 +49,34 @@ export default function SponsorCTA() {
     if (plan) {
       form.setValue("plan", plan);
     }
-  }, [searchParams, form]);
+  }, [searchParams, form.setValue]);
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
+  const onSubmit = async (data: FormValues): Promise<void> => {
     try {
       const response = await fetch(
         "https://hook.eu2.make.com/7l1tt47tk9cekkvhqhtjudzygqdo928c",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(values),
+          body: JSON.stringify(data),
         }
       );
 
       if (!response.ok)
         throw new Error(`HTTP error! status: ${response.status}`);
 
+      // Trigger Google Ads conversion
+      if (typeof window !== "undefined" && "gtag" in window) {
+        window.gtag("event", "conversion", {
+          send_to: "AW-16748317337/_x6_CIet54oaEJmVnLI-",
+        });
+      }
+
       toast.success("¡Mensaje enviado! Nos pondremos en contacto pronto.");
-      form.reset();
     } catch {
       toast.error("Error al enviar el mensaje. Por favor, inténtalo de nuevo.");
     }
-  }
+  };
 
   return (
     <Wrapper className="bg-gradient-to-b to-black from-brand-bg1" id="contact">

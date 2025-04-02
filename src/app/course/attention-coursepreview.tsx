@@ -5,7 +5,7 @@ import ReactPlayer from "react-player";
 
 export default function AttentionCoursePreview() {
   return (
-    <InnerWrap className="py-12 mt-12 max-w-5xl">
+    <InnerWrap className="pb-12 mt-12 max-w-5xl">
       <div className="flex justify-center w-full aspect-video overflow-hidden bg-slate-100 relative max-w-7xl rounded-2xl shadow-lg">
         <ReactPlayer
           url="https://www.youtube.com/watch?v=UzoSfWMylxQ"
