@@ -22,6 +22,7 @@ import { GraduationCap, PartyPopper } from "lucide-react";
 import { useState, useEffect } from "react";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
+import { isValidPhoneNumber } from "react-phone-number-input";
 
 const content = {
   cta: {
@@ -106,7 +107,7 @@ const formSchema = z.object({
   phone: z
     .string()
     .min(1, { message: content.form.fields.phone.validation.required })
-    .refine((val) => /^\+[1-9]\d{1,14}$/.test(val), {
+    .refine((val) => isValidPhoneNumber(val), {
       message: content.form.fields.phone.validation.format,
     }),
 });

@@ -48,7 +48,7 @@ const footer: { columns: FooterColumn[] } = {
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <Wrapper className="px-0 border-t border-gray-200 ">
+    <Wrapper className="px-4 border-t border-gray-200">
       <footer className="w-full max-w-5xl mx-auto text-sm bg-white dark:border-neutral-700 dark:bg-neutral-900 hidden px-0">
         <ul className="grid w-full grid-cols-1 md:grid-cols-6 rounded-full border border-slate-100">
           {footer.columns.map((column, index) => (

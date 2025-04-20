@@ -12,6 +12,7 @@ const config: Config = {
       fontFamily: {
         title: "var(--font-title)",
         subtitle: ["var(--font-subtitle)", "sans-serif"],
+        body: ["var(--font-body)", "sans-serif"],
       },
       aspectRatio: {
         "4/3": "4 / 3",

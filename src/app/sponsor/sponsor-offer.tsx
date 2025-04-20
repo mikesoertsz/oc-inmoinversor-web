@@ -1,71 +1,102 @@
 "use client";
 
+import { TitleBlock } from "@/components/ui/titleblock";
 import { InnerWrap, Wrapper } from "@/lib/atoms";
 import { Check, Sparkles } from "lucide-react";
+import usePackageStore, { PackageStore } from "@/lib/usePackageStore";
 
 const offerContent = {
-  preheading: "Paquetes de Patrocinio",
+  preheading: "EPISODIO ÚNICO",
   heading: "Elige tu Plan",
   subheading: "Soluciones flexibles para promocionar tu marca",
   packages: [
     {
-      name: "Anuncio en Video",
-      price: "599€",
-      description: "Integración natural de tu marca en nuestro contenido",
+      name: "Anuncio Único",
+      type: "Single-Ad",
+      frequency: "Single Episode",
+      duration: "15–30 seconds",
+      price: Math.ceil(699),
+      description:
+        "Integración de anuncio personalizada durante el tiempo de mayor visualización.",
       features: [
-        "60 segundos de mención integrada",
-        "Guión personalizado para tu marca",
-        "Logo y enlace en descripción",
-        "Promoción en redes sociales",
-        "Informe de resultados",
+        "Locución y colocación de producto.",
+        "Animación y gráficos de calidad.",
+        "Códigos promocionales y enlaces.",
+        "80% presupuesto en YouTube Ads.",
+        "Marca en sitio y videos.",
       ],
+      expectedViews: 50000,
       highlight: false,
-      id: "anuncio-video",
+      id: "anuncio-unico",
+      vatInclusive: true,
     },
     {
-      name: "Episodio Personalizado",
-      price: "2.499€",
-      description: "Un episodio completo dedicado a tu marca o servicio",
+      name: "Campaña de 4 Episodios",
+      type: "4-Pack Campaign",
+      frequency: "Monthly (4 episodes/month)",
+      price: Math.ceil(2097),
+      originalPriceEUR: Math.ceil(2796.0),
+      discountedPriceEUR: Math.ceil(2097),
+      discountPercentage: 25,
+      description: "4 episodios/mes con mensajes consistentes de Brabantia.",
       features: [
-        "Episodio completo (15-20 min)",
-        "Guión y narrativa personalizada",
-        "Filmación profesional",
-        "Post-producción premium",
-        "Campaña en redes sociales",
-        "Derechos de uso del contenido",
-        "Informe detallado de resultados",
+        "Todo en Anuncio Único.",
+        "Visibilidad a largo plazo.",
+        "Exposición masiva en videos.",
+        "Colaboración creativa prioritaria.",
       ],
+      expectedViews: 250000,
+      highlight: false,
+      id: "campana-4-episodios",
+      vatInclusive: true,
+    },
+    {
+      name: "Campaña de 12 Episodios",
+      type: "12-Pack Campaign",
+      frequency: "Quarterly (12 episodes/quarter)",
+      price: Math.ceil(5032.8),
+      originalPriceEUR: Math.ceil(8388.0),
+      discountedPriceEUR: Math.ceil(5032.8),
+      discountPercentage: 40,
+      description:
+        "12 episodios/trimestre con mensajes consistentes de Brabantia.",
+      features: [
+        "Todo en Anuncio Único.",
+        "Visibilidad a largo plazo.",
+        "Exposición masiva en videos.",
+        "Colaboración creativa prioritaria.",
+      ],
+      expectedViews: 750000,
       highlight: true,
-      id: "episodio-personalizado",
+      id: "campana-12-episodios",
+      vatInclusive: true,
     },
   ],
-  note: "* Los precios incluyen producción y promoción. IVA no incluido.",
+  note: "Precios incluyen IVA.",
 };
 
 export default function SponsorOffer() {
+  const setSelectedPackage = usePackageStore(
+    (state: PackageStore) => state.setSelectedPackage
+  );
+
   return (
-    <Wrapper className="bg-gradient-to-b from-black to-brand-bg1 py-[10dvh]">
+    <Wrapper className="bg-gradient-to-b from-black to-brand-bg1 py-24">
       <InnerWrap className="items-center justify-center max-w-6xl text-white">
-        <div className="text-center mb-16">
-          <span className="text-brand-primary font-medium mb-4 block">
-            {offerContent.preheading}
-          </span>
+        <TitleBlock
+          preheading={offerContent.preheading}
+          heading={offerContent.heading}
+          subheading={offerContent.subheading}
+          theme="dark"
+          orientation="center"
+        />
 
-          <h2 className="text-4xl font-bold mb-4 tracking-tight">
-            {offerContent.heading}
-          </h2>
-
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-            {offerContent.subheading}
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <ul className="grid md:grid-cols-3 gap-2 max-w-6xl mx-auto">
           {offerContent.packages.map((pkg, index) => (
-            <div
+            <li
               key={index}
               className={`
-                flex flex-col bg-slate-900/50 p-8 rounded-xl border relative z-10 pt-12
+                flex flex-col bg-white p-8 rounded-xl border relative z-10 pt-12 text-black font-body
                 ${
                   pkg.highlight
                     ? "border-brand-primary shadow-lg shadow-brand-primary/10"
@@ -80,31 +111,47 @@ export default function SponsorOffer() {
                 </div>
               )}
 
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold mb-2">{pkg.name}</h3>
-                <div className="text-4xl font-bold text-brand-primary mb-2">
-                  {pkg.price}
+              <div className="text-left mb-6 flex flex-col items-start justify-start gap-3">
+                <h3 className="text-sm uppercase font-semibold tracking-widest">
+                  {pkg.name}
+                </h3>
+                <div className="text-5xl font-bold text-slate-800 tracking-tight">
+                  €{pkg.price.toLocaleString()}
                 </div>
-                <p className="text-slate-400">{pkg.description}</p>
+                <div className="h-6">
+                  {pkg.discountPercentage && (
+                    <div className="text-lg text-green-700">
+                      <span className="line-through">
+                        €{pkg.originalPriceEUR.toLocaleString()}
+                      </span>{" "}
+                      -{pkg.discountPercentage}%
+                    </div>
+                  )}
+                </div>
+                <p className="text-slate-900 text-md font-medium balanced">
+                  {pkg.description}
+                </p>
               </div>
 
               <ul className="gap-2 flex-grow">
                 {pkg.features.map((feature, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <Check className="h-5 w-5 text-brand-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-slate-300">{feature}</span>
+                    <Check className="h-3 w-3 text-brand-primary flex-shrink-0 mt-1.5" />
+                    <span className="text-slate-800 text-sm font-medium">
+                      {feature}
+                    </span>
                   </li>
                 ))}
               </ul>
 
               <a
-                href={`#contact?plan=${pkg.name}`}
+                href="#contact"
                 className={`
                   block text-center py-3 px-8 rounded-md mt-8 transition
                   ${
                     pkg.highlight
                       ? "bg-brand-highlight text-black hover:bg-brand-highlight/80"
-                      : "bg-slate-800 text-white hover:bg-slate-700"
+                      : "bg-slate-50 text-black hover:bg-slate-100 border border-slate-300"
                   }
                 `}
                 onClick={(e) => {
@@ -112,20 +159,17 @@ export default function SponsorOffer() {
                   const contactSection = document.getElementById("contact");
                   if (contactSection) {
                     contactSection.scrollIntoView({ behavior: "smooth" });
-                    // Update URL with plan parameter
-                    const url = new URL(window.location.href);
-                    url.searchParams.set("plan", pkg.name);
-                    window.history.pushState({}, "", url);
+                    setSelectedPackage(pkg.name);
                   }
                 }}
               >
                 Seleccionar Plan
               </a>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
 
-        <p className="text-center text-sm text-slate-400 mt-8 bg-black z-20">
+        <p className="text-center text-sm text-slate-400 mt-8 drop-shadow-md z-20">
           {offerContent.note}
         </p>
       </InnerWrap>

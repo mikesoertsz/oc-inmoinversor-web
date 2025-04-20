@@ -21,27 +21,27 @@ const videoContent = {
 
 export default function SponsorVideoDemo() {
   return (
-    <Wrapper className="bg-gradient-to-b from-black to-brand-bg1 py-[10dvh]">
-      <InnerWrap className="items-center justify-center max-w-7xl text-white">
+    <Wrapper className="bg-white py-[10dvh]">
+      <InnerWrap className="items-center justify-center max-w-7xl">
         <div className="text-center mb-16">
           <span className="text-brand-primary font-medium mb-4 block">
             {videoContent.preheading}
           </span>
 
-          <h2 className="text-4xl font-bold mb-4 tracking-tight">
+          <h2 className="text-4xl font-bold mb-4 tracking-tight text-slate-900">
             {videoContent.heading}
           </h2>
 
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
             {videoContent.subheading}
           </p>
         </div>
 
         <div className="grid lg:grid-cols-6 gap-8 items-center">
-          <div className="lg:col-span-4 aspect-video bg-slate-900 rounded-xl overflow-hidden relative group cursor-pointer">
-            <div className="absolute inset-0 flex items-center justify-center bg-black/50 group-hover:bg-black/40 transition-colors">
+          <div className="lg:col-span-4 aspect-video bg-slate-100 rounded-xl overflow-hidden relative group cursor-pointer shadow-sm">
+            <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/20 transition-colors">
               <div className="w-16 h-16 rounded-full bg-brand-primary flex items-center justify-center">
-                <Play className="h-8 w-8 text-black" />
+                <Play className="h-8 w-8 text-white" />
               </div>
             </div>
             <iframe
@@ -59,12 +59,12 @@ export default function SponsorVideoDemo() {
             {videoContent.stats.map((stat, index) => (
               <div
                 key={index}
-                className="bg-slate-900/50 p-6 rounded-xl border border-slate-800"
+                className="bg-slate-50 p-6 rounded-xl border border-slate-200"
               >
                 <div className="text-3xl font-bold text-brand-primary mb-2">
                   {stat.value}
                 </div>
-                <div className="text-sm text-slate-400">{stat.label}</div>
+                <div className="text-sm text-slate-600">{stat.label}</div>
               </div>
             ))}
           </div>

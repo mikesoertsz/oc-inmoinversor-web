@@ -1,3 +1,4 @@
+import { TitleBlock } from "@/components/ui/titleblock";
 import { InnerWrap, Wrapper } from "@/lib/atoms";
 import { Building2, Target, Users, Wallet } from "lucide-react";
 
@@ -11,7 +12,7 @@ const featuresContent = {
       icon: Users,
       title: "Audiencia Cualificada",
       description:
-        "Inversores activos y potenciales entre 28-45 años, emprendedores y renovadores DIY.",
+        "Inversores activos y potenciales entre 28-65+ años, emprendedores y renovadores DIY.",
     },
     {
       icon: Target,
@@ -36,34 +37,32 @@ const featuresContent = {
 
 export default function SponsorFeatures() {
   return (
-    <Wrapper className="bg-black py-[3dvh]">
-      <InnerWrap className="items-center justify-center max-w-6xl text-center text-white">
-        <span className="text-brand-highlight font-medium mb-4 block">
-          {featuresContent.preheading}
-        </span>
+    <Wrapper className="bg-white py-16">
+      <InnerWrap className="items-center justify-center max-w-6xl text-center py-0">
+        <TitleBlock
+          preheading={featuresContent.preheading}
+          heading={featuresContent.heading}
+          subheading={featuresContent.subheading}
+          theme="light"
+          orientation="center"
+        />
 
-        <h2 className="text-4xl font-bold mb-4 tracking-tight">
-          {featuresContent.heading}
-        </h2>
-
-        <p className="text-xl text-slate-400 mb-16 max-w-2xl mx-auto">
-          {featuresContent.subheading}
-        </p>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <ul className="grid md:grid-cols-2 lg:grid-cols-4 gap-3">
           {featuresContent.features.map((feature, index) => (
-            <div
+            <li
               key={index}
-              className="bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-brand-highlight transition-colors duration-300"
+              className="bg-slate-50 p-6 rounded-md border border-slate-200 hover:border-brand-primary transition-colors duration-300"
             >
-              <div className="inline-flex justify-center items-center w-12 h-12 bg-brand-highlight/10 rounded-full mb-4">
-                <feature.icon className="h-6 w-6 text-brand-highlight" />
+              <div className="inline-flex justify-center items-center w-12 h-12 bg-brand-primary/10 rounded-full mb-4">
+                <feature.icon className="h-5 w-5 text-brand-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-slate-400 text-sm">{feature.description}</p>
-            </div>
+              <h3 className="text-md font-semibold text-slate-900">
+                {feature.title}
+              </h3>
+              <p className="text-slate-600 text-xs">{feature.description}</p>
+            </li>
           ))}
-        </div>
+        </ul>
       </InnerWrap>
     </Wrapper>
   );

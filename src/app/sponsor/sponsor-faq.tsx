@@ -1,79 +1,72 @@
-import { InnerWrap, Wrapper } from "@/lib/atoms";
+"use client";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { TitleBlock } from "@/components/ui/titleblock";
+import { InnerWrap, Wrapper } from "@/lib/atoms";
 
 const faqContent = {
   preheading: "Preguntas Frecuentes",
   heading: "Todo lo que Necesitas Saber",
-  subheading: "Respuestas a las preguntas más comunes sobre patrocinios",
+  subheading: "Respuestas a las preguntas más comunes sobre colaboraciones",
   faqs: [
     {
-      question: "¿Cómo se integra mi marca en el contenido?",
+      question: "¿Cómo funciona el proceso de colaboración?",
       answer:
-        "Trabajamos contigo para crear una integración natural que resuene con nuestra audiencia. Puede ser una demostración de producto, un caso de uso real, o una mención estratégica que aporte valor al contenido.",
+        "Tras contactar, programamos una llamada para discutir objetivos y detalles. Desarrollamos un brief creativo, acordamos fechas y procedemos con la producción. Recibirás actualizaciones regulares y un informe final de resultados.",
     },
     {
-      question: "¿Cuántos suscriptores tiene el canal?",
+      question: "¿Qué tipos de marcas son adecuadas?",
       answer:
-        "Nuestro canal está en crecimiento constante. Lo más importante es nuestra tasa de engagement y retención, que supera la media del sector. Contacta con nosotros para obtener las métricas más actualizadas.",
+        "Colaboramos con marcas relacionadas con inversión inmobiliaria, construcción, reformas, finanzas, seguros y tecnología para el sector inmobiliario. La clave es que aporten valor real a nuestra audiencia.",
     },
     {
-      question: "¿Puedo elegir en qué videos aparece mi marca?",
+      question: "¿Cuánto tiempo tarda la producción?",
       answer:
-        "Sí, trabajamos contigo para seleccionar los videos más relevantes para tu marca. Te proporcionamos un calendario de contenido y puedes elegir los temas que mejor se alineen con tu mensaje.",
+        "El tiempo de producción varía según el tipo de contenido. Un video patrocinado típico toma 2-3 semanas desde la aprobación del brief hasta la publicación. Proyectos más extensos pueden requerir 4-6 semanas.",
     },
     {
-      question: "¿Qué métricas recibiré después de la campaña?",
+      question: "¿Qué métricas de rendimiento proporcionan?",
       answer:
-        "Proporcionamos un informe detallado que incluye visualizaciones, tiempo de retención, engagement, clics en enlaces, y cualquier métrica específica que necesites para medir el ROI.",
+        "Proporcionamos informes detallados que incluyen visualizaciones, tiempo de retención, engagement rate, clicks en enlaces y datos demográficos de la audiencia. También podemos personalizar el seguimiento según tus KPIs específicos.",
     },
     {
-      question: "¿Hay un compromiso mínimo de videos?",
+      question: "¿Ofrecen exclusividad por sector?",
       answer:
-        "No hay un mínimo obligatorio, pero ofrecemos descuentos atractivos para paquetes de múltiples videos. Esto permite una presencia más consistente y mejores resultados.",
-    },
-    {
-      question: "¿Cómo se mide el éxito de la campaña?",
-      answer:
-        "Definimos KPIs claros antes de comenzar y los monitorizamos durante toda la campaña. Típicamente medimos visualizaciones, engagement, clics, conversiones y el sentimiento general de la audiencia.",
+        "Sí, podemos acordar períodos de exclusividad para tu sector. Esto significa que no promocionaremos productos o servicios competidores durante el período acordado.",
     },
   ],
 };
 
 export default function SponsorFAQ() {
   return (
-    <Wrapper className="bg-slate-100">
-      <InnerWrap className="items-center justify-center max-w-4xl text-black">
-        <div className="text-center mb-16">
-          <span className="text-brand-primary font-medium mb-4 block">
-            {faqContent.preheading}
-          </span>
+    <Wrapper className="bg-white py-12">
+      <InnerWrap className="items-center justify-center max-w-5xl ">
+        <TitleBlock
+          preheading={faqContent.preheading}
+          heading={faqContent.heading}
+          subheading={faqContent.subheading}
+          theme="light"
+          orientation="center"
+        />
 
-          <h2 className="text-4xl font-bold mb-4 tracking-tight">
-            {faqContent.heading}
-          </h2>
-
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-            {faqContent.subheading}
-          </p>
+        <div className="flex w-full p-12 border rounded-2xl shadow-sm">
+          <Accordion type="single" collapsible className="space-y-4 w-full">
+            {faqContent.faqs.map((faq, index) => (
+              <AccordionItem key={index} value={`faq-${index}`}>
+                <AccordionTrigger className="text-lg font-medium text-slate-900 border-b-0 px-4">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-slate-600 border border-b-0 border-t-0 p-4">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
-
-        <Accordion type="single" collapsible className="w-full">
-          {faqContent.faqs.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="text-left">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-slate-600">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
       </InnerWrap>
     </Wrapper>
   );

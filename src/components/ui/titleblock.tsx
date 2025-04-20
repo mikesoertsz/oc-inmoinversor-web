@@ -41,7 +41,7 @@ const titleStyles = cva("flex w-full max-w-3xl", {
     {
       theme: "dark",
       orientation: "center",
-      class: "flex-col items-center justify-center text-white",
+      class: "flex-col items-center justify-center",
     },
     {
       theme: "dark",
@@ -75,7 +75,8 @@ export function TitleBlock({
   orientation = "center",
 }: TitleBlockProps) {
   const darkModeStyles = {
-    preHeading: "text-brand-g1", // Example color for PreHeading in dark mode
+    preHeading: "text-brand-primary", // Example color for PreHeading in dark mode
+    heading: "text-brand-highlight", // Example color for Heading in dark mode
     body: "text-gray-400", // Example color for Body in dark mode
   };
 
@@ -89,7 +90,11 @@ export function TitleBlock({
         </PreHeading>
       )}
       {heading && (
-        <Heading className="font-title text-4xl leading-[1.35] md:text-[2.5em] font-medium tracking-tighter md:leading-[4rem]">
+        <Heading
+          className={`font-title text-4xl leading-[1.35] md:text-[2.5em] font-medium tracking-tighter md:leading-[4rem] ${
+            theme === "dark" ? darkModeStyles.heading : ""
+          }`}
+        >
           {heading}
         </Heading>
       )}
