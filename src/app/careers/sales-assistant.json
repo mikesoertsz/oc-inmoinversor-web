@@ -1,0 +1,88 @@
+{
+  "id": "job-002",
+  "title": "Sales Assistant",
+  "slug": "sales-assistant",
+  "company": {
+    "name": "Innovative Solutions Company",
+    "website": "",
+    "logo_url": "",
+    "description": "Our company is a leader in providing innovative solutions to clients worldwide, with a focus on customer satisfaction and growth.",
+    "location": "Remote",
+    "industry": ["Sales", "Customer Service"],
+    "size": "",
+    "funding_stage": ""
+  },
+  "location": {
+    "type": "Remote",
+    "remote_policy": "Work from anywhere",
+    "country": "Global",
+    "timezone_overlap": [],
+    "preferred_timezones": []
+  },
+  "employment_type": "Freelance",
+  "job_type": ["Sales", "Support"],
+  "contract_type": "Contract",
+  "experience_level": ["Entry-level", "1+ years"],
+  "salary": {
+    "currency": "",
+    "min": null,
+    "max": null,
+    "frequency": "",
+    "equity": ""
+  },
+  "compensation": {
+    "base_salary": "",
+    "bonus": "",
+    "equity_offered": false,
+    "signing_bonus": false,
+    "benefits": [
+      "Work from anywhere.",
+      "Gain experience in a fast-paced sales environment.",
+      "Collaborate with a diverse team of professionals."
+    ]
+  },
+  "technologies": ["Microsoft Office Suite", "CRM Software"],
+  "tools": ["Email", "CRM"],
+  "skills": ["Organizational Skills", "Multitasking", "Communication"],
+  "soft_skills": ["Teamwork", "Adaptability", "Problem-solving"],
+  "responsibilities": [
+    "Support the sales team in managing client accounts and relationships.",
+    "Prepare and organize sales materials and presentations.",
+    "Coordinate with other departments to ensure timely delivery of services.",
+    "Maintain accurate records of sales activities and client interactions.",
+    "Assist in the preparation of sales reports and forecasts."
+  ],
+  "requirements": [
+    "Previous experience in a sales support or administrative role.",
+    "Strong organizational and multitasking skills.",
+    "Excellent verbal and written communication skills.",
+    "Proficiency in Microsoft Office Suite and CRM software.",
+    "Ability to work independently and as part of a team."
+  ],
+  "nice_to_have": [
+    "Experience with sales analytics tools.",
+    "Knowledge of customer relationship management."
+  ],
+  "education": {
+    "required": "High School Diploma or equivalent",
+    "preferred": "Bachelor's in Business Administration or related field"
+  },
+  "languages": {
+    "required": ["English"],
+    "preferred": []
+  },
+  "application": {
+    "apply_url": "",
+    "contact_email": "",
+    "deadline": "",
+    "application_process": [
+      "Interested candidates should submit their resume and a cover letter detailing their relevant experience."
+    ]
+  },
+  "posted_at": "",
+  "updated_at": "",
+  "tags": ["remote", "sales", "support", "freelance", "entrylevel"],
+  "status": "active",
+  "visibility": "public",
+  "internal_notes": ""
+}

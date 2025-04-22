@@ -1,0 +1,88 @@
+{
+  "id": "job-003",
+  "title": "Sales Admin",
+  "slug": "sales-admin",
+  "company": {
+    "name": "Dynamic Sales Company",
+    "website": "",
+    "logo_url": "",
+    "description": "We are a dynamic company committed to excellence in sales and customer service, offering innovative solutions to our clients.",
+    "location": "Remote",
+    "industry": ["Sales", "Administration"],
+    "size": "",
+    "funding_stage": ""
+  },
+  "location": {
+    "type": "Remote",
+    "remote_policy": "Remote work flexibility",
+    "country": "Global",
+    "timezone_overlap": [],
+    "preferred_timezones": []
+  },
+  "employment_type": "Freelance",
+  "job_type": ["Administration", "Sales"],
+  "contract_type": "Contract",
+  "experience_level": ["Mid-level", "2+ years"],
+  "salary": {
+    "currency": "",
+    "min": null,
+    "max": null,
+    "frequency": "",
+    "equity": ""
+  },
+  "compensation": {
+    "base_salary": "",
+    "bonus": "",
+    "equity_offered": false,
+    "signing_bonus": false,
+    "benefits": [
+      "Remote work flexibility.",
+      "Opportunity to develop administrative skills in a sales context.",
+      "Engage with a supportive and collaborative team."
+    ]
+  },
+  "technologies": ["Microsoft Office Suite", "CRM Software"],
+  "tools": ["Email", "CRM"],
+  "skills": ["Attention to Detail", "Organizational Skills", "Communication"],
+  "soft_skills": ["Interpersonal Skills", "Time Management", "Problem-solving"],
+  "responsibilities": [
+    "Manage and organize the sales team's schedules and appointments.",
+    "Handle correspondence and communication with clients and partners.",
+    "Maintain and update sales records and databases.",
+    "Assist in the preparation of sales documents and contracts.",
+    "Provide general administrative support to the sales team."
+  ],
+  "requirements": [
+    "Experience in an administrative role, preferably in sales.",
+    "Strong attention to detail and organizational skills.",
+    "Proficiency in Microsoft Office Suite and CRM software.",
+    "Excellent communication and interpersonal skills.",
+    "Ability to manage multiple tasks and prioritize effectively."
+  ],
+  "nice_to_have": [
+    "Experience with project management tools.",
+    "Knowledge of sales processes."
+  ],
+  "education": {
+    "required": "Associate's Degree or equivalent experience",
+    "preferred": "Bachelor's in Business Administration or related field"
+  },
+  "languages": {
+    "required": ["English"],
+    "preferred": []
+  },
+  "application": {
+    "apply_url": "",
+    "contact_email": "",
+    "deadline": "",
+    "application_process": [
+      "Please send your resume and a brief cover letter explaining your suitability for the role."
+    ]
+  },
+  "posted_at": "",
+  "updated_at": "",
+  "tags": ["remote", "sales", "admin", "freelance", "midlevel"],
+  "status": "active",
+  "visibility": "public",
+  "internal_notes": ""
+}

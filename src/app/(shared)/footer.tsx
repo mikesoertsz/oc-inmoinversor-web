@@ -20,6 +20,7 @@ const footer: { columns: FooterColumn[] } = {
         { text: "Perspectivas", url: "/insights" },
         { text: "Contacto", url: "/contact" },
         { text: "Nosotros", url: "/about" },
+        { text: "Careers", url: "/careers" },
       ],
     },
     {

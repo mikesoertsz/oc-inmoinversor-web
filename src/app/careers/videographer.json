@@ -1,0 +1,89 @@
+{
+  "id": "job-001",
+  "title": "Videographer",
+  "slug": "videographer",
+  "company": {
+    "name": "Leading Media Company",
+    "website": "",
+    "logo_url": "",
+    "description": "We are a leading media company focused on delivering high-quality content across various platforms.",
+    "location": "Remote",
+    "industry": ["Media", "Content Creation"],
+    "size": "",
+    "funding_stage": ""
+  },
+  "location": {
+    "type": "Remote",
+    "remote_policy": "Flexible working hours",
+    "country": "Global",
+    "timezone_overlap": [],
+    "preferred_timezones": []
+  },
+  "employment_type": "Freelance",
+  "job_type": ["Videography", "Editing"],
+  "contract_type": "Contract",
+  "experience_level": ["Mid-level", "3+ years"],
+  "salary": {
+    "currency": "",
+    "min": null,
+    "max": null,
+    "frequency": "",
+    "equity": ""
+  },
+  "compensation": {
+    "base_salary": "",
+    "bonus": "",
+    "equity_offered": false,
+    "signing_bonus": false,
+    "benefits": [
+      "Flexible working hours.",
+      "Opportunity to work with a creative and dynamic team.",
+      "Access to the latest video production tools and software."
+    ]
+  },
+  "technologies": ["Adobe Premiere Pro", "Final Cut Pro"],
+  "tools": ["Video Cameras", "Editing Software"],
+  "skills": ["Video Editing", "Creative Direction", "Content Creation"],
+  "soft_skills": ["Communication", "Collaboration", "Time Management"],
+  "responsibilities": [
+    "Capture high-quality video footage for various projects.",
+    "Edit and assemble raw footage into polished video content.",
+    "Collaborate with the creative team to develop video concepts.",
+    "Ensure all video content aligns with brand guidelines.",
+    "Stay updated with industry trends and incorporate them into projects."
+  ],
+  "requirements": [
+    "Proven experience as a videographer or similar role.",
+    "Proficiency in video editing software such as Adobe Premiere Pro, Final Cut Pro, etc.",
+    "Strong portfolio showcasing previous video projects.",
+    "Excellent communication and collaboration skills.",
+    "Ability to work independently and meet deadlines."
+  ],
+  "nice_to_have": [
+    "Experience with animation software.",
+    "Knowledge of color grading."
+  ],
+  "education": {
+    "required": "Bachelor's in Film Production or related field",
+    "preferred": ""
+  },
+  "languages": {
+    "required": ["English"],
+    "preferred": []
+  },
+  "application": {
+    "apply_url": "",
+    "contact_email": "",
+    "deadline": "",
+    "application_process": [
+      "Submit your resume and a link to your portfolio.",
+      "Selected candidates will be contacted for an interview."
+    ]
+  },
+  "posted_at": "",
+  "updated_at": "",
+  "tags": ["remote", "videography", "editing", "freelance", "creative"],
+  "status": "active",
+  "visibility": "public",
+  "internal_notes": ""
+}
