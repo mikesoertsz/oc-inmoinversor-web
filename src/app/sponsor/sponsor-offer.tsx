@@ -38,7 +38,7 @@ const offerContent = {
       originalPriceEUR: Math.ceil(2796.0),
       discountedPriceEUR: Math.ceil(2097),
       discountPercentage: 25,
-      description: "4 episodios/mes con mensajes consistentes de Brabantia.",
+      description: "4 episodios/mes con mensajes consistentes.",
       features: [
         "Todo en Anuncio Único.",
         "Visibilidad a largo plazo.",
@@ -58,8 +58,7 @@ const offerContent = {
       originalPriceEUR: Math.ceil(8388.0),
       discountedPriceEUR: Math.ceil(5032.8),
       discountPercentage: 40,
-      description:
-        "12 episodios/trimestre con mensajes consistentes de Brabantia.",
+      description: "12 episodios/trimestre con mensajes consistentes.",
       features: [
         "Todo en Anuncio Único.",
         "Visibilidad a largo plazo.",
