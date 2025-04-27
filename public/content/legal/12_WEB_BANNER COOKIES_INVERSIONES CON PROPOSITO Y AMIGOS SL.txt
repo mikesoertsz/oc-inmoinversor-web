@@ -1,0 +1,26 @@
+﻿
+BANNER COOKIES
+
+1.- Información a incluir en el aviso de cookies ("banner" alerta cookies).
+En nuestro sitio web utilizamos cookies propias y de terceros para finalidades analíticas mediante el análisis del tráfico web, para personalizar el contenido mediante sus preferencias y con finalidades publicitarias. Para más información puedes consultar nuestra Política de Cookies AQUÍ.  Puedes aceptar y rechazar todas las cookies en bloque o también puedes aceptarlas de forma concreta, modificar su selección o rechazar su uso pulsando "Configuración de Cookies". 
+
+Configuración de Cookies
+
+
+Instrucciones incorporación banner 
+- El banner deberá ser claramente visible en el momento de acceder al sitio web. Se recomienda que el banner ocupe una porción importante de la pantalla y que obligue al usuario a aceptar o rechazar las cookies antes de continuar con la navegación. 
+- Para ello, el contenido no deberá ser accesible o claramente visualizable hasta que el usuario interactúe con el banner y establezca sus preferencias. 
+- Las cookies únicamente se instalarán en el momento en que el usuario acepte. 
+- El botón o enlace "AQUÍ" deberá redirigir automáticamente a la Política de Cookies de la página web. 
+- El botón "Configuración de Cookies" redirigirá al sistema de configuración en el que el usuario podrá rechazar las cookies o establecer sus preferencias. 
+
+2.- Sistema de "Configuración de Cookies" e información 
+En el apartado de configuración de preferencias al que debe redirigir en el momento de presionar el botón o texto subrayado "Configuración de Cookies" debe incluir: 
+* Se debe incluir un mecanismo de configuración para que el usuario puede activar o desactivar las cookies con los siguientes apartados (para cada una de las finalidades):
+              Cookies Necesarias
+               Activar / Desactivar Cookies de preferencias o personalización
+               Activar / Desactivar Cookies analíticas  
+Activar / Desactivar Cookies publicitarias   
+
+		
+

@@ -1,0 +1,11 @@
+﻿PÁGINA WEB WWW.INMOINVERSOR.COM
+
+
+Introducir checkbox mediante el cual se acepta el enlace a la Política de Privacidad y quede trazabilidad de ello.
+
+Introducir los textos legales en el footer de la web para que sean visibles por los usuarios en todo momento: Aviso Legal, Política de Privacidad y Políticas de Cookies.
+
+Implementar banner de cookies para su configuración cuando el usuario acceda por primera vez a la página web. 
+
+Introducir checkbox mediante el cual se acepta el enlace a la Política de Privacidad y quede trazabilidad de ello.
+

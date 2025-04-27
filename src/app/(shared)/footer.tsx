@@ -34,6 +34,15 @@ const footer: { columns: FooterColumn[] } = {
       ],
     },
     {
+      title: "Legal",
+      links: [
+        { text: "Cookies", url: "/legal/cookies-policy" },
+        { text: "Privacidad", url: "/legal/privacy-policy" },
+        { text: "Términos", url: "/legal/legal-notice" },
+        { text: "Cláusula Email", url: "/legal/email-clause" },
+      ],
+    },
+    {
       title: "Redes Sociales",
       links: [
         { text: "Facebook", url: "https://facebook.com" },
@@ -49,7 +58,7 @@ const footer: { columns: FooterColumn[] } = {
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <Wrapper className="px-4 border-t border-gray-200">
+    <Wrapper className="px-4 border-t border-gray-200 font-body">
       <footer className="w-full max-w-5xl mx-auto text-sm bg-white dark:border-neutral-700 dark:bg-neutral-900 hidden px-0">
         <ul className="grid w-full grid-cols-1 md:grid-cols-6 rounded-full border border-slate-100">
           {footer.columns.map((column, index) => (
@@ -73,9 +82,21 @@ export default function Footer() {
           ))}
         </ul>
       </footer>
-      <div className="flex flex-col-reverse gap-y-3 py-2 sm:gap-y-0 sm:py-0 sm:flex-row items-center justify-between h-auto sm:h-10 text-xs text-center text-gray-500 border-t border-gray-200 dark:border-neutral-700 dark:text-neutral-200">
-        <p>Immo Inversor © {currentYear}. Todos los derechos reservados.</p>
-        <div className="items-center justify-center hidden md:flex md:justify-end">
+
+      <div className="grid grid-cols-1 md:grid-cols-3 sm:flex-row items-center justify-between h-auto sm:h-10 text-[12px] text-center text-gray-500 border-t border-gray-200 dark:border-neutral-700 dark:text-neutral-200">
+        <p className="text-left">
+          Immo Inversor©{currentYear}. Todos los derechos reservados.
+        </p>
+        <ul className="flex flex-row gap-4 items-center justify-center">
+          {footer.columns[2].links.map((link, index) => (
+            <li key={index} className="text-[11px]">
+              <a href={link.url} className="hover:underline">
+                {link.text}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <div className="items-center justify-center hidden md:flex md:justify-end text-xs">
           <p>
             Hecho por{" "}
             <a

@@ -85,15 +85,15 @@ export default function FAQ({ faqContent = defaultFaqContent }: FAQProps) {
           <Accordion
             type="single"
             collapsible
-            className="w-full bg-slate-100 border border-slate-200 p-4 rounded-2xl"
+            className="w-full bg-slate-100 border border-slate-200 p-4 rounded-2xl border-none"
           >
             {faqContent.questions.map((item) => (
               <AccordionItem
                 key={item.id}
                 value={item.id}
-                className="px-4 mt-2 transition ease-in-out bg-white border border-gray-200 rounded-lg shadow-sm duratin-300 first:mt-0 hover:shadow-md"
+                className="px-4 mt-2 transition ease-in-out bg-white rounded-lg shadow-sm duratin-300 first:mt-0 hover:shadow-md border-none"
               >
-                <AccordionTrigger className="flex w-full items-center justify-between py-4 font-medium text-left text-slate-900">
+                <AccordionTrigger className="flex w-full items-center justify-between py-4 font-medium text-left text-slate-900 border-none">
                   {item.question}
                 </AccordionTrigger>
                 <AccordionContent className="pb-4 text-left text-slate-700">

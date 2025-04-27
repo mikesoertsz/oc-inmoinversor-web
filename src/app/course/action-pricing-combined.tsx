@@ -31,7 +31,8 @@ const content = {
     subheading: "Plazas limitadas disponibles. ¡Actúa rápido!",
   },
   pricing: {
-    title: "Acceso Completo",
+    preheading: "Inscripción al Curso",
+    title: "Acceso Completo\nCurso de Inversión Inmobiliaria",
     price: 3499,
     features: [
       "Todo el contenido online",
@@ -42,6 +43,8 @@ const content = {
       "Plan de inversión personalizado",
     ],
     guarantee: "Garantía de satisfacción del 100% o te devolvemos el dinero",
+    disclaimer:
+      "No somos agentes ni corredores y no podemos ayudar a vender tu casa.",
   },
   form: {
     title: "Regístrate Ahora",
@@ -184,13 +187,20 @@ export default function CombinedCTA() {
 
         <div className="grid md:grid-cols-2 gap-4 w-full max-w-6xl mx-auto bg-slate-50 p-4 rounded-2xl">
           {/* Pricing Column */}
-          <div className="bg-white p-6 rounded-xl shadow-md flex flex-col items-start justify-between">
+          <div className="bg-white p-10 rounded-xl shadow-md flex flex-col items-start justify-between">
             <div className="space-y-6">
               <div>
-                <h3 className="text-2xl font-light tracking-tight">
+                <p className="text-sm font-medium text-gray-500 mb-3">
+                  {content.pricing.preheading}
+                </p>
+                <h3 className="text-2xl font-light tracking-tight whitespace-pre-line">
                   {content.pricing.title}
                 </h3>
-                <p className="text-5xl font-medium mt-2 tracking-tighter">
+                <p className="text-xs text-gray-500">
+                  Aprende a invertir en bienes raíces con nuestro curso
+                  completo.
+                </p>
+                <p className="text-6xl font-medium mt-8 tracking-tighter">
                   €{content.pricing.price.toLocaleString("de-DE")}
                 </p>
               </div>
@@ -204,9 +214,15 @@ export default function CombinedCTA() {
                 ))}
               </ul>
             </div>
-            <p className="text-sm text-gray-500 pt-4 border-t">
-              {content.pricing.guarantee}
-            </p>
+            <div className="rounded-md bg-slate-50 border p-4 text-sm max-w-prose">
+              <p className="text-md font-medium text-gray-800 mb-2">
+                Garantía y Disclaimer
+              </p>
+              <ol className="list-decimal list-outside px-4 space-y-1 text-xs">
+                <li>{content.pricing.guarantee}</li>
+                <li>{content.pricing.disclaimer}</li>
+              </ol>
+            </div>
           </div>
 
           {/* Form Column */}
