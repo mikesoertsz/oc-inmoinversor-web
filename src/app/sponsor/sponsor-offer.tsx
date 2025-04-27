@@ -16,8 +16,7 @@ const offerContent = {
       frequency: "Single Episode",
       duration: "15–30 seconds",
       price: Math.ceil(699),
-      description:
-        "Integración de anuncio personalizada durante el tiempo de mayor visualización.",
+      description: "Anuncio personalizado en tiempo de mayor visualización.",
       features: [
         "Locución y colocación de producto.",
         "Animación y gráficos de calidad.",
@@ -34,10 +33,9 @@ const offerContent = {
       name: "Campaña de 4 Episodios",
       type: "4-Pack Campaign",
       frequency: "Monthly (4 episodes/month)",
-      price: Math.ceil(2097),
       originalPriceEUR: Math.ceil(2796.0),
-      discountedPriceEUR: Math.ceil(2097),
-      discountPercentage: 25,
+      price: Math.ceil(2796.0 * (1 - 0.15)), // Calculate discounted price
+      discountPercentage: 15,
       description: "4 episodios/mes con mensajes consistentes.",
       features: [
         "Todo en Anuncio Único.",
@@ -54,10 +52,9 @@ const offerContent = {
       name: "Campaña de 12 Episodios",
       type: "12-Pack Campaign",
       frequency: "Quarterly (12 episodes/quarter)",
-      price: Math.ceil(5032.8),
       originalPriceEUR: Math.ceil(8388.0),
-      discountedPriceEUR: Math.ceil(5032.8),
-      discountPercentage: 40,
+      price: Math.ceil(8388.0 * (1 - 0.25)), // Calculate discounted price
+      discountPercentage: 25,
       description: "12 episodios/trimestre con mensajes consistentes.",
       features: [
         "Todo en Anuncio Único.",

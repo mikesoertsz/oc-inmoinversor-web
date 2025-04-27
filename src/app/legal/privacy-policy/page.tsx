@@ -33,8 +33,8 @@ export default function PrivacyPolicy() {
           datos personales. Esta Política de Privacidad tiene como objetivo
           informar a los usuarios sobre cómo recopilamos, utilizamos,
           compartimos y protegemos sus datos personales cuando acceden y
-          utilizan nuestro sitio web www. inmoinversor.com (en adelante, "la
-          Web").
+          utilizan nuestro sitio web www.inmoinversor.com (en adelante, &quot;la
+          Web&quot;).
         </p>
         <p>
           El acceso y uso de la Web implica la aceptación plena y sin reservas

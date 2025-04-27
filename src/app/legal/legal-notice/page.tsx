@@ -20,15 +20,15 @@ export default function LegalNotice() {
         <p>
           El presente Aviso Legal establece las condiciones generales que
           regulan el acceso y uso del sitio web www.inmoinversor.com (en
-          adelante, "la Web"), que INVERSIONES CON PROPOSITO Y AMIGOS, S.L. pone
-          a disposición de los usuarios de Internet. El acceso y uso de la Web
-          implica la aceptación plena y sin reservas de todas y cada una de las
-          disposiciones incluidas en este Aviso Legal, así como de cualquier
-          otra disposición legal que fuera de aplicación. A través de la Web,
-          INVERSIONES CON PROPOSITO Y AMIGOS, S.L. facilita a los usuarios el
-          acceso y la utilización de diversos servicios y contenidos puestos a
-          disposición por INVERSIONES CON PROPOSITO Y AMIGOS, S.L. o por
-          terceros. El usuario se compromete a hacer un uso adecuado de los
+          adelante, &quot;la Web&quot;), que INVERSIONES CON PROPOSITO Y AMIGOS,
+          S.L. pone a disposición de los usuarios de Internet. El acceso y uso
+          de la Web implica la aceptación plena y sin reservas de todas y cada
+          una de las disposiciones incluidas en este Aviso Legal, así como de
+          cualquier otra disposición legal que fuera de aplicación. A través de
+          la Web, INVERSIONES CON PROPOSITO Y AMIGOS, S.L. facilita a los
+          usuarios el acceso y la utilización de diversos servicios y contenidos
+          puestos a disposición por INVERSIONES CON PROPOSITO Y AMIGOS, S.L. o
+          por terceros. El usuario se compromete a hacer un uso adecuado de los
           contenidos y servicios que INVERSIONES CON PROPOSITO Y AMIGOS, S.L.
           ofrece a través de la Web y a no emplearlos para incurrir en
           actividades ilícitas o contrarias a la buena fe y al ordenamiento
@@ -39,9 +39,10 @@ export default function LegalNotice() {
           En cumplimiento de la Ley 34/2002, de 11 de julio, de Servicios de la
           Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se
           informa que la presente página web www.inmoinversor.com (en adelante,
-          "la Web") es propiedad de INVERSIONES CON PROPOSITO Y AMIGO, S.L., con
-          NIF B-01783299, datos de Registro Mercantil y domicilio fiscal en
-          calle Golondrina nº 11, CP: 28229, Villanueva del Pardillo, Madrid.
+          &quot;la Web&quot;) es propiedad de INVERSIONES CON PROPOSITO Y
+          AMIGOS, S.L., con NIF B-01783299, datos de Registro Mercantil y
+          domicilio fiscal en calle Golondrina nº 11, CP: 28229, Villanueva del
+          Pardillo, Madrid.
         </p>
         <p>
           Si deseas ponerte en contacto con nosotros puedes hacerlo poniéndote
