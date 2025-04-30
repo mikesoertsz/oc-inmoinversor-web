@@ -8,7 +8,7 @@ import {
   Eye,
   Heart,
   TrendingUp,
-  Users
+  Users,
 } from "lucide-react";
 
 const iconSize = 24;
@@ -87,7 +87,7 @@ export default function SponsorInfo() {
           <div className="gap-3 p-12">
             <TitleBlock
               heading="Acerca de Nuestro Canal"
-              body="Inmo Inversor es un canal de YouTube líder en contenido sobre inversión inmobiliaria en España, alcanzando a miles de inversores actuales y potenciales cada semana."
+              body="InmoInversor es un canal de YouTube líder en contenido sobre inversión inmobiliaria en España, alcanzando a miles de inversores actuales y potenciales cada semana."
               theme="light"
               orientation="left"
             />
@@ -101,7 +101,7 @@ export default function SponsorInfo() {
         <div className="gap-3 p-12">
           <TitleBlock
             heading="Nuestra Audiencia"
-            subheading="El contenido de Inmo Inversor atrae a un público específico y altamente comprometido, interesado en invertir y mejorar propiedades inmobiliarias."
+            subheading="El contenido de InmoInversor atrae a un público específico y altamente comprometido, interesado en invertir y mejorar propiedades inmobiliarias."
             theme="light"
             orientation="left"
           />

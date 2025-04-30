@@ -68,7 +68,7 @@ const offerContent = {
       vatInclusive: true,
     },
   ],
-  note: "Precios incluyen IVA.",
+  note: "Precios excluyen IVA.",
 };
 
 export default function SponsorOffer() {
@@ -112,13 +112,13 @@ export default function SponsorOffer() {
                   {pkg.name}
                 </h3>
                 <div className="text-5xl font-bold text-slate-800 tracking-tight">
-                  €{pkg.price.toLocaleString()}
+                  €{pkg.price.toLocaleString("de-DE")}
                 </div>
                 <div className="h-6">
                   {pkg.discountPercentage && (
                     <div className="text-lg text-green-700">
                       <span className="line-through">
-                        €{pkg.originalPriceEUR.toLocaleString()}
+                        €{pkg.originalPriceEUR.toLocaleString("de-DE")}
                       </span>{" "}
                       -{pkg.discountPercentage}%
                     </div>

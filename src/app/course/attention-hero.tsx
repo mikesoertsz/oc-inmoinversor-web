@@ -6,7 +6,7 @@ import { VelocityScroll } from "@/components/ui/scroll-based-velocity";
 const heroContent = {
   title: "Curso de Inversión Inmobiliaria",
   description:
-    "Únete a nuestro curso para aprender estrategias de inversión inmobiliaria y construir un portafolio exitoso.",
+    "Únete a nuestro curso para aprender estrategias de inversion inmobiliaria y construir un patrimonio inmobiliario indestructible.",
   buttonText: "Empezar ahora",
   offerText: "Oferta limitada, precios subirán pronto.",
 };

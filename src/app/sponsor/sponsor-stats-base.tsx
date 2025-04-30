@@ -7,10 +7,10 @@ type StatsProps = {
 };
 
 const statsData: StatsProps[] = [
-  { label: "RETURNING VIEWERS", value: "1.300" },
-  { label: "UNIQUE VIEWERS", value: "42.500" },
-  { label: "SUBSCRIBERS", value: "8.555" },
-  { label: "WATCH TIME", value: "1.100hrs" },
+  { label: "ESPECTADORES RECURRENTES", value: "1.300" },
+  { label: "ESPECTADORES ÚNICOS", value: "42.500" },
+  { label: "SUSCRIPTORES", value: "8.555" },
+  { label: "TIEMPO DE VISUALIZACIÓN", value: "1.100hrs" },
 ];
 
 export default function SponsorStatsBase() {

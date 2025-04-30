@@ -10,7 +10,7 @@ import "./globals.css";
 import "./prose.css";
 
 export const metadata: Metadata = {
-  title: "Inmo Inversor | Aprende a invertir en bienes raices en España",
+  title: "InmoInversor | Aprende a invertir en bienes raices en España",
   description: "Canal de aprendizaje sobre inversión inmobiliaria en España",
 };
 

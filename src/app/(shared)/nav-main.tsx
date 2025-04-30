@@ -75,7 +75,7 @@ export default function NavMain() {
               className="hidden  hover:no-underline hover:text-white transition duration-300 ease-in-out text-gray-300 font-title font-medium sm:flex items-center text-xs"
             >
               <a
-                href="https://www.youtube.com/@Inmoinversores"
+                href="https://www.youtube.com/channel/UCUt1LXPzzrOVe7PyYNYVjFQ"
                 target="_blank"
                 rel="noopener noreferrer"
               >

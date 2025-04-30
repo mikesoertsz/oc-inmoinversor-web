@@ -18,7 +18,7 @@ interface UIArticle {
 }
 
 export const metadata: Metadata = {
-  title: "Blog | Inmo Inversor",
+  title: "Blog | InmoInversor",
   description:
     "Artículos sobre inversión inmobiliaria y bienes raíces en España",
 };

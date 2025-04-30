@@ -3,7 +3,7 @@ import { InnerWrap, Wrapper } from "@/lib/atoms";
 import { Building2, Target, Users, Wallet } from "lucide-react";
 
 const featuresContent = {
-  preheading: "¿Por qué Inmo Inversor?",
+  preheading: "¿Por qué InmoInversor?",
   heading: "Tu Marca, Nuestro Alcance",
   subheading:
     "Construimos una comunidad altamente comprometida de inversores inmobiliarios en España",

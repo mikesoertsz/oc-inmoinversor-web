@@ -8,7 +8,7 @@ const testimonialsContent = {
   testimonials: [
     {
       quote:
-        "Colaborar con Inmo Inversor nos dio acceso directo al nicho de inversión inmobiliaria en España. Su audiencia confía en su experiencia, y ahora confían en nuestra marca.",
+        "Colaborar con InmoInversor nos dio acceso directo al nicho de inversión inmobiliaria en España. Su audiencia confía en su experiencia, y ahora confían en nuestra marca.",
       author: "María González",
       position: "Directora de Marketing",
       company: "Reformas Premium SL",
@@ -16,7 +16,7 @@ const testimonialsContent = {
     },
     {
       quote:
-        "El ROI que hemos visto de nuestras campañas con Inmo Inversor ha superado nuestras expectativas. La audiencia está realmente comprometida y busca productos de calidad.",
+        "El ROI que hemos visto de nuestras campañas con InmoInversor ha superado nuestras expectativas. La audiencia está realmente comprometida y busca productos de calidad.",
       author: "Carlos Ruiz",
       position: "CEO",
       company: "Inversiones Seguras",

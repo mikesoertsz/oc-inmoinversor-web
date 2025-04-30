@@ -350,7 +350,21 @@ export default function CombinedCTA() {
                     </Button>
 
                     <p className="text-xs text-center text-muted-foreground mt-4">
-                      {content.form.footer}
+                      Al registrarte, aceptas nuestros
+                      <a
+                        href="/legal/terms-and-conditions"
+                        className="font-medium hover:underline px-1 text-blue-700"
+                      >
+                        Términos
+                      </a>
+                      y nuestra
+                      <a
+                        href="/legal/privacy-policy"
+                        className="font-medium hover:underline px-1 text-blue-700"
+                      >
+                        Política de Privacidad
+                      </a>
+                      .
                     </p>
                   </form>
                 </Form>

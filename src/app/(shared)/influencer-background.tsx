@@ -37,7 +37,7 @@ const influencerContent = {
   },
   quote: {
     text: "La inversión inmobiliaria no se trata solo de comprar propiedades; se trata de construir un futuro financiero sólido y ayudar a otros a hacer lo mismo.",
-    author: "Guillermo Ortiz, Fundador de Inmo Inversor",
+    author: "Guillermo Ortiz, Fundador de InmoInversor",
   },
 };
 
@@ -65,7 +65,9 @@ export default function InfluencerBackground() {
               {influencerContent.stats.map((stat) => (
                 <div key={stat.label} className="space-y-2">
                   <div className="flex items-center gap-2">
-                    <div className="w-5 h-5 text-brand-primary">{stat.icon}</div>
+                    <div className="w-5 h-5 text-brand-primary">
+                      {stat.icon}
+                    </div>
                     <span className="text-2xl font-bold text-white">
                       {stat.value}
                     </span>

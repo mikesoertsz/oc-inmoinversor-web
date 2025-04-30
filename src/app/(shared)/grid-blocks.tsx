@@ -68,7 +68,7 @@ const defaultGridContent: {
       icon: FaHandHoldingUsd,
     },
     {
-      title: "Legal",
+      title: "Fiscalidad",
       subtitle:
         "No te equivoques en impuestos, conoce todos los trucos de primera mano.",
       icon: FaGavel,

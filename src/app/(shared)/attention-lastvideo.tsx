@@ -8,7 +8,7 @@ export default function LastVideo() {
     <Wrapper className="bg-gradient-to-t from-brand-bg1 to-black py-[5dvh] md:px-3">
       <InnerWrap className="items-center justify-center max-w-4xl text-center py-[5dvh] md:py-[10dvh]">
         <h2 className="tracking-tight font-title text-center mb-8 text-2xl text-white">
-          Ver el episodio más reciente
+          El plan de Inmo para 2025
         </h2>
         <div className="flex justify-center w-full aspect-video overflow-hidden bg-slate-100 relative max-w-6xl rounded-2xl shadow-xl">
           <ReactPlayer

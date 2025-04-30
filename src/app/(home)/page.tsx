@@ -4,8 +4,8 @@ import // getAllArticlesAction,
 "@/server/actions/articles";
 import Hero from "../(shared)/attention-hero";
 import LastVideo from "../(shared)/attention-lastvideo";
-import CtaCommunity from "../(shared)/cta-community";
 import FAQ from "../(shared)/faq";
+import FeaturedPosts from "../(shared)/featured-posts";
 // import InfluencerBackground from "../(shared)/influencer-background";
 // import MostRecentPost from "../(shared)/most-recent-post";
 // import ShortsCarousel from "./shorts";
@@ -25,11 +25,11 @@ export default async function Home() {
       <Hero />
       {/* <AppleCarousel /> */}
       <LastVideo />
-      {/* <FeaturedPosts /> */}
+      <FeaturedPosts />
       {/* <ShortsCarousel shorts={shorts} /> */}
       {/* <MostRecentPost articles={articles} /> */}
       <FAQ />
-      <CtaCommunity />
+      {/* <CtaCommunity /> */}
     </main>
   );
 }
