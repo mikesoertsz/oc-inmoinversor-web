@@ -34,50 +34,38 @@ const storyContent = {
 
 export default function Story() {
   return (
-    <main className="bg-gradient-to-b from-black to-brand-bg1 py-[5dvh]">
-      <Wrapper className="py-[5dvh]">
-        <InnerWrap className="flex flex-col max-w-3xl text-left text-gray-30">
-          <div className="flex items-center justify-start w-full my-12">
-            <Image
-              src={storyContent.imageSrc}
-              alt={storyContent.imageAlt}
-              width={60}
-              height={60}
-              className="mr-6 overflow-hidden rounded-full"
-            />
-            <div>
-              <p className="text-lg font-medium text-white">Guillermo Ortiz</p>
-              <p className="text-gray-500 text-md">Instructor</p>
-            </div>
-          </div>
-          <h1 className="w-full mb-3 text-5xl font-semibold text-white">
+    <main className="bg-gradient-to-b from-black to-brand-bg1 py-12">
+      <Wrapper className="py-0">
+        <InnerWrap className="flex flex-col items-center justify-center max-w-4xl text-left text-gray-30">
+          <h1 className="w-full mb-3 text-5xl font-semibold text-white text-center">
             {storyContent.title}
           </h1>
-          <div className="relative flex-col hidden w-full py-12 overflow-hidden aspect-video rounded-xl">
-            <Image
-              src={storyContent.imageSrc}
-              alt={storyContent.imageAlt}
-              fill
-              className="absolute inset-0"
-              style={{ objectFit: "cover" }}
-            />
-          </div>
-          <div
-            className="py-12 flex w-fullbun run dev
-          "
-          >
+          <div className="bg-white rounded-2xl shadow-lg p-3 flex flex-col w-full items-center justify-start mt-8">
+            <div className="relative flex-col hidden w-full py-12 overflow-hidden aspect-video rounded-xl">
+              <Image
+                src={storyContent.imageSrc}
+                alt={storyContent.imageAlt}
+                fill
+                className="absolute inset-0"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
             <PersonalStory />
+            <div className="flex flex-col w-full gap-4 mt-6 p-8">
+              {storyContent.paragraphs.map((paragraph, index) => (
+                <p key={index} className="text-md text-gray-800">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
           </div>
-          <div className="flex flex-col w-full gap-4 mt-6">
-            {storyContent.paragraphs.map((paragraph, index) => (
-              <p key={index} className="text-lg text-gray-400 drop-shadow-sm">
-                {paragraph}
-              </p>
-            ))}
-          </div>
-          <div className="flex flex-col md:flex-row items-center justify-between gap-12 p-8 my-4 mt-12 text-white bg-slate-900 shadow-lg rounded-xl text-center md:text-left">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-12 p-8 mt-12 text-white bg-slate-900 shadow-lg rounded-xl text-center md:text-left">
             <p className="text-sm">{storyContent.courseMessage}</p>
-            <Button variant="secondary" asChild>
+            <Button
+              variant="secondary"
+              asChild
+              className="px-8 bg-brand-highlight"
+            >
               <Link href={storyContent.courseLink}>Ver Curso</Link>
             </Button>
           </div>

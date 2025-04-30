@@ -26,7 +26,6 @@ export default async function Home() {
       {/* <AppleCarousel /> */}
       <LastVideo />
       <FeaturedPosts />
-      {/* <ShortsCarousel shorts={shorts} /> */}
       {/* <MostRecentPost articles={articles} /> */}
       <FAQ />
       {/* <CtaCommunity /> */}
