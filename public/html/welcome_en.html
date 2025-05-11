@@ -64,6 +64,12 @@
         margin-top: 30px;
         text-align: center;
       }
+      .call-to-action-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+      }
       .call-to-action button {
         background-color: #000000;
         color: white;
@@ -75,6 +81,26 @@
       }
       .call-to-action button:hover {
         background-color: #333333;
+      }
+      .whatsapp-button {
+        background-color: #25D366;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .whatsapp-button:hover {
+        background-color: #1EBE57;
+      }
+      .whatsapp-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
       }
       .call-to-action-text {
         font-size: 16px;
@@ -90,6 +116,10 @@
         .brand-logo {
           width: 100px;
           height: 100px;
+        }
+        .call-to-action-buttons {
+          flex-direction: column;
+          gap: 10px;
         }
       }
     </style>
@@ -118,9 +148,21 @@
           As a next step, you can schedule your initial call at a convenient
           time. Click the button below to book your appointment:
         </div>
-        <a href="https://cal.com/inmoinversor/curso-inicial" target="_blank">
-          <button>Book Initial Call</button>
-        </a>
+        <div class="call-to-action-buttons">
+          <a href="https://cal.com/inmoinversor/curso-inicial" target="_blank">
+            <button>Book Initial Call</button>
+          </a>
+          <a href="https://chat.whatsapp.com/invite" target="_blank">
+            <button class="whatsapp-button">
+              <img
+                class="whatsapp-icon"
+                src="https://res.cloudinary.com/drifter/image/upload/v1746176592/Icons/Whatsapp_Social_Media_Icon_dpm6jb.svg"
+                alt="WhatsApp Icon"
+              />
+              Join WhatsApp Group
+            </button>
+          </a>
+        </div>
       </div>
       <div class="footer">
         Best regards,<br />

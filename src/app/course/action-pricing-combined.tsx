@@ -115,7 +115,7 @@ const formSchema = z.object({
     }),
 });
 
-export default function CombinedCTA() {
+export default function CombinedCTA({ showPrice }: { showPrice: boolean }) {
   const [mounted, setMounted] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -200,9 +200,11 @@ export default function CombinedCTA() {
                   Aprende a invertir en bienes raíces con nuestro curso
                   completo.
                 </p>
-                <p className="text-6xl font-medium mt-8 tracking-tighter">
-                  €{content.pricing.price.toLocaleString("de-DE")}
-                </p>
+                {showPrice && (
+                  <p className="text-6xl font-medium mt-8 tracking-tighter">
+                    €{content.pricing.price.toLocaleString("de-DE")}
+                  </p>
+                )}
               </div>
 
               <ul className="gap-2">
@@ -263,6 +265,11 @@ export default function CombinedCTA() {
                     onSubmit={form.handleSubmit(onSubmit)}
                     className="space-y-4"
                   >
+                    <input
+                      type="hidden"
+                      name="priceShown"
+                      value={showPrice ? "shown" : "hidden"}
+                    />
                     <FormField
                       control={form.control}
                       name="name"
