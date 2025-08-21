@@ -4,8 +4,17 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import classNames from "classnames";
 import Image from "next/image";
 import { useCallback, useMemo, useRef, useState } from "react";
-import ReactPlayer from "react-player";
+import dynamic from "next/dynamic";
 import { Wrapper } from "@/lib/atoms";
+
+const ReactPlayer = dynamic(() => import("react-player"), {
+  ssr: false,
+  loading: () => (
+    <div className="flex items-center justify-center w-full h-full bg-slate-200">
+      <div className="text-slate-500">Cargando video...</div>
+    </div>
+  ),
+});
 
 type Slide = {
   title: string;

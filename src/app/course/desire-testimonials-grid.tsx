@@ -17,13 +17,12 @@ type DesireTestimonialsGridProps = {
 export default function DesireTestimonialsGrid({
   testimonials = [],
 }: DesireTestimonialsGridProps) {
-  // Function to select random 3 testimonials
-  const getRandomTestimonials = (testimonials: Testimonial[]) => {
-    const shuffled = testimonials.sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, 3);
+  // Function to select first 3 testimonials (deterministic)
+  const getSelectedTestimonials = (testimonials: Testimonial[]) => {
+    return testimonials.slice(0, 3);
   };
 
-  const selectedTestimonials = getRandomTestimonials(testimonials);
+  const selectedTestimonials = getSelectedTestimonials(testimonials);
 
   return (
     <Wrapper className="py-12 bg-gradient-to-b from-slate-100 to-white">

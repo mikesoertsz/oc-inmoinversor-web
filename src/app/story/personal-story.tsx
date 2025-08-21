@@ -1,6 +1,15 @@
 "use client";
 import React from "react";
-import ReactPlayer from "react-player";
+import dynamic from "next/dynamic";
+
+const ReactPlayer = dynamic(() => import("react-player"), {
+  ssr: false,
+  loading: () => (
+    <div className="flex items-center justify-center w-full h-full bg-slate-200">
+      <div className="text-slate-500">Cargando video...</div>
+    </div>
+  ),
+});
 
 export default function PersonalStory() {
   return (

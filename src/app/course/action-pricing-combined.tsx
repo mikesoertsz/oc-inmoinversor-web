@@ -202,7 +202,7 @@ export default function CombinedCTA({ showPrice }: { showPrice: boolean }) {
                 </p>
                 {showPrice && (
                   <p className="text-6xl font-medium mt-8 tracking-tighter">
-                    €{content.pricing.price.toLocaleString("de-DE")}
+                    €{content.pricing.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
                   </p>
                 )}
               </div>

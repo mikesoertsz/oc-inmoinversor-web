@@ -20,6 +20,15 @@ type Article = {
   slug: string;
 };
 
+// Helper function to format date consistently
+function formatDate(dateString: string): string {
+  const date = new Date(dateString);
+  const day = date.getDate().toString().padStart(2, '0');
+  const month = (date.getMonth() + 1).toString().padStart(2, '0');
+  const year = date.getFullYear();
+  return `${day}/${month}/${year}`;
+}
+
 export default async function FeaturedPosts() {
   const featuredArticles: Article[] = await getAllFeaturedArticlesAction();
 
@@ -70,7 +79,7 @@ export default async function FeaturedPosts() {
                   </p>
                   <div className="flex items-center text-xs text-gray-400 mt-auto">
                     <span>
-                      {new Date(article.date).toLocaleDateString("en-GB")}
+                      {formatDate(article.date)}
                     </span>
                     <span className="mx-2">•</span>
                     <span>{article.reading_time}</span>

@@ -15,13 +15,17 @@ const ViewerActivityChart = () => {
       (_, i) => i.toString().padStart(2, "0") + ":00"
     );
 
-    // Create datasets for each day
+    // Create datasets for each day with deterministic data
     const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-    const datasets = days.map((day, index) => ({
+    const datasets = days.map((day, dayIndex) => ({
       label: day,
-      data: Array.from({ length: 24 }, () => Math.floor(Math.random() * 100)),
-      backgroundColor: `rgba(147, 51, 234, ${0.3 + index * 0.1})`,
-      borderColor: `rgba(147, 51, 234, ${0.5 + index * 0.1})`,
+      data: Array.from({ length: 24 }, (_, hourIndex) => {
+        // Create deterministic "random" data based on day and hour
+        const seed = dayIndex * 24 + hourIndex;
+        return (seed * 7 + 13) % 100; // Simple deterministic formula
+      }),
+      backgroundColor: `rgba(147, 51, 234, ${0.3 + dayIndex * 0.1})`,
+      borderColor: `rgba(147, 51, 234, ${0.5 + dayIndex * 0.1})`,
       borderWidth: 1,
     }));
 

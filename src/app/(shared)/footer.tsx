@@ -1,19 +1,12 @@
+"use client";
+
 import { Wrapper } from "@/lib/atoms";
+import { useEffect, useState } from "react";
 
-type FooterLink = {
-  text: string;
-  url: string;
-};
-
-type FooterColumn = {
-  title: string;
-  links: FooterLink[];
-};
-
-const footer: { columns: FooterColumn[] } = {
+const footer = {
   columns: [
     {
-      title: "Recursos",
+      title: "Navegación",
       links: [
         { text: "Blog", url: "/blog" },
         { text: "Herramientas", url: "/tools" },
@@ -56,9 +49,14 @@ const footer: { columns: FooterColumn[] } = {
 };
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
+  const [currentYear, setCurrentYear] = useState<string>("");
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear().toString());
+  }, []);
+
   return (
-    <Wrapper className="px-4 border-t border-gray-200 font-body">
+    <Wrapper className="px-4 border-t border-gray-100 font-body">
       <footer className="w-full max-w-5xl mx-auto text-sm bg-white dark:border-neutral-700 dark:bg-neutral-900 hidden px-0">
         <ul className="grid w-full grid-cols-1 md:grid-cols-6 rounded-full border border-slate-100">
           {footer.columns.map((column, index) => (

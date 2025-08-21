@@ -125,7 +125,7 @@ export default function ActionPricing({
                     {tier.title}
                   </h3>
                   <p className="text-4xl font-medium mb-4 font-body tracking-tighter">
-                    €{tier.price.toLocaleString("de-DE")}
+                    €{tier.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
                   </p>
                 </div>
                 <ul className="text-left gap-1 py-4 px-4 flex h-full flex-col justify-start items-start">

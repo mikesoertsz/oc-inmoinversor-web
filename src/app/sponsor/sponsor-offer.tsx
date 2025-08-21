@@ -112,13 +112,13 @@ export default function SponsorOffer() {
                   {pkg.name}
                 </h3>
                 <div className="text-5xl font-bold text-slate-800 tracking-tight">
-                  €{pkg.price.toLocaleString("de-DE")}
+                  €{pkg.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
                 </div>
                 <div className="h-6">
                   {pkg.discountPercentage && (
                     <div className="text-lg text-green-700">
                       <span className="line-through">
-                        €{pkg.originalPriceEUR.toLocaleString("de-DE")}
+                        €{pkg.originalPriceEUR.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
                       </span>{" "}
                       -{pkg.discountPercentage}%
                     </div>

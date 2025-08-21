@@ -14,9 +14,9 @@ export async function BlogLayout({ article }: BlogLayoutProps) {
   const allArticles = await getAllArticlesAction();
   const otherArticles = allArticles.filter((a) => a.slug !== article.slug);
 
-  // Randomly select 3 articles
-  const randomRelatedPosts = otherArticles
-    .sort(() => Math.random() - 0.5)
+  // Select 3 articles based on date (most recent first) instead of random
+  const relatedPosts = otherArticles
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 3);
 
   return (
@@ -25,7 +25,7 @@ export async function BlogLayout({ article }: BlogLayoutProps) {
         <BlogHero article={article} />
         <BlogContent article={article} />
       </article>
-      <BlogRelatedPosts relatedPosts={randomRelatedPosts} />
+      <BlogRelatedPosts relatedPosts={relatedPosts} />
     </div>
   );
 }

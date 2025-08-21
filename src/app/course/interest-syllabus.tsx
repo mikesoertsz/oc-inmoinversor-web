@@ -25,8 +25,17 @@ import { HiOutlineClock } from "react-icons/hi2";
 import { LuGoal } from "react-icons/lu";
 import { MdOutlineCode, MdOutlineSmartDisplay } from "react-icons/md";
 import { TiDocument } from "react-icons/ti";
-import ReactPlayer from "react-player";
+import dynamic from "next/dynamic";
 import CourseSectionHeader from "@/components/blocks/course-section-header";
+
+const ReactPlayer = dynamic(() => import("react-player"), {
+  ssr: false,
+  loading: () => (
+    <div className="flex items-center justify-center w-full h-full bg-slate-200">
+      <div className="text-slate-500">Cargando video...</div>
+    </div>
+  ),
+});
 
 export type Syllabus = {
   header: string | React.ReactNode;

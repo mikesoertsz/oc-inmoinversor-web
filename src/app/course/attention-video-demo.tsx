@@ -1,7 +1,16 @@
 import { InnerWrap, Wrapper } from "@/lib/atoms";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import ReactPlayer from "react-player";
+import dynamic from "next/dynamic";
+
+const ReactPlayer = dynamic(() => import("react-player"), {
+  ssr: false,
+  loading: () => (
+    <div className="flex items-center justify-center w-full h-full bg-slate-200">
+      <div className="text-slate-500">Cargando video...</div>
+    </div>
+  ),
+});
 
 const videoContent = {
   preheading: "Vista Previa",
