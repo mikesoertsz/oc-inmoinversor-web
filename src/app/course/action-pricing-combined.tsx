@@ -185,9 +185,9 @@ export default function CombinedCTA({ showPrice }: { showPrice: boolean }) {
           orientation="center"
         />
 
-        <div className="grid md:grid-cols-2 gap-4 w-full max-w-6xl mx-auto bg-slate-50 p-4 rounded-2xl">
-          {/* Pricing Column */}
-          <div className="bg-white p-10 rounded-xl shadow-md flex flex-col items-start justify-between">
+        <div className="grid md:grid-cols-1 gap-4 w-full max-w-3xl mx-auto bg-slate-50 p-4 rounded-2xl">
+          {/* Pricing Column - Hidden */}
+          <div className="hidden bg-white p-10 rounded-xl shadow-md flex flex-col items-start justify-between">
             <div className="space-y-6">
               <div>
                 <p className="text-sm font-medium text-gray-500 mb-3">
@@ -202,7 +202,10 @@ export default function CombinedCTA({ showPrice }: { showPrice: boolean }) {
                 </p>
                 {showPrice && (
                   <p className="text-6xl font-medium mt-8 tracking-tighter">
-                    €{content.pricing.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
+                    €
+                    {content.pricing.price
+                      .toString()
+                      .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
                   </p>
                 )}
               </div>

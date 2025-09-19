@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://inmoinversor.com
+
+# Sitemaps
+Sitemap: https://inmoinversor.com/sitemap.xml
