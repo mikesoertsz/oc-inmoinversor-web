@@ -1,9 +1,6 @@
 import { Toaster } from "@/components/ui/sonner";
 import { body, title } from "@/lib/fonts";
-import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
-import Script from "next/script";
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import Footer from "./(shared)/footer";
 import NavMain from "./(shared)/nav-main";
 import CookieBanner from "@/components/cookie-banner";

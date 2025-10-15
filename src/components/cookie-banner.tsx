@@ -90,7 +90,7 @@ export default function CookieBanner() {
         document.head.appendChild(script);
 
         window.dataLayer = window.dataLayer || [];
-        function gtag(...args: any[]) {
+        function gtag(...args: unknown[]) {
           window.dataLayer.push(args);
         }
         window.gtag = gtag;
@@ -168,7 +168,7 @@ export default function CookieBanner() {
               </Link>
               . Puedes aceptar y rechazar todas las cookies en bloque o también
               puedes aceptarlas de forma concreta, modificar su selección o
-              rechazar su uso pulsando "Configuración de Cookies".
+              rechazar su uso pulsando &quot;Configuración de Cookies&quot;.
             </p>
             <div className="flex flex-col gap-2">
               <Button
@@ -308,8 +308,7 @@ export default function CookieBanner() {
 // Extend Window interface for TypeScript
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
-    dataLayer: any[];
-    fbq: (...args: any[]) => void;
+    dataLayer: unknown[];
+    fbq: (...args: unknown[]) => void;
   }
 }
