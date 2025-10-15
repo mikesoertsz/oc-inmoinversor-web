@@ -46,9 +46,6 @@ const formSchema = z.object({
   privacyPolicy: z.boolean().refine((val) => val === true, {
     message: "Debe aceptar la Política de Privacidad para continuar",
   }),
-  budgetClause: z.boolean().refine((val) => val === true, {
-    message: "Debe aceptar las cláusulas de presupuesto para continuar",
-  }),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -64,7 +61,6 @@ export default function SponsorCTA() {
       plan: "",
       message: "",
       privacyPolicy: false,
-      budgetClause: false,
     },
   });
 
@@ -273,34 +269,6 @@ export default function SponsorCTA() {
                           target="_blank"
                         >
                           Política de Privacidad
-                        </Link>
-                      </label>
-                    </div>
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="budgetClause"
-                render={({ field }) => (
-                  <FormItem className="flex flex-row items-start space-x-3 space-y-0">
-                    <FormControl>
-                      <Checkbox
-                        checked={field.value}
-                        onCheckedChange={field.onChange}
-                      />
-                    </FormControl>
-                    <div className="space-y-1 leading-none">
-                      <FormMessage />
-                      <label className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                        Acepto las{" "}
-                        <Link
-                          href="/legal/budget-clause"
-                          className="text-blue-600 underline hover:text-blue-800"
-                          target="_blank"
-                        >
-                          Cláusulas de Presupuesto
                         </Link>
                       </label>
                     </div>

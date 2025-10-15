@@ -33,9 +33,6 @@ const footer = {
         { text: "Privacidad", url: "/legal/privacy-policy" },
         { text: "Términos", url: "/legal/legal-notice" },
         { text: "Cláusula Email", url: "/legal/email-clause" },
-        { text: "Cláusula Contratos", url: "/legal/contract-clause" },
-        { text: "Cláusula Presupuestos", url: "/legal/budget-clause" },
-        { text: "Cláusula Facturas", url: "/legal/invoice-clause" },
       ],
     },
     {

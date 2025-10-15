@@ -33,18 +33,24 @@ This plan outlines the integration of comprehensive legal documentation into the
 
 #### 2. Business Process Clauses (Priority 2)
 
-- **CLÁUSULA CONTRATOS** → New page `/legal/contract-clause`
-- **CLÁUSULA PRESUPUESTOS** → New page `/legal/budget-clause`
-- **CLÁUSULA PARA INSERTAR EN LAS FACTURAS** → New page `/legal/invoice-clause`
-- **CLAUSULA PARA INCLUIR EN E-MAILS** → Update existing `/legal/email-clause`
+- **CLÁUSULA CONTRATOS** → For actual business contracts (NOT website pages)
+- **CLÁUSULA PRESUPUESTOS** → For actual budget quotes (NOT website pages)
+- **CLÁUSULA PARA INSERTAR EN LAS FACTURAS** → For actual invoices (NOT website pages)
+- **CLAUSULA PARA INCLUIR EN E-MAILS** → Update existing `/legal/email-clause` (email signatures)
 
 #### 3. HR and Internal Documents (Priority 3)
 
-- **NORMATIVA DE PROTECCIÓN DE DATOS PARA EL PERSONAL LABORAL** → Internal use only
-- **CARTA CONTESTACIÓN CURRÍCULUM VITAE** → Internal use only
-- **CESIÓN DE DERECHOS DE IMAGEN** → Internal use only
+- **NORMATIVA DE PROTECCIÓN DE DATOS PARA EL PERSONAL LABORAL** → Internal HR use only
+- **CARTA CONTESTACIÓN CURRÍCULUM VITAE** → Internal HR use only (CV response letters)
+- **CESIÓN DE DERECHOS DE IMAGEN** → Internal HR use only (employee image rights)
 - **CONTRATO DE ENCARGADO DE TRATAMIENTO** → Internal use only
-- **Hardware/Recurso** → Internal use only
+- **Hardware/Recurso** → Internal use only (equipment assignment)
+
+#### 4. Student Course Contracts (Priority 4)
+
+- **CLÁUSULA CONTRATOS** → For student course enrollment contracts
+- **CLÁUSULA PRESUPUESTOS** → For course pricing and quotes
+- **CESIÓN DE DERECHOS DE IMAGEN** → For student image rights in course materials
 
 ### Implementation Phases
 
@@ -104,25 +110,23 @@ This plan outlines the integration of comprehensive legal documentation into the
 - Support granular cookie preferences (Necessary, Analytics, Marketing, Preferences)
 - Store consent preferences in localStorage
 
-## Phase 3: Additional Legal Pages (MEDIUM PRIORITY) ✅ COMPLETED
+## Phase 3: Additional Legal Pages (MEDIUM PRIORITY) ❌ CORRECTED
 
 **Objective**: Add business process legal pages
 
 ### Tasks:
 
-- [x] **3.1** Create `/legal/contract-clause` with **CLÁUSULA CONTRATOS** content ✅
-- [x] **3.2** Create `/legal/budget-clause` with **CLÁUSULA PRESUPUESTOS** content ✅
-- [x] **3.3** Create `/legal/invoice-clause` with **CLÁUSULA PARA INSERTAR EN LAS FACTURAS** content ✅
-- [x] **3.4** Update footer to include new legal page links ✅
+- [x] **3.1** ~~Create `/legal/contract-clause` with **CLÁUSULA CONTRATOS** content~~ ❌ **REMOVED** - This is for business contracts, not website pages
+- [x] **3.2** ~~Create `/legal/budget-clause` with **CLÁUSULA PRESUPUESTOS** content~~ ❌ **REMOVED** - This is for business quotes, not website pages
+- [x] **3.3** ~~Create `/legal/invoice-clause` with **CLÁUSULA PARA INSERTAR EN LAS FACTURAS** content~~ ❌ **REMOVED** - This is for invoices, not website pages
+- [x] **3.4** ~~Update footer to include new legal page links~~ ❌ **REVERTED** - Removed incorrect links
 
 ### Phase 3 Results:
 
-- **New Pages Created**: 3 additional legal pages following existing structure
-- **Content Accuracy**: All pages use exact content from provided documents
-- **Consistent Design**: All pages follow the same structure as existing legal pages
-- **Footer Integration**: Added 3 new links to footer legal section
-- **Navigation**: All pages include back button with ChevronLeft icon
-- **Company Details**: All pages have correct contact information
+- **MISTAKE IDENTIFIED**: Incorrectly created website pages for business contract documents
+- **CORRECTION APPLIED**: Removed all incorrectly created legal pages
+- **FOOTER REVERTED**: Removed incorrect legal page links from footer
+- **CLARIFICATION**: These documents are for actual business contracts, not website pages
 
 **Requirements**:
 
@@ -144,12 +148,12 @@ This plan outlines the integration of comprehensive legal documentation into the
 ### Phase 4 Results:
 
 - **Checkbox Component**: Created ShadCN checkbox component for form integration
-- **Contact Forms**: Added privacy policy checkbox to sponsor CTA form
-- **Registration Forms**: Added contract clause checkbox to course registration form
-- **Quote Forms**: Added budget clause checkbox to sponsor CTA form (quote request)
-- **Email Templates**: Email clause page already exists for email signature integration
-- **Form Validation**: All checkboxes are required with proper error messages
-- **Legal Links**: All checkboxes link to appropriate legal pages
+- **Contact Forms**: Added privacy policy checkbox to sponsor CTA form ✅
+- **Registration Forms**: ~~Added contract clause checkbox~~ ❌ **REMOVED** - Contract clauses are for business contracts, not course registration
+- **Quote Forms**: ~~Added budget clause checkbox~~ ❌ **REMOVED** - Budget clauses are for business quotes, not website forms
+- **Email Templates**: Email clause page already exists for email signature integration ✅
+- **Form Validation**: Privacy policy checkbox is required with proper error messages ✅
+- **Legal Links**: Privacy policy checkbox links to appropriate legal page ✅
 
 **Requirements**:
 
@@ -176,6 +180,56 @@ This plan outlines the integration of comprehensive legal documentation into the
 - **HR Organization**: Organized all HR documents and processes
 - **Compliance Framework**: Established complete compliance monitoring framework
 - **Security Procedures**: Documented all security measures and incident response procedures
+
+---
+
+## ⚠️ CORRECTIONS APPLIED
+
+### **Mistakes Identified and Fixed:**
+
+#### **1. Incorrectly Created Website Pages for Business Documents:**
+
+- ❌ **REMOVED**: `/legal/contract-clause` - This is for actual business contracts, not website pages
+- ❌ **REMOVED**: `/legal/budget-clause` - This is for actual budget quotes, not website pages
+- ❌ **REMOVED**: `/legal/invoice-clause` - This is for actual invoices, not website pages
+
+#### **2. Incorrectly Applied Business Clauses to Website Forms:**
+
+- ❌ **REMOVED**: Contract clause checkbox from course registration form
+- ❌ **REMOVED**: Budget clause checkbox from sponsor CTA form
+- ✅ **KEPT**: Privacy policy checkbox (correct for website forms)
+
+#### **3. Incorrectly Added Links to Footer:**
+
+- ❌ **REMOVED**: Links to contract-clause, budget-clause, invoice-clause pages
+- ✅ **KEPT**: Original legal page links (cookies, privacy, terms, email clause)
+
+### **Correct Document Purposes:**
+
+#### **Website Legal Pages** (✅ Correctly Implemented):
+
+- **AVISO LEGAL** → `/legal/legal-notice` ✅
+- **POLÍTICA DE PRIVACIDAD** → `/legal/privacy-policy` ✅
+- **POLÍTICA DE COOKIES** → `/legal/cookies-policy` ✅
+- **CLAUSULA PARA INCLUIR EN E-MAILS** → `/legal/email-clause` ✅
+
+#### **Business Contract Documents** (❌ NOT for website):
+
+- **CLÁUSULA CONTRATOS** → For actual business contracts
+- **CLÁUSULA PRESUPUESTOS** → For actual budget quotes
+- **CLÁUSULA PARA INSERTAR EN LAS FACTURAS** → For actual invoices
+
+#### **HR Internal Documents** (❌ NOT for website):
+
+- **NORMATIVA DE PROTECCIÓN DE DATOS PARA EL PERSONAL LABORAL** → Internal HR use
+- **CARTA CONTESTACIÓN CURRÍCULUM VITAE** → Internal HR use (CV responses)
+- **CESIÓN DE DERECHOS DE IMAGEN** → Internal HR use (employee image rights)
+
+#### **Student Course Contracts** (❓ Need clarification):
+
+- **CLÁUSULA CONTRATOS** → For student course enrollment contracts?
+- **CLÁUSULA PRESUPUESTOS** → For course pricing and quotes?
+- **CESIÓN DE DERECHOS DE IMAGEN** → For student image rights in course materials?
 
 ---
 
