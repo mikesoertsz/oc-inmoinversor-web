@@ -19,7 +19,9 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
+import Link from "next/link";
 
 const formSchema = z.object({
   firstName: z.string().min(1, { message: "El nombre es obligatorio." }),
@@ -33,6 +35,9 @@ const formSchema = z.object({
   countryCode: z
     .string()
     .min(1, { message: "El código de país es obligatorio." }),
+  contractClause: z.boolean().refine((val) => val === true, {
+    message: "Debe aceptar las cláusulas contractuales para continuar",
+  }),
 });
 
 export default function FormUserRegistration() {
@@ -152,6 +157,50 @@ export default function FormUserRegistration() {
             </FormItem>
           )}
         />
+        <FormField
+          control={form.control}
+          name="contractClause"
+          render={({ field }) => (
+            <FormItem className="flex flex-row items-start space-x-3 space-y-0 mt-4">
+              <FormControl>
+                <Checkbox
+                  checked={field.value}
+                  onCheckedChange={field.onChange}
+                />
+              </FormControl>
+              <div className="space-y-1 leading-none">
+                <FormMessage />
+                <label className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                  Acepto la{" "}
+                  <Link
+                    href="/legal/privacy-policy"
+                    className="text-blue-600 underline hover:text-blue-800"
+                    target="_blank"
+                  >
+                    Política de Privacidad
+                  </Link>
+                  , los{" "}
+                  <Link
+                    href="/legal/legal-notice"
+                    className="text-blue-600 underline hover:text-blue-800"
+                    target="_blank"
+                  >
+                    Términos y Condiciones
+                  </Link>
+                  , y las{" "}
+                  <Link
+                    href="/legal/contract-clause"
+                    className="text-blue-600 underline hover:text-blue-800"
+                    target="_blank"
+                  >
+                    Cláusulas Contractuales
+                  </Link>
+                </label>
+              </div>
+            </FormItem>
+          )}
+        />
+
         <Button type="submit" className="flex w-full mt-8" disabled={loading}>
           {loading ? (
             <Loader className="animate-spin" />
@@ -159,17 +208,6 @@ export default function FormUserRegistration() {
             "Registrarse para el curso"
           )}
         </Button>
-        <p className="text-xs text-gray-500 mt-4">
-          Al registrarte, aceptas nuestra{" "}
-          <a href="/privacy-policy" className="text-blue-500 underline">
-            Política de Privacidad
-          </a>{" "}
-          y nuestros{" "}
-          <a href="/terms-and-conditions" className="text-blue-500 underline">
-            Términos y Condiciones
-          </a>
-          .
-        </p>
       </form>
     </Form>
   );

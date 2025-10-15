@@ -18,7 +18,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { TitleBlock } from "@/components/ui/titleblock";
+import { Checkbox } from "@/components/ui/checkbox";
 import { z } from "zod";
+import Link from "next/link";
 import {
   Select,
   SelectContent,
@@ -41,6 +43,12 @@ const formSchema = z.object({
     ),
   plan: z.string().optional(),
   message: z.string().min(10, "El mensaje debe tener al menos 10 caracteres"),
+  privacyPolicy: z.boolean().refine((val) => val === true, {
+    message: "Debe aceptar la Política de Privacidad para continuar",
+  }),
+  budgetClause: z.boolean().refine((val) => val === true, {
+    message: "Debe aceptar las cláusulas de presupuesto para continuar",
+  }),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -55,6 +63,8 @@ export default function SponsorCTA() {
       phone: "",
       plan: "",
       message: "",
+      privacyPolicy: false,
+      budgetClause: false,
     },
   });
 
@@ -241,6 +251,62 @@ export default function SponsorCTA() {
                   </p>
                 )}
               </div>
+
+              <FormField
+                control={form.control}
+                name="privacyPolicy"
+                render={({ field }) => (
+                  <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                    <FormControl>
+                      <Checkbox
+                        checked={field.value}
+                        onCheckedChange={field.onChange}
+                      />
+                    </FormControl>
+                    <div className="space-y-1 leading-none">
+                      <FormMessage />
+                      <label className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                        Acepto la{" "}
+                        <Link
+                          href="/legal/privacy-policy"
+                          className="text-blue-600 underline hover:text-blue-800"
+                          target="_blank"
+                        >
+                          Política de Privacidad
+                        </Link>
+                      </label>
+                    </div>
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="budgetClause"
+                render={({ field }) => (
+                  <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                    <FormControl>
+                      <Checkbox
+                        checked={field.value}
+                        onCheckedChange={field.onChange}
+                      />
+                    </FormControl>
+                    <div className="space-y-1 leading-none">
+                      <FormMessage />
+                      <label className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                        Acepto las{" "}
+                        <Link
+                          href="/legal/budget-clause"
+                          className="text-blue-600 underline hover:text-blue-800"
+                          target="_blank"
+                        >
+                          Cláusulas de Presupuesto
+                        </Link>
+                      </label>
+                    </div>
+                  </FormItem>
+                )}
+              />
 
               <Button
                 type="submit"

@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import Footer from "./(shared)/footer";
 import NavMain from "./(shared)/nav-main";
+import CookieBanner from "@/components/cookie-banner";
 import "./globals.css";
 import "./prose.css";
 
@@ -21,32 +22,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=AW-16748317337"
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'AW-16748317337');
-        `}
-      </Script>
       <meta
         name="facebook-domain-verification"
         content="fnt8j85finy5w14g4yj6ot2gw0lg8h"
       />
-      <Suspense>
-        <GoogleAnalytics gaId="G-K8F9KGJXC8" />
-        <GoogleTagManager gtmId="GTM-KCGSVCZP" />
-      </Suspense>
+      {/* Analytics scripts will be loaded conditionally by CookieBanner component */}
       <body
         className={`${title.variable} ${body.variable} subpixel-antialiased font-title`}
       >
         <NavMain />
         {children}
         <Footer />
+        <CookieBanner />
         <Toaster />
       </body>
     </html>
