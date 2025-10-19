@@ -10,7 +10,11 @@
     "postbuild": "next-sitemap",
     "test:youtube": "node tests/youtube-api-test.js",
     "demo:youtube": "node tests/youtube-api-demo.js",
-    "test:latest-video": "node tests/test-latest-video-api.js"
+    "test:latest-video": "node tests/test-latest-video-api.js",
+    "test:youtube:endpoints": "node tests/test-youtube-endpoints.js",
+    "test:youtube:service": "node tests/test-youtube-service.js",
+    "test:youtube:integration": "node tests/test-youtube-integration.js",
+    "test:youtube:all": "npm run test:youtube:endpoints && npm run test:youtube:service && npm run test:youtube:integration"
   },
   "dependencies": {
     "@hookform/resolvers": "^4.1.3",
@@ -33,6 +37,8 @@
     "@radix-ui/react-tabs": "^1.1.8",
     "@radix-ui/react-toast": "^1.2.10",
     "@radix-ui/react-tooltip": "^1.2.3",
+    "@supabase/ssr": "^0.7.0",
+    "@supabase/supabase-js": "^2.75.1",
     "@tabler/icons-react": "^3.31.0",
     "@types/mdx": "^2.0.13",
     "calendar-link": "^2.8.0",

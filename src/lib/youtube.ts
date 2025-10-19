@@ -11,7 +11,7 @@ export class YouTubeService {
       // Server-side initialization
       this.youtube = google.youtube({
         version: "v3",
-        auth: process.env.YOUTUBE_API_KEY,
+        auth: process.env.NEXT_PUBLIC_YOUTUBE_API_KEY,
       });
     }
   }

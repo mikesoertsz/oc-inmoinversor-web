@@ -1,128 +1,195 @@
-# YouTube Data API v3 Tests
+# YouTube API Tests
 
-This folder contains tests to explore the YouTube Data API v3 capabilities for the inmoinversor channel.
+This folder contains comprehensive tests for the YouTube API integration with the inmoinversor channel.
 
-## Setup
+## 📁 Test Files
 
-1. Make sure you have your YouTube Data API v3 key in your `.env.local` file:
+### 1. `test-youtube-endpoints.js`
+
+Tests all YouTube API endpoints to ensure they're working correctly:
+
+- Channel stats endpoint (`/api/youtube/channel-stats`)
+- Latest video endpoint (`/api/youtube/latest-video`)
+- Recent videos endpoint (`/api/youtube/recent-videos`)
+
+**What it tests:**
+
+- HTTP response codes
+- Response data structure validation
+- Required field presence
+- Data type validation
+- Error handling
+
+### 2. `test-youtube-service.js`
+
+Tests the YouTube service class directly without going through API endpoints:
+
+- Service initialization
+- Channel discovery
+- Latest video retrieval
+- Recent videos retrieval
+- API key configuration
+
+**What it tests:**
+
+- Direct service functionality
+- Data retrieval from YouTube API
+- Service configuration validation
+
+### 3. `test-youtube-integration.js`
+
+Comprehensive integration test that verifies the entire workflow:
+
+- Environment setup validation
+- Server availability
+- Complete workflow testing
+- Data quality and consistency
+- Performance metrics
+
+**What it tests:**
+
+- End-to-end functionality
+- Data consistency across endpoints
+- Response times and performance
+- Integration between all components
+
+## 🚀 Running the Tests
+
+### Prerequisites
+
+1. **Development Server Running**: Make sure your Next.js development server is running on `http://localhost:3000`
+
+2. **Environment Configuration**: Ensure your `.env.local` file contains:
 
    ```
-   YOUTUBE_API_KEY=your_api_key_here
+   NEXT_PUBLIC_YOUTUBE_API_KEY=your_actual_api_key_here
    ```
 
-2. Install dependencies (already done):
-   ```bash
-   npm install googleapis dotenv
-   ```
+3. **YouTube API Key**: You need a valid YouTube Data API v3 key:
+   - Go to [Google Cloud Console](https://console.cloud.google.com/)
+   - Create a project or select existing one
+   - Enable YouTube Data API v3
+   - Create credentials (API Key)
 
-## Running the Tests
-
-Run the comprehensive YouTube API test:
+### Running Individual Tests
 
 ```bash
-npm run test:youtube
+# Test API endpoints
+node tests/test-youtube-endpoints.js
+
+# Test YouTube service directly
+node tests/test-youtube-service.js
+
+# Run comprehensive integration test
+node tests/test-youtube-integration.js
 ```
 
-Or directly:
+### Running All Tests
 
 ```bash
-node tests/youtube-api-test.js
+# Run all YouTube tests in sequence
+npm run test:youtube:all
+
+# Or run them individually
+npm run test:youtube:endpoints
+npm run test:youtube:service
+npm run test:youtube:integration
 ```
 
-## What the Test Does
+## 📊 Test Output
 
-The test will explore the following YouTube Data API v3 capabilities:
+Each test provides detailed output including:
 
-### 🔍 **Channel Discovery**
+- ✅ **Pass/Fail Status** for each test case
+- 📊 **Data Validation** results with actual values
+- ⚡ **Performance Metrics** (response times)
+- 🔍 **Error Details** with specific failure reasons
+- 📈 **Success Rate** percentage
+- 🎯 **Next Steps** recommendations
 
-- Find the "inmoinversor" channel by name
-- Get detailed channel information including statistics, branding, and content details
+### Example Output
 
-### 📊 **Data Retrieval**
+```
+🚀 Starting YouTube API Endpoints Test Suite
+============================================================
+✅ YouTube API key configured
 
-- Channel information (snippet, statistics, contentDetails, brandingSettings, status)
-- Recent videos from the channel
-- Channel playlists
-- Channel sections (tabs)
-- Channel activities
-- Comment threads on videos
-- Subscription lists
-- Captions for videos
+🧪 Testing: Channel Stats Endpoint
+──────────────────────────────────────────────────
+   📊 Channel Stats Retrieved:
+      Subscribers: 1.2K
+      Videos: 45
+      Views: 12.5K
+✅ PASSED: Channel Stats Endpoint
 
-### 🔍 **Search Capabilities**
+📊 TEST RESULTS SUMMARY
+============================================================
+✅ Passed: 5
+❌ Failed: 0
+📈 Success Rate: 100.0%
+🎉 All tests passed! YouTube API endpoints are working correctly.
+```
 
-- Search for videos, channels, and playlists
-- Test different search parameters and filters
+## 🐛 Troubleshooting
 
-### 📈 **Analytics & Metadata**
+### Common Issues
 
-- Video statistics (views, likes, comments)
-- Video categories and content details
-- Supported languages and regions
-- Guide categories
+1. **"NEXT_PUBLIC_YOUTUBE_API_KEY not found"**
 
-### 🎯 **Available Actions Summary**
+   - Check your `.env.local` file exists
+   - Ensure the API key variable name is correct
+   - Restart your development server after adding the key
 
-#### ✅ **Read-Only Actions (No Authentication Required)**
+2. **"HTTP 404" or "Server not available"**
 
-- Search for channels, videos, playlists
-- Get channel information (snippet, statistics, contentDetails)
-- Get video information (snippet, statistics, contentDetails)
-- Get playlist information
-- Get channel sections
-- Get comment threads
-- Get channel activities
-- Get video categories
-- Get i18n languages and regions
-- Get guide categories
-- Get captions list
-- Get subscription lists
+   - Make sure your Next.js development server is running
+   - Check the server is accessible at `http://localhost:3000`
+   - Verify the API routes are properly created
 
-#### 🔒 **Write Actions (Authentication Required)**
+3. **"Could not find channel"**
 
-- Update channel information
-- Update video information
-- Create/update/delete playlists
-- Upload videos
-- Manage comments
-- Manage subscriptions
-- Manage channel sections
-- Manage captions
-- Manage thumbnails
-- Manage channel branding
+   - Verify the YouTube API key has proper permissions
+   - Check if the "inmoinversor" channel exists and is public
+   - Ensure YouTube Data API v3 is enabled in Google Cloud Console
 
-#### 📈 **Analytics Actions (Special Permissions)**
+4. **"API responses too slow"**
+   - Check your internet connection
+   - Verify YouTube API quota limits aren't exceeded
+   - Consider implementing caching for production use
 
-- Get detailed analytics data
-- Get revenue data
-- Get demographic data
-- Get geographic data
-- Get device data
+### Debug Steps
 
-## Expected Output
+1. **Check Environment**: Run `node tests/test-youtube-service.js` to verify API key configuration
+2. **Test Server**: Run `node tests/test-youtube-endpoints.js` to check if endpoints are accessible
+3. **Full Integration**: Run `node tests/test-youtube-integration.js` for comprehensive validation
 
-The test will provide detailed information about:
+## 📋 Test Coverage
 
-- What data is available for the inmoinversor channel
-- Which API endpoints are accessible with your current API key
-- Sample data structures for videos, playlists, and channel information
-- Recommendations for implementing YouTube integration in your application
+The tests cover:
 
-## Next Steps
+- ✅ API endpoint availability and responses
+- ✅ Data structure validation
+- ✅ Error handling scenarios
+- ✅ Performance benchmarks
+- ✅ Data consistency checks
+- ✅ Service initialization
+- ✅ Channel discovery
+- ✅ Video retrieval
+- ✅ Environment configuration
 
-Based on the test results, you can:
+## 🔧 Customization
 
-1. Implement read-only features to display channel content on your website
-2. Set up OAuth2 authentication for write operations if needed
-3. Consider YouTube Analytics API for detailed metrics
-4. Implement caching for frequently accessed data
-5. Build components to display YouTube content in your React application
+You can modify the tests to:
 
-## Troubleshooting
+- **Change test limits**: Modify the `testLimits` arrays in the test files
+- **Add new endpoints**: Extend the test suites for additional API endpoints
+- **Adjust performance thresholds**: Modify timeout values for your environment
+- **Add custom validations**: Include domain-specific data validation rules
 
-If you encounter errors:
+## 📝 Notes
 
-1. Verify your API key is correct in `.env.local`
-2. Check that the YouTube Data API v3 is enabled in your Google Cloud Console
-3. Ensure your API key has the necessary permissions
-4. Check the console output for specific error messages and API response details
+- Tests are designed to be run in a development environment
+- All tests use the `inmoinversor` channel name - modify if needed
+- Tests include proper error handling and graceful degradation
+- Performance thresholds are set for typical development setups
+- Tests validate both success and failure scenarios
