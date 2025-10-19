@@ -3,15 +3,7 @@
 import { InnerWrap, Wrapper } from "@/lib/atoms";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
-
-const ReactPlayer = dynamic(() => import("react-player"), {
-  ssr: false,
-  loading: () => (
-    <div className="flex items-center justify-center w-full h-full bg-slate-200">
-      <div className="text-slate-500">Cargando video...</div>
-    </div>
-  ),
-});
+import ReactPlayer from "react-player";
 
 export default function LastVideo() {
   return (
@@ -21,18 +13,12 @@ export default function LastVideo() {
           El plan de Inmo para 2025
         </h2>
         <div className="flex justify-center w-full aspect-video overflow-hidden bg-slate-100 relative max-w-6xl rounded-2xl shadow-xl">
-          <Suspense fallback={
-            <div className="flex items-center justify-center w-full h-full bg-slate-200">
-              <div className="text-slate-500">Cargando video...</div>
-            </div>
-          }>
-            <ReactPlayer
-              url="https://www.youtube.com/watch?v=726d1cPlISE"
-              width="100%"
-              height="100%"
-              pip
-            />
-          </Suspense>
+          <ReactPlayer
+            url="https://www.youtube.com/watch?v=726d1cPlISE"
+            width="100%"
+            height="100%"
+            pip
+          />
         </div>
       </InnerWrap>
     </Wrapper>

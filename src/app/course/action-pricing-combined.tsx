@@ -152,11 +152,8 @@ export default function CombinedCTA({ showPrice }: { showPrice: boolean }) {
       }
 
       // Trigger Google Ads conversion
-      if (typeof window !== "undefined" && "gtag" in window) {
-        window.gtag("event", "conversion", {
-          send_to: "AW-16748317337/_x6_CIet54oaEJmVnLI-",
-        });
-      }
+      const { trackGoogleAdsConversion } = await import("@/lib/analytics");
+      trackGoogleAdsConversion("AW-16748317337/_x6_CIet54oaEJmVnLI-");
 
       toast.success(content.notifications.success);
       setIsSubmitted(true);

@@ -5,13 +5,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Development Commands
 
 - **Development server**: `npm run dev` (runs on http://localhost:3000)
-- **Build**: `npm run build` 
+- **Build**: `npm run build`
 - **Production start**: `npm start`
 - **Lint**: `npm run lint`
 
 ## Project Architecture
 
 ### Tech Stack
+
 - **Framework**: Next.js 15.3.1 with App Router architecture
 - **Content**: MDX-based articles stored in `/articles` directory
 - **Styling**: Tailwind CSS with custom components
@@ -20,6 +21,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Analytics**: Google Analytics, Google Tag Manager, Facebook tracking
 
 ### Key Directory Structure
+
 ```
 ├── src/app/                    # Next.js App Router pages
 │   ├── (home)/                # Home page grouping
@@ -35,12 +37,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ```
 
 ### Content Management
+
 - **Articles**: Stored as MDX files in `/articles` directory with frontmatter metadata
 - **Article Processing**: Server actions in `/src/server/actions/articles.ts` handle MDX compilation
 - **Article Types**: Standard articles, featured articles, and "shorts" (video content)
 - **Frontmatter Fields**: Includes SEO metadata, categories, tags, reading time, related posts
 
 ### Routing Structure
+
 - `/` - Home page with shorts and featured content
 - `/blog` - Article listing with search functionality
 - `/blog/[blogSlug]` - Individual article pages
@@ -51,6 +55,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `/legal/*` - Legal pages (privacy, cookies, etc.)
 
 ### Key Features
+
 - **Responsive Design**: Mobile-first with Tailwind CSS
 - **SEO Optimized**: Comprehensive metadata and structured data
 - **Content Search**: Client-side article search functionality
@@ -59,11 +64,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Internationalization**: Spanish primary language with some English content
 
 ### Special Files
-- `/hooks.md` - Marketing content and video script hooks (not code hooks)
+
+- `/public/docs/hooks.md` - Marketing content and video script hooks (not code hooks)
 - `/supabaseclient.js` - Database client (Supabase integration)
 - Custom MDX components in `/src/components/ui/mdx.tsx`
 
 ### Development Notes
+
 - Uses server actions for data fetching instead of API routes
 - Articles are compiled at runtime using `next-mdx-remote`
 - Heavy use of Radix UI components for accessibility
@@ -71,7 +78,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Styled with Tailwind CSS and CSS custom properties
 
 ### Business Context
+
 This is a Spanish real estate investment education website with:
+
 - Blog articles about property investment in Spain
 - Course landing page for real estate investment education
 - Analytics dashboard for sponsors/partners

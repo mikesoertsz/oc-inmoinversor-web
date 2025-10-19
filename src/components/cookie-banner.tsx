@@ -53,8 +53,12 @@ export default function CookieBanner() {
     setPreferences(allAccepted);
     localStorage.setItem("cookie-consent", JSON.stringify(allAccepted));
     setShowBanner(false);
+    // Dispatch custom event for real-time updates
+    window.dispatchEvent(
+      new CustomEvent("cookieConsentChange", { detail: allAccepted })
+    );
     // Load analytics and marketing scripts here
-    loadCookies(allAccepted);
+    loadCookies();
   };
 
   const handleRejectAll = () => {
@@ -67,78 +71,31 @@ export default function CookieBanner() {
     setPreferences(onlyNecessary);
     localStorage.setItem("cookie-consent", JSON.stringify(onlyNecessary));
     setShowBanner(false);
+    // Dispatch custom event for real-time updates
+    window.dispatchEvent(
+      new CustomEvent("cookieConsentChange", { detail: onlyNecessary })
+    );
     // Only load necessary cookies
-    loadCookies(onlyNecessary);
+    loadCookies();
   };
 
   const handleSavePreferences = () => {
     localStorage.setItem("cookie-consent", JSON.stringify(preferences));
     setShowBanner(false);
     setShowSettings(false);
+    // Dispatch custom event for real-time updates
+    window.dispatchEvent(
+      new CustomEvent("cookieConsentChange", { detail: preferences })
+    );
     // Load cookies based on preferences
-    loadCookies(preferences);
+    loadCookies();
   };
 
-  const loadCookies = (prefs: CookiePreferences) => {
-    // Load Google Analytics if analytics cookies are accepted
-    if (prefs.analytics) {
-      // Load Google Analytics script
-      if (typeof window !== "undefined" && !window.gtag) {
-        const script = document.createElement("script");
-        script.src = "https://www.googletagmanager.com/gtag/js?id=G-K8F9KGJXC8";
-        script.async = true;
-        document.head.appendChild(script);
-
-        window.dataLayer = window.dataLayer || [];
-        function gtag(...args: unknown[]) {
-          window.dataLayer.push(args);
-        }
-        window.gtag = gtag;
-        gtag("js", new Date());
-        gtag("config", "G-K8F9KGJXC8");
-      }
-    }
-
-    // Load Google Tag Manager if analytics cookies are accepted
-    if (prefs.analytics) {
-      // Load GTM script
-      if (
-        typeof window !== "undefined" &&
-        !document.getElementById("gtm-script")
-      ) {
-        const script = document.createElement("script");
-        script.id = "gtm-script";
-        script.innerHTML = `
-          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-KCGSVCZP');
-        `;
-        document.head.appendChild(script);
-      }
-    }
-
-    // Load Facebook Pixel if marketing cookies are accepted
-    if (prefs.marketing) {
-      // Load Facebook Pixel script
-      if (typeof window !== "undefined" && !window.fbq) {
-        const script = document.createElement("script");
-        script.innerHTML = `
-          !function(f,b,e,v,n,t,s)
-          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-          n.queue=[];t=b.createElement(e);t.async=!0;
-          t.src=v;s=b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t,s)}(window, document,'script',
-          'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', 'YOUR_PIXEL_ID');
-          fbq('track', 'PageView');
-        `;
-        document.head.appendChild(script);
-      }
-    }
+  const loadCookies = () => {
+    // Analytics and marketing scripts are now handled by the modern Analytics component
+    // This function is kept for backward compatibility but doesn't load scripts manually anymore
+    // The Analytics component handles Google Analytics loading based on consent
+    // Facebook Pixel and GTM can be added here if needed in the future
   };
 
   if (!showBanner) return null;
@@ -305,10 +262,4 @@ export default function CookieBanner() {
   );
 }
 
-// Extend Window interface for TypeScript
-declare global {
-  interface Window {
-    dataLayer: unknown[];
-    fbq: (...args: unknown[]) => void;
-  }
-}
+// Window interface extensions are now handled by the analytics utility

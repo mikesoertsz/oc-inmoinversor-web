@@ -97,7 +97,7 @@ This plan outlines the integration of comprehensive legal documentation into the
 - **ShadCN Integration**: Used Dialog, Button, Switch, Label components
 - **GDPR Compliance**: Banner blocks content until consent, proper backdrop
 - **Granular Control**: 4 cookie categories (Necessary, Preferences, Analytics, Marketing)
-- **Analytics Integration**: Google Analytics (G-K8F9KGJXC8) and GTM (GTM-KCGSVCZP) load conditionally
+- **Analytics Integration**: Google Analytics (G-8B0M5E5N52) loads conditionally using modern Next.js 15+ patterns
 - **Design Fixed**: Compact size (max-w-sm), small buttons (size="sm", text-xs), proper positioning
 - **Hook Created**: `/src/hooks/use-cookie-consent.ts` for reusable state management
 
