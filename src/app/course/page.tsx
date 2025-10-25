@@ -7,6 +7,13 @@ import DesireTestimonialsMarquees from "./desire-testimonial-marquees";
 import DesireTestimonialVideo from "./desire-testimonial-video";
 import InterestFull from "./interest-full";
 import InterestPersonalStory from "./interest-personalstory";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Curso de Inversión Inmobiliaria",
+  description:
+    "Aprende a invertir en bienes raíces con el curso completo de Guillermo Ortiz. Estrategias probadas, análisis de propiedades y gestión de alquileres para generar ingresos pasivos.",
+};
 
 export default function Course() {
   return (

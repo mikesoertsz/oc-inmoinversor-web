@@ -11,8 +11,60 @@ import "./globals.css";
 import "./prose.css";
 
 export const metadata: Metadata = {
-  title: "InmoInversor | Aprende a invertir en bienes raices en España",
-  description: "Canal de aprendizaje sobre inversión inmobiliaria en España",
+  title: {
+    template: "%s | InmoInversor",
+    default: "InmoInversor | Aprende a invertir en bienes raíces en España",
+  },
+  description:
+    "Canal de aprendizaje sobre inversión inmobiliaria en España. Aprende estrategias de inversión, análisis de propiedades y gestión de alquileres.",
+  keywords: [
+    "inversión inmobiliaria",
+    "bienes raíces",
+    "alquileres",
+    "inmobiliaria España",
+    "inversión propiedades",
+  ],
+  authors: [{ name: "Guillermo Ortiz" }],
+  creator: "InmoInversor",
+  publisher: "InmoInversor",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "es_ES",
+    url: "https://inmoinversor.com",
+    siteName: "InmoInversor",
+    title: "InmoInversor | Aprende a invertir en bienes raíces en España",
+    description:
+      "Canal de aprendizaje sobre inversión inmobiliaria en España. Aprende estrategias de inversión, análisis de propiedades y gestión de alquileres.",
+    images: [
+      {
+        url: "/img/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "InmoInversor - Inversión Inmobiliaria",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "InmoInversor | Aprende a invertir en bienes raíces en España",
+    description:
+      "Canal de aprendizaje sobre inversión inmobiliaria en España. Aprende estrategias de inversión, análisis de propiedades y gestión de alquileres.",
+    images: ["/img/og-image.jpg"],
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
 };
 
 export default function RootLayout({
@@ -21,7 +73,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="es" className="scroll-smooth">
       <meta
         name="facebook-domain-verification"
         content="fnt8j85finy5w14g4yj6ot2gw0lg8h"

@@ -1,21 +1,22 @@
-"use client";
 import { InnerWrap, Wrapper } from "@/lib/atoms";
-import { ChevronLeft } from "lucide-react";
+import LegalBackButton from "../legal-back-button";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Aviso Legal",
+  description:
+    "Aviso legal de InmoInversor. Condiciones generales de uso del sitio web y información legal de la empresa.",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function LegalNotice() {
   return (
     <Wrapper className="prose mx-auto p-4 text-left">
       <InnerWrap className="max-w-4xl text-left items-start justify-start text-sm">
-        <button
-          onClick={() => window.history.back()}
-          className="mb-4 flex items-center text-sm text-gray-500 group hover:text-brand-primary"
-        >
-          <ChevronLeft
-            className="h-4 w-4 mr-1 transition-transform transform group-hover:-translate-x-1"
-            size={16}
-          />
-          Volver
-        </button>
+        <LegalBackButton />
         <h1>Aviso Legal</h1>
         <p>
           El presente Aviso Legal establece las condiciones generales que
@@ -40,153 +41,53 @@ export default function LegalNotice() {
           Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se
           informa que la presente página web www.inmoinversor.com (en adelante,
           &quot;la Web&quot;) es propiedad de INVERSIONES CON PROPOSITO Y
-          AMIGOS, S.L., con NIF B-01783299, datos de Registro Mercantil y
-          domicilio fiscal en calle Golondrina nº 11, CP: 28229, Villanueva del
-          Pardillo, Madrid.
+          AMIGOS, S.L. con domicilio social en Calle Golondrina, 11, 28229,
+          Villanueva del Pardillo, Madrid, España, con CIF B45834564 e inscrita
+          en el Registro Mercantil de Madrid, Tomo 45730, Folio 32, Hoja
+          M803207, Inscripción 1ª.
         </p>
+        <h2>2. Objeto</h2>
         <p>
-          Si deseas ponerte en contacto con nosotros puedes hacerlo poniéndote
-          en contacto con nosotros a través del siguiente email:
-          gortiz@ortizpcapital.com
+          Las presentes condiciones generales de uso (en adelante,
+          &quot;Condiciones de Uso&quot;) regulan el acceso y la utilización del
+          sitio web www.inmoinversor.com (en adelante, &quot;la Web&quot;) que
+          INVERSIONES CON PROPOSITO Y AMIGOS, S.L. pone gratuitamente a
+          disposición de los usuarios de Internet. El acceso y uso de la Web
+          atribuye la condición de usuario de la Web (en adelante, el
+          &quot;Usuario&quot;) e implica la aceptación plena y sin reservas de
+          todas y cada una de las disposiciones incluidas en estas Condiciones
+          de Uso.
         </p>
-        <h2>2. Condiciones de uso</h2>
+        <h2>3. Propiedad intelectual e industrial</h2>
         <p>
-          El acceso y/o uso de la Web atribuye la condición de usuario, que
-          acepta, desde dicho acceso y/o uso, las presentes condiciones de uso.
-          El usuario se compromete a utilizar la Web conforme a la ley, la
-          moral, las buenas costumbres y el orden público.
+          Todos los contenidos de la Web, entendiendo por estos a título
+          meramente enunciativo, los textos, fotografías, gráficos, imágenes,
+          iconos, tecnología, software, links y demás contenidos audiovisuales o
+          sonoros, así como su diseño gráfico y códigos fuente (en adelante, los
+          &quot;Contenidos&quot;), son propiedad intelectual de INVERSIONES CON
+          PROPOSITO Y AMIGOS, S.L. o de terceros, sin que puedan entenderse
+          cedidos al Usuario ninguno de los derechos de explotación sobre los
+          mismos más allá de lo estrictamente necesario para el correcto uso de
+          la Web.
         </p>
-        <h2>3. Propiedad Intelectual e Industrial</h2>
+        <h2>4. Uso del sitio web y responsabilidad</h2>
         <p>
-          Todos los contenidos de la Web, entendiendo por estos, a título
-          enunciativo, los textos, fotografías, gráficos, imágenes, iconos,
-          tecnología, software, así como su diseño gráfico y códigos fuente,
-          constituyen una obra cuya propiedad pertenece a INVERSIONES CON
-          PROPOSITO Y AMIGOS, S.L., sin que puedan entenderse cedidos al usuario
-          ninguno de los derechos de explotación sobre los mismos más allá de lo
-          estrictamente necesario para el correcto uso de la Web.
+          El Usuario se compromete a hacer un uso diligente del sitio web y de
+          los servicios accesibles desde el mismo, con total sujeción a la ley,
+          a las buenas costumbres y a las presentes Condiciones de Uso.
+          INVERSIONES CON PROPOSITO Y AMIGOS, S.L. se reserva el derecho a
+          retirar cualquier información o comunicación que vulnere el
+          ordenamiento jurídico, que incite a la realización de actos
+          delictivos, lesivos o constitutivos de delito o que, en general, sean
+          contrarios a las buenas costumbres o al orden público.
         </p>
-        <p>
-          En particular, quedan prohibidas la reproducción, transformación,
-          distribución, comunicación pública, puesta a disposición, extracción,
-          reutilización, reenvío o la utilización de cualquier naturaleza, por
-          cualquier medio o procedimiento, de cualquiera de ellos, salvo en los
-          casos en que esté legalmente permitido o sea autorizado expresamente
-          por el titular de los correspondientes derechos.
-        </p>
-        <p>
-          El usuario se compromete a respetar los derechos de Propiedad
-          Intelectual e Industrial titularidad de INVERSIONES CON PROPOSITO Y
-          AMIGOS, S.L. Podrá visualizar los elementos de la Web e incluso
-          imprimirlos, copiarlos y almacenarlos en el disco duro de su ordenador
-          o en cualquier otro soporte físico siempre y cuando sea, única y
-          exclusivamente, para su uso personal y privado. El usuario deberá
-          abstenerse de suprimir, alterar, eludir o manipular cualquier
-          dispositivo de protección o sistema de seguridad que estuviera
-          instalado en la Web.
-        </p>
-        <h2>4. Protección de datos</h2>
-        <p>
-          INVERSIONES CON PROPOSITO Y AMIGOS, S.L. cumple con la normativa
-          vigente en materia de protección de datos, en particular con el
-          Reglamento General de Protección de Datos (RGPD) y la Ley Orgánica
-          3/2018, de Protección de Datos Personales y garantía de los derechos
-          digitales (LOPDGDD). Para más información sobre el tratamiento de sus
-          datos personales, consulte nuestra Política de Privacidad.
-        </p>
-        <h2>5. Responsabilidad</h2>
-        <p>
-          INVERSIONES CON PROPOSITO Y AMIGOS, S.L. no se hace responsable de los
-          daños y perjuicios de cualquier naturaleza que pudieran derivarse del
-          uso de la Web, a título enunciativo: errores u omisiones en los
-          contenidos, falta de disponibilidad de la Web, transmisión de virus o
-          programas maliciosos o lesivos en los contenidos, a pesar de haber
-          adoptado todas las medidas tecnológicas necesarias para evitarlo.
-        </p>
-        <p>
-          INVERSIONES CON PROPOSITO Y AMIGOS, S.L. no garantiza la continuidad
-          del funcionamiento de la Web, ni que la misma se encuentre en todo
-          momento operativa y disponible. INVERSIONES CON PROPOSITO Y AMIGOS,
-          S.L. se reserva el derecho a interrumpir el acceso a la Web en
-          cualquier momento y sin previo aviso, ya sea por motivos técnicos, de
-          seguridad, de control, de mantenimiento, por fallos de suministro
-          eléctrico o por cualquier otra causa.
-        </p>
-        <p>
-          INVERSIONES CON PROPOSITO Y AMIGOS, S.L. no se responsabiliza del uso
-          que los usuarios puedan hacer de los contenidos y servicios incluidos
-          en la Web. En consecuencia, INVERSIONES CON PROPOSITO Y AMIGOS, S.L.
-          no garantiza que el uso que los usuarios puedan hacer de los
-          contenidos y servicios que en su caso se incluyan en la Web, se
-          ajusten a la ley, la moral, el orden público y las presentes
-          condiciones de uso.
-        </p>
-        <p>
-          INVERSIONES CON PROPOSITO Y AMIGOS, S.L. no asume responsabilidad
-          alguna por la información contenida en sitios web de terceros a los
-          que se pueda acceder por enlaces (links) o buscadores desde la Web. La
-          presencia de enlaces (links) en la Web tiene finalidad meramente
-          informativa y en ningún caso supone sugerencia, invitación o
-          recomendación sobre los mismos.
-        </p>
-        <p>
-          INVERSIONES CON PROPOSITO Y AMIGOS, S.L. no se hace responsable de los
-          daños y perjuicios que pudieran derivarse del uso indebido de la Web
-          por parte de los usuarios, así como de los daños y perjuicios que
-          pudieran derivarse de la suplantación de la identidad de un tercero
-          por parte de un usuario en cualquier clase de comunicación realizada a
-          través de la Web.
-        </p>
-        <h2>6. Modificaciones</h2>
+        <h2>5. Modificaciones</h2>
         <p>
           INVERSIONES CON PROPOSITO Y AMIGOS, S.L. se reserva el derecho de
           efectuar sin previo aviso las modificaciones que considere oportunas
-          en la Web, pudiendo cambiar, suprimir o añadir tanto los contenidos y
-          servicios que se presten a través de la misma como la forma en la que
-          éstos aparezcan presentados o localizados en la Web.
-        </p>
-        <h2>7. Enlaces</h2>
-        <p>
-          En el caso de que en la Web se dispusiesen enlaces o hipervínculos
-          hacía otros sitios de Internet, INVERSIONES CON PROPOSITO Y AMIGOS,
-          S.L. no ejercerá ningún tipo de control sobre dichos sitios y
-          contenidos. En ningún caso INVERSIONES CON PROPOSITO Y AMIGOS, S.L.
-          asumirá responsabilidad alguna por los contenidos de algún enlace
-          perteneciente a un sitio web ajeno, ni garantizará la disponibilidad
-          técnica, calidad, fiabilidad, exactitud, amplitud, veracidad, validez
-          y constitucionalidad de cualquier material o información contenida en
-          ninguno de dichos hipervínculos u otros sitios de Internet.
-        </p>
-        <h2>8. Derecho de exclusión</h2>
-        <p>
-          INVERSIONES CON PROPOSITO Y AMIGOS, S.L. se reserva el derecho a
-          denegar o retirar el acceso a la Web y/o los servicios ofrecidos sin
-          necesidad de preaviso, a instancia propia o de un tercero, a aquellos
-          usuarios que incumplan las presentes condiciones de uso.
-        </p>
-        <h2>9. Generalidades</h2>
-        <p>
-          INVERSIONES CON PROPOSITO Y AMIGOS, S.L. perseguirá el incumplimiento
-          de las presentes condiciones así como cualquier utilización indebida
-          de su Web ejerciendo todas las acciones civiles y penales que le
-          puedan corresponder en derecho.
-        </p>
-        <h2>10. Legislación Aplicable y Jurisdicción</h2>
-        <p>
-          El presente Aviso Legal y sus términos y condiciones se regirán e
-          interpretarán de acuerdo con la Legislación Española. El usuario, por
-          el solo hecho de acceder a la página web u obtener la condición de
-          usuario registrado otorga, de forma irrevocable, su consentimiento a
-          que los Tribunales competentes por defecto puedan conocer de cualquier
-          acción judicial derivada de o relacionada con las presentes
-          condiciones, o con su uso de este Sitio o la navegación realizada por
-          el mismo.
-        </p>
-        <p>
-          Si alguna cláusula o apartado del presente Aviso Legal, que no sea de
-          naturaleza esencial para la existencia del mismo, es declarada nula o
-          inaplicable, la validez de las restantes cláusulas no se verá
-          afectada.
+          en su portal, pudiendo cambiar, suprimir o añadir tanto los contenidos
+          y servicios que se presten a través de la misma como la forma en la
+          que éstos aparezcan presentados o localizados en su portal.
         </p>
       </InnerWrap>
     </Wrapper>

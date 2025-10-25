@@ -1,6 +1,17 @@
 import { redirect } from "next/navigation";
 import { isSuperAdmin } from "@/lib/auth/admin-helpers";
 import AdminUserManagement from "./admin-user-management";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Gestión de Usuarios",
+  description:
+    "Panel de administración para gestión de usuarios y permisos de InmoInversor.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default async function AdminUsersPage() {
   // Check if current user is super admin

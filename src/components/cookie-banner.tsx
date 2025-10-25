@@ -13,6 +13,7 @@ import {
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import Link from "next/link";
+import { updateConsentMode } from "@/lib/analytics";
 
 interface CookiePreferences {
   necessary: boolean;
@@ -53,6 +54,17 @@ export default function CookieBanner() {
     setPreferences(allAccepted);
     localStorage.setItem("cookie-consent", JSON.stringify(allAccepted));
     setShowBanner(false);
+
+    // Update Google Consent Mode v2
+    updateConsentMode({
+      analytics_storage: "granted",
+      ad_storage: "granted",
+      ad_user_data: "granted",
+      ad_personalization: "granted",
+      functionality_storage: "granted",
+      personalization_storage: "granted",
+    });
+
     // Dispatch custom event for real-time updates
     window.dispatchEvent(
       new CustomEvent("cookieConsentChange", { detail: allAccepted })
@@ -71,6 +83,17 @@ export default function CookieBanner() {
     setPreferences(onlyNecessary);
     localStorage.setItem("cookie-consent", JSON.stringify(onlyNecessary));
     setShowBanner(false);
+
+    // Update Google Consent Mode v2 - deny all except necessary
+    updateConsentMode({
+      analytics_storage: "denied",
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied",
+      functionality_storage: "denied",
+      personalization_storage: "denied",
+    });
+
     // Dispatch custom event for real-time updates
     window.dispatchEvent(
       new CustomEvent("cookieConsentChange", { detail: onlyNecessary })
@@ -83,6 +106,17 @@ export default function CookieBanner() {
     localStorage.setItem("cookie-consent", JSON.stringify(preferences));
     setShowBanner(false);
     setShowSettings(false);
+
+    // Update Google Consent Mode v2 based on user preferences
+    updateConsentMode({
+      analytics_storage: preferences.analytics ? "granted" : "denied",
+      ad_storage: preferences.marketing ? "granted" : "denied",
+      ad_user_data: preferences.marketing ? "granted" : "denied",
+      ad_personalization: preferences.marketing ? "granted" : "denied",
+      functionality_storage: preferences.preferences ? "granted" : "denied",
+      personalization_storage: preferences.preferences ? "granted" : "denied",
+    });
+
     // Dispatch custom event for real-time updates
     window.dispatchEvent(
       new CustomEvent("cookieConsentChange", { detail: preferences })

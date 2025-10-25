@@ -9,6 +9,13 @@ import SponsorMission from "./sponsor-mission";
 import SponsorOffer from "./sponsor-offer";
 import SponsorStatsBase from "./sponsor-stats-base";
 import SponsorInfo from "./sponsor-audience";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Patrocina InmoInversor",
+  description:
+    "Oportunidades de colaboración y patrocinio con InmoInversor. Conecta tu marca con una audiencia especializada en inversión inmobiliaria y bienes raíces.",
+};
 export default function SponsorPage() {
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900 flex flex-col w-full h-full antialiased">

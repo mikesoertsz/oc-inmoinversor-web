@@ -12,7 +12,9 @@ import FeaturedPosts from "../(shared)/featured-posts";
 
 export async function generateMetadata() {
   return {
-    title: "Home",
+    title: "Inicio",
+    description:
+      "Descubre las mejores estrategias de inversión inmobiliaria en España. Aprende de Guillermo Ortiz, experto en bienes raíces, y transforma tu futuro financiero.",
   };
 }
 

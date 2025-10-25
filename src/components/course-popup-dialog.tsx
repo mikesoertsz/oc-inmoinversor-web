@@ -20,7 +20,10 @@ export default function CoursePopupDialog() {
     if (!hasSeenPopup) {
       setIsOpen(true);
       // Track popup display
-      trackEvent("popup_displayed", "engagement", "course_popup");
+      trackEvent("popup_displayed", {
+        event_category: "engagement",
+        event_label: "course_popup",
+      });
     }
   }, []);
 
@@ -44,12 +47,18 @@ export default function CoursePopupDialog() {
     setIsOpen(false);
     localStorage.setItem("course-popup-seen", "true");
     // Track popup close
-    trackEvent("popup_closed", "engagement", "course_popup");
+    trackEvent("popup_closed", {
+      event_category: "engagement",
+      event_label: "course_popup",
+    });
   };
 
   const handleButtonClick = () => {
     // Track button click before navigation
-    trackEvent("popup_cta_clicked", "conversion", "course_popup");
+    trackEvent("popup_cta_clicked", {
+      event_category: "conversion",
+      event_label: "course_popup",
+    });
   };
 
   return (

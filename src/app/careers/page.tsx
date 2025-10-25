@@ -10,6 +10,13 @@ import {
 } from "@/components/ui/table";
 import { Wrapper, InnerWrap } from "@/lib/atoms";
 import { TitleBlock } from "@/components/ui/titleblock";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Trabaja con Nosotros",
+  description:
+    "Únete al equipo de InmoInversor. Oportunidades de trabajo en videografía, ventas y administración en el sector inmobiliario.",
+};
 const jobList = [
   {
     title: "Videographer",

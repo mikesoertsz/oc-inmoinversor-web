@@ -1,6 +1,16 @@
-"use client";
 import { Suspense } from "react";
 import LoginForm from "./login-form";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Admin Login",
+  description:
+    "Acceso administrativo a InmoInversor para gestión de contenido y analytics.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function LoginPage() {
   return (

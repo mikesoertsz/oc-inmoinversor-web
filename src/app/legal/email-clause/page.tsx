@@ -1,21 +1,11 @@
-"use client";
 import { InnerWrap, Wrapper } from "@/lib/atoms";
-import { ChevronLeft } from "lucide-react";
+import LegalBackButton from "../legal-back-button";
 
 export default function EmailClause() {
   return (
     <Wrapper className="prose mx-auto p-4 text-left">
       <InnerWrap className="max-w-4xl text-left items-start justify-start text-sm fillscreen">
-        <button
-          onClick={() => window.history.back()}
-          className="mb-4 flex items-center text-sm text-gray-500 group hover:text-brand-primary"
-        >
-          <ChevronLeft
-            className="h-4 w-4 mr-1 transition-transform transform group-hover:-translate-x-1"
-            size={16}
-          />
-          Volver
-        </button>
+        <LegalBackButton />
         <h1>Cláusula para Incluir en E-mails</h1>
         <h2>Confidencialidad</h2>
         <p>

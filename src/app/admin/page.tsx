@@ -11,6 +11,17 @@ import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import YouTubeStats from "./youtube-stats";
 import { isSuperAdmin } from "@/lib/auth/admin-helpers";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Admin Dashboard",
+  description:
+    "Panel de administración de InmoInversor para gestión de contenido y analytics.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default async function AdminDashboard() {
   const isSuper = await isSuperAdmin();
