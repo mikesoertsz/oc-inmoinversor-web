@@ -17,14 +17,15 @@ export default function CoursePopupDialog() {
     // localStorage.removeItem("course-popup-seen");
 
     const hasSeenPopup = localStorage.getItem("course-popup-seen");
-    if (!hasSeenPopup) {
-      setIsOpen(true);
-      // Track popup display
-      trackEvent("popup_displayed", {
-        event_category: "engagement",
-        event_label: "course_popup",
-      });
-    }
+    // Removing the line that sets isOpen to true:
+    // if (!hasSeenPopup) {
+    //   setIsOpen(true);
+    // Track popup display
+    //   trackEvent("popup_displayed", {
+    //     event_category: "engagement",
+    //     event_label: "course_popup",
+    //   });
+    // }
   }, []);
 
   useEffect(() => {
