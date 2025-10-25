@@ -28,7 +28,7 @@ export default function Hero() {
         </p>
         <div className="flex justify-center space-x-4 mb-8">
           <a
-            href="https://www.youtube.com/@Inmoinversores"
+            href="https://www.youtube.com/@inmoinversor"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center bg-gray-100 text-black px-8 py-4 rounded-md hover:bg-gray-700"

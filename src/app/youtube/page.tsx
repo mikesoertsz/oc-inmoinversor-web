@@ -1,13 +1,12 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useChannelStats } from "@/hooks/useChannelStats";
 import { useLatestVideo } from "@/hooks/useLatestVideo";
 import { useRecentVideos } from "@/hooks/useRecentVideos";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Play, Users, Video, Eye, Calendar, ExternalLink } from "lucide-react";
+import { Calendar, ExternalLink, Eye, Play, Users, Video } from "lucide-react";
 import ReactPlayer from "react-player/youtube";
-import { Button } from "@/components/ui/button";
 
 function formatNumber(num: string): string {
   const number = parseInt(num);

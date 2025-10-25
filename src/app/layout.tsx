@@ -6,6 +6,7 @@ import NavMain from "./(shared)/nav-main";
 import CookieBanner from "@/components/cookie-banner";
 import Analytics from "@/components/google-analytics";
 import CoursePopupDialog from "@/components/course-popup-dialog";
+import { AuthProvider } from "@/lib/auth/auth-context";
 import "./globals.css";
 import "./prose.css";
 
@@ -29,13 +30,15 @@ export default function RootLayout({
       <body
         className={`${title.variable} ${body.variable} subpixel-antialiased font-title`}
       >
-        <NavMain />
-        {children}
-        <Footer />
-        <CookieBanner />
-        <Analytics />
-        <CoursePopupDialog />
-        <Toaster />
+        <AuthProvider>
+          <NavMain />
+          {children}
+          <Footer />
+          <CookieBanner />
+          <Analytics />
+          <CoursePopupDialog />
+          <Toaster />
+        </AuthProvider>
       </body>
     </html>
   );

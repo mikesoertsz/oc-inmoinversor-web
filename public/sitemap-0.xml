@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://inmoinversor.com/careers</loc><lastmod>2025-10-19T09:59:51.253Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://inmoinversor.com/course</loc><lastmod>2025-10-19T09:59:51.254Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://inmoinversor.com/legal/legal-notice</loc><lastmod>2025-10-19T09:59:51.254Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://inmoinversor.com/legal/cookies-policy</loc><lastmod>2025-10-19T09:59:51.254Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://inmoinversor.com/thank-you</loc><lastmod>2025-10-19T09:59:51.254Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://inmoinversor.com/legal/privacy-policy</loc><lastmod>2025-10-19T09:59:51.254Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://inmoinversor.com/sponsor</loc><lastmod>2025-10-19T09:59:51.254Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://inmoinversor.com/legal/email-clause</loc><lastmod>2025-10-19T09:59:51.254Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://inmoinversor.com/story</loc><lastmod>2025-10-19T09:59:51.254Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://inmoinversor.com/sitemap.xml</loc><lastmod>2025-10-19T09:59:51.254Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://inmoinversor.com/blog</loc><lastmod>2025-10-19T09:59:51.254Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://inmoinversor.com</loc><lastmod>2025-10-19T09:59:51.254Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://inmoinversor.com/sitemap.xml</loc><lastmod>2025-10-19T14:32:39.436Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://inmoinversor.com/legal/cookies-policy</loc><lastmod>2025-10-19T14:32:39.437Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://inmoinversor.com/legal/email-clause</loc><lastmod>2025-10-19T14:32:39.437Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://inmoinversor.com/reset-password</loc><lastmod>2025-10-19T14:32:39.437Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://inmoinversor.com/story</loc><lastmod>2025-10-19T14:32:39.437Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://inmoinversor.com/legal/legal-notice</loc><lastmod>2025-10-19T14:32:39.437Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://inmoinversor.com/thank-you</loc><lastmod>2025-10-19T14:32:39.437Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://inmoinversor.com/login</loc><lastmod>2025-10-19T14:32:39.437Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://inmoinversor.com/course</loc><lastmod>2025-10-19T14:32:39.437Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://inmoinversor.com/youtube</loc><lastmod>2025-10-19T14:32:39.437Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://inmoinversor.com/legal/privacy-policy</loc><lastmod>2025-10-19T14:32:39.437Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://inmoinversor.com/sponsor</loc><lastmod>2025-10-19T14:32:39.437Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://inmoinversor.com/blog</loc><lastmod>2025-10-19T14:32:39.437Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://inmoinversor.com/careers</loc><lastmod>2025-10-19T14:32:39.437Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://inmoinversor.com</loc><lastmod>2025-10-19T14:32:39.437Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>

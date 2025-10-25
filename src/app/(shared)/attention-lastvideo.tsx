@@ -1,8 +1,6 @@
 "use client";
 
 import { InnerWrap, Wrapper } from "@/lib/atoms";
-import dynamic from "next/dynamic";
-import { Suspense } from "react";
 import ReactPlayer from "react-player";
 
 export default function LastVideo() {

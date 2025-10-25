@@ -94,7 +94,14 @@ export default function Footer() {
             </li>
           ))}
         </ul>
-        <div className="items-center justify-center hidden md:flex md:justify-end text-xs">
+        <div className="items-center justify-center hidden md:flex md:justify-end text-xs gap-4">
+          <a
+            href="/login"
+            className="text-gray-500 hover:text-gray-700 hover:underline"
+            title="Admin Login"
+          >
+            Admin
+          </a>
           <p>
             Hecho por{" "}
             <a

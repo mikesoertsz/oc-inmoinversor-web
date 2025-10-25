@@ -2,18 +2,12 @@ import { google } from "googleapis";
 
 // YouTube API service for fetching channel data
 export class YouTubeService {
-  private youtube: any;
+  private youtube: ReturnType<typeof google.youtube>;
   private channelName = "inmoinversor";
   private channelId: string | null = null;
 
   constructor() {
-    if (typeof window === "undefined") {
-      // Server-side initialization
-      this.youtube = google.youtube({
-        version: "v3",
-        auth: process.env.NEXT_PUBLIC_YOUTUBE_API_KEY,
-      });
-    }
+    this.youtube = google.youtube({ version: "v3" });
   }
 
   // Find channel by name
@@ -22,15 +16,16 @@ export class YouTubeService {
 
     try {
       const response = await this.youtube.search.list({
-        part: "snippet",
+        part: ["snippet"],
         q: this.channelName,
-        type: "channel",
+        type: ["channel"],
         maxResults: 1,
       });
 
-      if (response.data.items.length > 0) {
-        return response.data.items[0].id.channelId;
+      if (response.data.items && response.data.items.length > 0) {
+        return response.data.items[0].id?.channelId || null;
       }
+
       return null;
     } catch (error) {
       console.error("Error finding channel:", error);
@@ -57,23 +52,23 @@ export class YouTubeService {
 
       // Search for the most recent video from the channel
       const response = await this.youtube.search.list({
-        part: "snippet",
+        part: ["snippet"],
         channelId: this.channelId,
-        type: "video",
+        type: ["video"],
         order: "date",
         maxResults: 1,
       });
 
-      if (response.data.items.length > 0) {
+      if (response.data.items && response.data.items.length > 0) {
         const video = response.data.items[0];
         return {
-          videoId: video.id.videoId,
-          title: video.snippet.title,
-          description: video.snippet.description,
-          publishedAt: video.snippet.publishedAt,
+          videoId: video.id?.videoId || "",
+          title: video.snippet?.title || "",
+          description: video.snippet?.description || "",
+          publishedAt: video.snippet?.publishedAt || "",
           thumbnail:
-            video.snippet.thumbnails?.high?.url ||
-            video.snippet.thumbnails?.medium?.url ||
+            video.snippet?.thumbnails?.high?.url ||
+            video.snippet?.thumbnails?.medium?.url ||
             "",
         };
       }
@@ -99,12 +94,13 @@ export class YouTubeService {
         if (!this.channelId) return null;
       }
 
-      const response = await this.youtube.channels.list({
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const response = await (this.youtube.channels.list as any)({
         part: "statistics",
         id: this.channelId,
       });
 
-      if (response.data.items.length > 0) {
+      if (response.data.items && response.data.items.length > 0) {
         const stats = response.data.items[0].statistics;
         return {
           subscriberCount: stats.subscriberCount || "0",
@@ -137,22 +133,23 @@ export class YouTubeService {
       }
 
       const response = await this.youtube.search.list({
-        part: "snippet",
+        part: ["snippet"],
         channelId: this.channelId,
-        type: "video",
+        type: ["video"],
         order: "date",
         maxResults: limit,
       });
 
-      if (response.data.items.length > 0) {
+      if (response.data.items && response.data.items.length > 0) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         return response.data.items.map((video: any) => ({
-          videoId: video.id.videoId,
-          title: video.snippet.title,
-          description: video.snippet.description,
-          publishedAt: video.snippet.publishedAt,
+          videoId: video.id?.videoId || "",
+          title: video.snippet?.title || "",
+          description: video.snippet?.description || "",
+          publishedAt: video.snippet?.publishedAt || "",
           thumbnail:
-            video.snippet.thumbnails?.high?.url ||
-            video.snippet.thumbnails?.medium?.url ||
+            video.snippet?.thumbnails?.high?.url ||
+            video.snippet?.thumbnails?.medium?.url ||
             "",
         }));
       }
